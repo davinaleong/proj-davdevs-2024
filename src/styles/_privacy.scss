@@ -1,0 +1,109 @@
+/// Privacy
+
+.section-privacy {
+  --_section-bg-clr: theme("colors.neutral.50");
+
+  &-hero {
+    --_section-bg-clr: theme("colors.blue.500");
+    --_section-bg-img: url("/src/assets/images/privacy-hero-mobile.svg");
+    --_section-bg-position: center bottom;
+
+    & > .wrapper {
+      --_wrapper-width: var(--small-content-width);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &-end {
+    --_section-bg-clr: theme("colors.neutral.50");
+    --_section-bg-img: url("/src/assets/images/footer-mobile.svg");
+    --_section-bg-position: bottom center;
+  }
+}
+
+.theme-dark,
+[data-theme="dark"] {
+  .section-privacy {
+    &-hero {
+      --_section-bg-img: url("/src/assets/images/privacy-hero-desktop.svg");
+    }
+
+    &-end {
+      --_section-bg-img: url("/src/assets/images/footer-desktop.svg");
+    }
+  }
+}
+
+@container container-q-primary-main (width > theme("screens.sm")) {
+  .section-privacy {
+    &-hero {
+      --_section-bg-img: url("/src/assets/images/privacy-hero-desktop.svg");
+    }
+
+    &-end {
+      --_section-bg-img: url("/src/assets/images/footer-desktop.svg");
+    }
+  }
+
+  .theme-dark,
+  [data-theme="dark"] {
+    .section-privacy {
+      --_section-bg-clr: theme("colors.neutral.950");
+
+      &-hero {
+        --_section-bg-img: url("/src/assets/images/privacy-hero-desktop-dark.svg");
+      }
+
+      &-end {
+        --_section-bg-img: url("/src/assets/images/footer-desktop-dark.svg");
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .section-privacy {
+    --_section-bg-clr: theme("colors.neutral.950");
+
+    &-hero {
+      --_section-bg-clr: theme("colors.neutral.950");
+      --_section-bg-img: url("/src/assets/images/privacy-hero-mobile-dark.svg");
+    }
+
+    &-end {
+      --_section-bg-clr: theme("colors.neutral.950");
+      --_section-bg-img: url("/src/assets/images/footer-mobile-dark.svg");
+    }
+  }
+
+  @container container-q-primary-main (width > theme("screens.sm")) {
+    .section-privacy {
+      &-hero {
+        --_section-bg-img: url("/src/assets/images/privacy-hero-desktop-dark.svg");
+      }
+
+      &-end {
+        --_section-bg-img: url("/src/assets/images/footer-desktop-dark.svg");
+      }
+    }
+  }
+}
+
+@media print {
+  .section-privacy {
+    --_section-bg-clr: theme("colors.white");
+
+    &-hero {
+      display: none;
+    }
+
+    &-end {
+      display: none;
+    }
+  }
+}

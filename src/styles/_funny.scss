@@ -1,0 +1,58 @@
+/// Funny
+
+.section-funny {
+  --_section-bg-clr: theme("colors.violet.700");
+
+  &-hero {
+    --_section-bg-img: url("/src/assets/images/funny-hero-mobile.svg");
+    --_section-bg-position: center bottom;
+
+    .section__wrapper {
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  &-content {
+    --_section-bg-img: url("/src/assets/images/funny-content-mobile.svg");
+    --_section-bg-size: contain;
+
+    color: theme("colors.neutral.50");
+
+    .section__wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  &-end {
+    --_section-height: 30vh;
+    --_section-bg-img: url("/src/assets/images/funny-footer-mobile.svg");
+    --_section-bg-position: bottom center;
+  }
+}
+
+.funny-content-wrapper {
+  max-width: 60ch;
+  margin-inline: auto;
+  background-color: hsla(263, 70%, 50%, 50%);
+  padding: theme("padding.4");
+  border-radius: theme("borderRadius.sm");
+}
+
+@container container-q-primary-main (width > theme("screens.md")) {
+  .section-funny {
+    &-hero {
+      --_section-bg-img: url("/src/assets/images/funny-hero-desktop.svg");
+    }
+
+    &-content {
+      --_section-bg-img: url("/src/assets/images/funny-content-desktop.svg");
+    }
+
+    &-end {
+      --_section-bg-img: url("/src/assets/images/funny-footer-desktop.svg");
+    }
+  }
+}

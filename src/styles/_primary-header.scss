@@ -1,0 +1,111 @@
+/// Primary Header
+
+.primary-header {
+  --_primary-header-clr: theme("colors.neutral.50");
+  --_primary-header-hover-clr: theme("colors.neutral.50");
+
+  --_primary-header-spacer: theme("padding.4");
+
+  --_primary-header-menu-width: theme("screens.sm");
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  color: var(--_primary-header-clr);
+  background-color: theme("colors.blue.500");
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .btn-primary-header {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: transparent;
+    --_btn-border-clr: transparent;
+    --_btn-border: none;
+    --_btn-td: none;
+
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: transparent;
+    --_btn-hover-border-clr: transparent;
+    --_btn-hover-border: none;
+    --_btn-hover-td: underline;
+
+    font-weight: theme("fontWeight.semibold");
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: theme("gap.2");
+    z-index: 1;
+
+    &__link {
+      --_a-clr: var(--_primary-header-clr);
+      --_a-hover-clr: var(--_primary-header-hover-clr);
+
+      display: flex;
+      gap: theme("gap.2");
+      padding-block-start: var(--_primary-header-spacer);
+      padding-block-end: var(--_primary-header-spacer);
+      padding-inline-start: var(--_primary-header-spacer);
+      padding-inline-end: var(--_primary-header-spacer);
+    }
+  }
+
+  [data-element="primary-header__menu"] {
+    display: none;
+  }
+
+  [data-element="primary-header__close"] {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: theme("fontSize.xl");
+    z-index: 1;
+  }
+}
+
+@media (max-width: theme("screens.md")) {
+  .primary-header {
+    &__nav {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      position: fixed;
+      inset: 0;
+      background-color: theme("colors.blue.500");
+      translate: -100% 0;
+      transition: translate 0.3s ease-in-out;
+
+      & > * {
+        width: 100%;
+      }
+    }
+
+    [data-element="primary-header__menu"] {
+      display: inline-flex;
+    }
+
+    &[data-active="true"] {
+      position: relative;
+
+      [data-element="primary-header__close"] {
+        display: inline-flex;
+      }
+
+      .primary-header__nav {
+        translate: 0 0;
+      }
+    }
+  }
+}
+
+@media print {
+  .primary-header {
+    display: none;
+  }
+}

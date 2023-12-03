@@ -1,0 +1,112 @@
+/// Resume
+
+.section-resume {
+  --_section-bg-clr: theme("colors.neutral.50");
+
+  &-hero {
+    --_section-bg-clr: theme("colors.blue.500");
+    --_section-bg-img: url("/src/assets/images/resume-hero-mobile.svg");
+    --_section-bg-position: center bottom;
+
+    .section__wrapper {
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  &-end {
+    --_section-bg-clr: theme("colors.neutral.50");
+    --_section-bg-img: url("/src/assets/images/footer-mobile.svg");
+    --_section-bg-position: bottom center;
+  }
+}
+
+.text-grid {
+  --_text-grid-label-width: 10ch;
+
+  display: grid;
+  grid-template-columns: var(--_text-grid-label-width) auto;
+  gap: theme("gap.4");
+}
+
+.theme-dark,
+[data-theme="dark"] {
+  .section-resume {
+    --_section-bg-clr: theme("colors.neutral.950");
+
+    &-hero {
+      --_section-bg-img: url("/src/assets/images/resume-hero-desktop.svg");
+    }
+
+    &-end {
+      --_section-bg-img: url("/src/assets/images/footer-desktop.svg");
+    }
+  }
+}
+
+@container container-q-primary-main (width > theme("screens.sm")) {
+  .section-resume {
+    &-hero {
+      --_section-bg-img: url("/src/assets/images/resume-hero-desktop.svg");
+    }
+
+    &-end {
+      --_section-bg-img: url("/src/assets/images/footer-desktop.svg");
+    }
+  }
+
+  .theme-dark,
+  [data-theme="dark"] {
+    .section-resume {
+      &-hero {
+        --_section-bg-img: url("/src/assets/images/resume-hero-desktop-dark.svg");
+      }
+
+      &-end {
+        --_section-bg-img: url("/src/assets/images/footer-desktop-dark.svg");
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .section-resume {
+    --_section-bg-clr: theme("colors.neutral.950");
+
+    &-hero {
+      --_section-bg-clr: theme("colors.neutral.950");
+      --_section-bg-img: url("/src/assets/images/resume-hero-mobile-dark.svg");
+    }
+
+    &-end {
+      --_section-bg-clr: theme("colors.neutral.950");
+      --_section-bg-img: url("/src/assets/images/footer-mobile-dark.svg");
+    }
+  }
+
+  @container container-q-primary-main (width > theme("screens.sm")) {
+    .section-resume {
+      &-hero {
+        --_section-bg-img: url("/src/assets/images/resume-hero-desktop-dark.svg");
+      }
+
+      &-end {
+        --_section-bg-img: url("/src/assets/images/footer-desktop-dark.svg");
+      }
+    }
+  }
+}
+
+@media print {
+  .section-resume {
+    --_section-bg-clr: theme("colors.white");
+
+    &-hero {
+      display: none;
+    }
+
+    &-end {
+      display: none;
+    }
+  }
+}

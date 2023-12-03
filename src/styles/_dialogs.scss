@@ -1,0 +1,74 @@
+/// Dialogs
+
+.dialog {
+  --_dialog-width: theme("screens.sm") - theme("padding.6");
+  --_dialog-spacer: theme("padding.4");
+
+  width: min(100%, var(--_dialog-width));
+  color: theme("colors.neutral.50");
+  background-color: theme("colors.blue.500");
+  padding-block-start: var(--_dialog-spacer);
+  padding-block-end: var(--_dialog-spacer);
+  padding-inline-start: var(--_dialog-spacer);
+  padding-inline-end: var(--_dialog-spacer);
+  border-radius: theme("borderRadius.sm");
+  box-shadow: theme("boxShadow.md");
+  overflow: hidden;
+  position: fixed;
+  left: theme("padding.4");
+  right: theme("padding.4");
+  bottom: theme("padding.4");
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: theme("gap.4");
+
+    &__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: theme("gap.2");
+    }
+  }
+
+  a {
+    --_a-clr: theme("colors.neutral.50");
+    --_a-td: underline;
+
+    --_a-hover-clr: theme("colors.neutral.100");
+  }
+}
+
+.btn-dialog {
+  --_btn-spacer-block: theme("padding.2");
+  --_btn-spacer-inline: theme("padding.3");
+
+  &-close {
+    position: absolute;
+    top: theme("padding.2");
+    right: theme("padding.2");
+  }
+
+  &-yes {
+    --_btn-clr: theme("colors.neutral.950");
+    --_btn-bg-clr: theme("colors.green.500");
+    --_btn-border-clr: theme("colors.green.500");
+
+    --_btn-hover-clr: theme("colors.neutral.950");
+    --_btn-hover-bg-clr: theme("colors.green.600");
+    --_btn-hover-border-clr: theme("colors.green.600");
+  }
+
+  &-no {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: theme("colors.red.500");
+    --_btn-border-clr: theme("colors.red.500");
+
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: theme("colors.red.600");
+    --_btn-hover-border-clr: theme("colors.red.600");
+  }
+}

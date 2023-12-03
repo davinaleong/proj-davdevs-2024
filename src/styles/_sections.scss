@@ -1,0 +1,33 @@
+/// Section
+
+.section {
+  --_section-height: 100vh;
+  --_section-height-offset: 0em;
+  --_section-height-total: calc(
+    var(--_section-height) - var(--_section-height-offset)
+  );
+  --_section-bg-clr: transparent;
+  --_section-bg-img: none;
+  --_section-bg-position: center;
+  --_section-bg-size: cover;
+  --_section-bg-repeat: no-repeat;
+
+  min-height: var(--_section-height-total);
+  background-color: var(--_section-bg-clr);
+  background-image: var(--_section-bg-img);
+  background-position: var(--_section-bg-position);
+  background-size: var(--_section-bg-size);
+  background-repeat: var(--_section-bg-repeat);
+
+  &-half {
+    --_section-height: 50vh;
+  }
+
+  .section__wrapper {
+    min-height: var(--_section-height-total);
+  }
+
+  &:first-of-type {
+    --_section-height-offset: var(--primary-header-height);
+  }
+}

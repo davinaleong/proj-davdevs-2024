@@ -1,0 +1,225 @@
+/// Portfolio
+
+.section-portfolio {
+  --_section-bg-clr: theme("colors.neutral.50");
+
+  &-hero {
+    --_section-bg-clr: theme("colors.blue.500");
+    --_section-bg-img: url("/src/assets/images/portfolio-hero-mobile.svg");
+    --_section-bg-position: center bottom;
+
+    .section__wrapper {
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  &-end {
+    --_section-height: 30vh;
+    --_section-bg-img: url("/src/assets/images/footer-mobile.svg");
+    --_section-bg-position: bottom center;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: theme("gap.4");
+  font-size: theme("fontSize.sm");
+}
+
+.btn-filter {
+  --_btn-clr: theme("colors.neutral.50");
+  --_btn-bg-clr: theme("colors.blue.500");
+  --_btn-hover-clr: theme("colors.neutral.50");
+  --_btn-hover-bg-clr: theme("colors.blue.700");
+  --_btn-spacer-inline: theme("padding.3");
+  --_btn-spacer-block: theme("padding.2");
+
+  &:hover {
+    color: var(--_btn-hover-clr);
+    background-color: var(--_btn-hover-bg-clr);
+  }
+
+  &__all {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: theme("colors.neutral.500");
+    --_btn-border-clr: theme("colors.neutral.500");
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: theme("colors.neutral.700");
+    --_btn-hover-border-clr: theme("colors.neutral.700");
+  }
+
+  &__html {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: theme("colors.html.base");
+    --_btn-border-clr: theme("colors.html.base");
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: theme("colors.html.light");
+    --_btn-hover-border-clr: theme("colors.html.light");
+  }
+
+  &__css {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: theme("colors.css.base");
+    --_btn-border-clr: theme("colors.css.base");
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: theme("colors.css.light");
+    --_btn-border-clr: theme("colors.css.light");
+  }
+
+  &__sass {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: theme("colors.sass.base");
+    --_btn-border-clr: theme("colors.sass.base");
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: theme("colors.sass.light");
+    --_btn-border-clr: theme("colors.sass.light");
+  }
+
+  &__bootstrap {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: theme("colors.bootstrap.base");
+    --_btn-border-clr: theme("colors.bootstrap.base");
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: theme("colors.bootstrap.light");
+    --_btn-hover-border-clr: theme("colors.bootstrap.light");
+  }
+
+  &__javascript {
+    --_btn-clr: theme("colors.neutral.950");
+    --_btn-bg-clr: theme("colors.javascript.base");
+    --_btn-border-clr: theme("colors.javascript.base");
+    --_btn-hover-clr: theme("colors.neutral.950");
+    --_btn-hover-bg-clr: theme("colors.javascript.dark");
+    --_btn-hover-border-clr: theme("colors.javascript.dark");
+  }
+
+  &__php {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: theme("colors.php.base");
+    --_btn-border-clr: theme("colors.php.base");
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: theme("colors.php.light");
+    --_btn-hover-border-clr: theme("colors.php.light");
+  }
+
+  &__laravel {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: theme("colors.laravel.base");
+    --_btn-border-clr: theme("colors.laravel.base");
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: theme("colors.laravel.light");
+    --_btn-hover-border-clr: theme("colors.laravel.light");
+  }
+
+  &__sql {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: theme("colors.sql.base");
+    --_btn-border-clr: theme("colors.sql.base");
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: theme("colors.sql.light");
+    --_btn-hover-border-clr: theme("colors.sql.light");
+  }
+
+  &__astro {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: theme("colors.astro.base");
+    --_btn-border-clr: theme("colors.astro.base");
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: theme("colors.astro.light");
+    --_btn-hover-border-clr: theme("colors.astro.light");
+  }
+
+  &__react {
+    --_btn-clr: theme("colors.neutral.950");
+    --_btn-bg-clr: theme("colors.react.base");
+    --_btn-border-clr: theme("colors.react.base");
+    --_btn-hover-clr: theme("colors.neutral.950");
+    --_btn-hover-bg-clr: theme("colors.react.dark");
+    --_btn-hover-border-clr: theme("colors.react.dark");
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: theme("gap.2");
+
+  &__item {
+    color: theme("colors.neutral.500");
+  }
+
+  &__link {
+    &[data-active="true"] {
+      --_a-clr: theme("colors.blue.700");
+      --_a-hover-clr: theme("colors.blue.700");
+    }
+  }
+}
+
+.theme-dark,
+[data-theme="dark"] {
+  .section-portfolio {
+    --_section-bg-clr: theme("colors.neutral.950");
+
+    &-hero {
+      --_section-bg-img: url("/src/assets/images/portfolio-hero-desktop.svg");
+    }
+
+    &-end {
+      --_section-bg-img: url("/src/assets/images/footer-desktop.svg");
+    }
+  }
+}
+
+@container container-q-primary-main (width > theme("screens.sm")) {
+  .section-portfolio {
+    &-hero {
+      --_section-bg-img: url("/src/assets/images/portfolio-hero-desktop.svg");
+    }
+
+    &-end {
+      --_section-bg-img: url("/src/assets/images/footer-desktop.svg");
+    }
+  }
+
+  .theme-dark,
+  [data-theme="dark"] {
+    .section-portfolio {
+      &-hero {
+        --_section-bg-img: url("/src/assets/images/portfolio-hero-desktop-dark.svg");
+      }
+
+      &-end {
+        --_section-bg-img: url("/src/assets/images/footer-desktop-dark.svg");
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .section-portfolio {
+    --_section-bg-clr: theme("colors.neutral.950");
+
+    &-hero {
+      --_section-bg-img: url("/src/assets/images/portfolio-hero-mobile-dark.svg");
+    }
+
+    &-end {
+      --_section-bg-img: url("/src/assets/images/footer-mobile-dark.svg");
+    }
+  }
+
+  @container container-q-primary-main (width > theme("screens.sm")) {
+    .section-portfolio {
+      &-hero {
+        --_section-bg-img: url("/src/assets/images/portfolio-hero-desktop-dark.svg");
+      }
+
+      &-end {
+        --_section-bg-img: url("/src/assets/images/footer-desktop-dark.svg");
+      }
+    }
+  }
+}
