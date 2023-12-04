@@ -1,0 +1,47 @@
+---
+import "./../styles/app.scss"
+import favicon from "../assets/images/logo-svg.svg"
+
+import PrimaryHeader from "../components/primary-header.astro"
+import PrimaryFooter from "../components/primary-footer.astro"
+import CookieDialog from "../components/cookie-dialog.astro"
+
+const { title = `` } = Astro.props
+const theTitle: string = title === `` ? `Dav/Devs` : `Dav/Devs - ${title}`
+
+const currentPath: string = Astro.url.pathname
+const theCookieDialog = currentPath === `/` ? CookieDialog : null
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href={favicon} />
+		<title>{theTitle}</title>
+		<script is:inline src="https://kit.fontawesome.com/1b82ea5cb2.js"
+			crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<PrimaryHeader />
+
+        <main class="primary-main container-q container-q-primary-main">
+            <button class="btn btn-theme" type="button" data-element="btn-theme">
+              <span class="btn-theme__label btn-theme__label-light">
+                <i class="fa-light fa-sharp fa-lightbulb-on"></i>
+                <span class="btn-theme__label__text">Light</span>
+              </span>
+              <span class="btn-theme__label btn-theme__label-dark">
+                <i class="fa-light fa-sharp fa-lightbulb-slash"></i>
+                <span class="btn-theme__label__text">Dark</span>
+              </span>
+            </button>
+
+            <slot />
+        </main>
+
+        <PrimaryFooter />
+
+        {theCookieDialog}
+	</body>
+</html>
