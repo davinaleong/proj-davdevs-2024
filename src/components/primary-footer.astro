@@ -1,5 +1,10 @@
 ---
 import logo from "../assets/images/logo-white-svg.svg"
+
+const year: number = 2019
+const now = new Date()
+const nowYear: number = Number(now.getFullYear())
+const strYear: string = year === nowYear ? `${year}` : `${year} &ndash; ${nowYear}`
 ---
 <footer class="primary-footer" data-element="primary-footer">
     <div class="wrapper mx-auto">
@@ -59,7 +64,7 @@ import logo from "../assets/images/logo-white-svg.svg"
       </div>
       <div class="primary-footer__bottom">
         <p class="text-center text-sm">
-          Dav/Devs &copy; Davina Leong, since ${config.year}.
+          Dav/Devs &copy; Davina Leong, {strYear}.
         </p>
       </div>
     </div>    
