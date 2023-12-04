@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import logo from "../assets/images/logo-white-svg.svg"
 
 const year: number = 2019
@@ -11,10 +12,9 @@ const strYear: string = year === nowYear ? `${year}` : `${year} &ndash; ${nowYea
       <div class="primary-footer__top">
         <div class="primary-footer__top__col | flow">
           <a href="#" class="btn btn-primary-footer">
-            <img
+            <Image
               src={logo}
               alt="Dav/Devs footer logo"
-              srcset=""
             />
             <div>Dav/Devs</div>
           </a>

@@ -1,10 +1,11 @@
 ---
+import { Image } from 'astro:assets'
 import logo from "../assets/images/logo-white-svg.svg"
 ---
 <header class="primary-header" data-element="primary-header">
     <div class="wrapper primary-header-wrapper mx-auto">
         <a href="index.html" class="btn btn-primary-header">
-            <img src={logo} /> Dav/Devs
+            <Image src={logo} alt="Dav/Devs Footer Logo" /> Dav/Devs
         </a>
 
         <nav class="primary-header__nav">
