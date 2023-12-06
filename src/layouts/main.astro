@@ -1,6 +1,7 @@
 ---
 import "./../styles/app.scss"
-import favicon from "../assets/images/logo-svg.svg"
+// import favicon from "./../assets/images/logo-png-32x32.png"
+import favicon from "./../assets/images/logo-svg.svg"
 
 import PrimaryHeader from "../components/primary-header.astro"
 import PrimaryFooter from "../components/primary-footer.astro"
@@ -17,7 +18,7 @@ const home: boolean = currentPath === `/`
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href={favicon} />
+		<link rel="icon" type="image/png" href={favicon.src} />
 		<title>{theTitle}</title>
 		<script is:inline src="https://kit.fontawesome.com/1b82ea5cb2.js"
 			crossorigin="anonymous"></script>
