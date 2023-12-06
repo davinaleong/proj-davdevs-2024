@@ -14,6 +14,7 @@ const portfolioPath: string = currentPath === `/` ? 'portfolio/' : '../portfolio
 const projectPath: string = currentPath === `/` ? 'project/' : '../project/'
 const contactPath: string = currentPath === `/` ? 'contact/' : '../contact/'
 const funnyPath: string = currentPath === `/` ? 'funny/' : '../funny/'
+const privacyPolicyPath: string = currentPath === `/` ? 'privacy-policy/' : '../privacy-policy/'
 ---
 <footer class="primary-footer" data-element="primary-footer">
     <div class="wrapper mx-auto">
@@ -26,6 +27,17 @@ const funnyPath: string = currentPath === `/` ? 'funny/' : '../funny/'
             />
             <div>Dav/Devs</div>
           </a>
+        </div>
+        <div class="primary-footer__top__col | flow">
+          <h2 class="primary-footer__heading">Pages</h2>
+          <ul class="primary-footer__list">
+            <li><a href={`${homePath}`}>Home</a></li>
+            <li><a href={`${resumePath}`}>Resume</a></li>
+            <li><a href={`${portfolioPath}`}>Portfolio</a></li>
+            <li><a href={`${contactPath}`}>Contact</a></li>
+            <li><a href={`${funnyPath}`}>Funny</a></li>
+            <li><a href={`${privacyPolicyPath}`}>Privacy Policy</a></li>
+          </ul>
         </div>
         <div class="primary-footer__top__col | flow">
           <h2 class="primary-footer__heading">Home</h2>
@@ -47,17 +59,6 @@ const funnyPath: string = currentPath === `/` ? 'funny/' : '../funny/'
             <li><a href={`${resumePath}#resume-talks`}>Talks</a></li>
             <li><a href={`${resumePath}#resume-hobbies`}>Hobbies</a></li>
             <li><a href={`${resumePath}#resume-testimonials`}>Testimonials</a></li>
-          </ul>
-        </div>
-        <div class="primary-footer__top__col | flow">
-          <h2 class="primary-footer__heading">Portfolio</h2>
-          <ul class="primary-footer__list">
-            <li><a href={`${portfolioPath}`}>HTML</a></li>
-            <li><a href={`${portfolioPath}`}>CSS</a></li>
-            <li><a href={`${portfolioPath}`}>Bootstrap</a></li>
-            <li><a href={`${portfolioPath}`}>Laravel</a></li>
-            <li><a href={`${portfolioPath}`}>JavaScript</a></li>
-            <li><a href={`${portfolioPath}`}>ReactJS</a></li>
           </ul>
         </div>
         <div class="primary-footer__top__col | flow">

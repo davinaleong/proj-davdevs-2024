@@ -15,6 +15,8 @@ const COOKIE_YES = `yes`
 const THEME_LIGHT = `light`
 const THEME_DARK = `dark`
 
+const COOKIE_DIALOG_DELAY = 3000
+
 const COOKIE_STRINGS = {
   NO: COOKIE_NO,
   YES: COOKIE_YES,
@@ -33,6 +35,7 @@ function main() {
 
   toggleMenu()
   toggleTheme(cookie)
+  toggleCookieDialog(cookie)
 }
 
 /// Functions - Elements
@@ -61,7 +64,7 @@ function toggleMenu() {
 }
 
 function toggleTheme(cookie) {
-  logFunction(`toggleTheme`)
+  logFunction(`toggleTheme`, { cookie })
 
   let theme = THEME_LIGHT
   if (cookie === COOKIE_YES) {
@@ -101,6 +104,55 @@ function toggleTheme(cookie) {
   } catch (error) {
     console.error(error)
   }
+}
+
+function toggleCookieDialog(cookie) {
+  logFunction(`toggleCookieDialog`, { cookie })
+
+  const cookieDialogEl = getElement(`cookie-dialog`)
+  if (!cookieDialogEl) return
+
+  const btnCloseEl = getElement(`btn-close`, cookieDialogEl)
+  if (!btnCloseEl) return
+
+  const btnYesEl = getElement(`btn-yes`, cookieDialogEl)
+  if (!btnYesEl) return
+
+  const btnNoEl = getElement(`btn-no`, cookieDialogEl)
+  if (!btnNoEl) return
+
+  if (cookie !== COOKIE_NO) {
+    setTimeout(function () {
+      cookieDialogEl.show()
+    }, COOKIE_DIALOG_DELAY)
+  }
+
+  btnCloseEl.addEventListener(`click`, function (event) {
+    event.preventDefault()
+    cookieDialogEl.close()
+  })
+
+  btnYesEl.addEventListener(`click`, function (event) {
+    event.preventDefault()
+    setLocalStorage(KEY_COOKIE, COOKIE_YES)
+    setLocalStorage(KEY_THEME, THEME_LIGHT)
+    const themeAttr = document.body.getAttribute(DATA_THEME_ATTR)
+    if (themeAttr) {
+      setLocalStorage(KEY_THEME, themeAttr)
+    }
+    cookieDialogEl.close()
+  })
+
+  btnNoEl.addEventListener(`click`, function (event) {
+    event.preventDefault()
+
+    const cookieValue = getLocalStorage(KEY_COOKIE)
+    if (cookieValue === COOKIE_YES) {
+      setLocalStorage(KEY_COOKIE, COOKIE_NO)
+    }
+
+    cookieDialogEl.close()
+  })
 }
 
 /// Functions - Helpers

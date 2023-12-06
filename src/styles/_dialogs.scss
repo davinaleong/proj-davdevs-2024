@@ -1,10 +1,9 @@
 /// Dialogs
 
 .dialog {
-  --_dialog-width: theme("screens.sm") - theme("padding.6");
   --_dialog-spacer: theme("padding.4");
 
-  width: min(100%, var(--_dialog-width));
+  width: clamp(320px, 20em, theme("screens.md"));
   color: theme("colors.neutral.50");
   background-color: theme("colors.blue.500");
   padding-block-start: var(--_dialog-spacer);
