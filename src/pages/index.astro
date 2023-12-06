@@ -3,5 +3,242 @@ import Main from "../layouts/main.astro"
 ---
 
 <Main>
-	<h1>Home</h1>
+	<section id="home-hero" class="section section-home-hero">
+        <div class="wrapper section__wrapper mx-auto p-4 | flow">
+          <h1
+            class="section-hero-home__heading | text-6xl font-bold text-neutral-50 uppercase"
+          >
+            Dav/Devs
+          </h1>
+          <p
+            class="section-hero-home__subheading text-xl font-semibold text-neutral-50 bg-orange-500 uppercase shadow-md rounded-sm"
+          >
+            <span>Full-stack Web Developer</span>
+          </p>
+          <p
+            class="section-hero-home__slogan text-xl font-semibold uppercase text-neutral-50"
+          >
+            Just keep learning&hellip;
+          </p>
+        </div>
+        <!-- ./wrapper -->
+      </section>
+
+      <section id="home-skills" class="section section-home-skills">
+        <div class="wrapper section__wrapper mx-auto p-4 | flow">
+          <h2
+            class="section__heading | text-4xl text-neutral-50 text-bold text-center"
+          >
+            My Toolkit
+          </h2>
+
+          <p class="skills | mx-auto">
+            <span class="skill skill__html | shadow-md">HTML</span>
+            <span class="skill skill__css | shadow-md">CSS</span>
+            <span class="skill skill__javascript | shadow-md">JavaScript</span>
+            <span class="skill skill__sass | shadow-md">SASS</span>
+            <span class="skill skill__bootstrap | shadow-md">Bootstrap</span>
+            <span class="skill skill__react | shadow-md">React</span>
+            <span class="skill skill__sql | shadow-md">SQL</span>
+            <span class="skill skill__php | shadow-md">PHP</span>
+            <span class="skill skill__laravel | shadow-md">Laravel</span>
+            <span class="skill skill__astro | shadow-md">Astro</span>
+          </p>
+        </div>
+        <!-- ./wrapper -->
+      </section>
+
+      <section id="home-featured" class="section section-home-featured">
+        <div class="wrapper section__wrapper | mx-auto p-4 flow">
+          <h2 class="section__heading | text-4xl text-bold text-center">
+            Digital Projects
+          </h2>
+
+          <div class="card card-home">
+            <img
+              src="/src/assets/images/project.png"
+              alt="Project Screenshot"
+              class="card__img | shadow"
+            />
+            <div class="card__body | shadow flow p-4">
+              <h3 class="card__body__heading | font-bold text-2xl">
+                Project Title
+              </h3>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorum, voluptates!
+              </p>
+
+              <p><a href="#">Read more</a></p>
+            </div>
+            <!-- ./card__body -->
+          </div>
+          <!-- ./card -->
+          <div class="card card-home">
+            <img
+              src="/src/assets/images/project.png"
+              alt="Project Screenshot"
+              class="card__img | shadow"
+            />
+            <div class="card__body | shadow flow p-4">
+              <h3 class="card__body__heading | font-bold text-2xl">
+                Project Title
+              </h3>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorum, voluptates!
+              </p>
+
+              <p><a href="#">Read more</a></p>
+            </div>
+            <!-- ./card__body -->
+          </div>
+          <!-- ./card -->
+          <div class="card card-home">
+            <img
+              src="/src/assets/images/project.png"
+              alt="Project Screenshot"
+              class="card__img | shadow"
+            />
+            <div class="card__body | shadow flow p-4">
+              <h3 class="card__body__heading | font-bold text-2xl">
+                Project Title
+              </h3>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorum, voluptates!
+              </p>
+
+              <p><a href="#">Read more</a></p>
+            </div>
+            <!-- ./card__body -->
+          </div>
+          <!-- ./card -->
+          <div class="card card-home">
+            <img
+              src="/src/assets/images/project.png"
+              alt="Project Screenshot"
+              class="card__img | shadow"
+            />
+            <div class="card__body | shadow flow p-4">
+              <h3 class="card__body__heading | font-bold text-2xl">
+                Project Title
+              </h3>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorum, voluptates!
+              </p>
+
+              <p><a href="#">Read more</a></p>
+            </div>
+            <!-- ./card__body -->
+          </div>
+          <!-- ./card -->
+        </div>
+        <!-- ./wrapper -->
+      </section>
+
+      <section id="home-talks" class="section section-home-talks">
+        <div class="wrapper section__wrapper | flow p-4 mx-auto">
+          <h2 class="section__heading | text-4xl text-bold text-center">
+            Knowledge Sharing
+          </h2>
+
+          <div class="cards-grid">
+            <div class="card">
+              <img
+                src="/src/assets/images/project.png"
+                alt="Project Screenshot"
+                class="card__img"
+              />
+              <div class="card__overlay | flow">
+                <h3 class="card__overlay__heading">
+                  <a href="project.html">Project Title</a>
+                </h3>
+              </div>
+              <!-- ./card__overlay -->
+            </div>
+            <!-- ./card -->
+
+            <div class="card">
+              <img
+                src="/src/assets/images/project.png"
+                alt="Project Screenshot"
+                class="card__img"
+              />
+              <div class="card__overlay | flow mx-auto">
+                <h3 class="card__overlay__heading">
+                  <a href="project.html">Project Title</a>
+                </h3>
+              </div>
+              <!-- ./card__overlay -->
+            </div>
+            <!-- ./card -->
+          </div>
+          <!-- ./card-grid -->
+        </div>
+        <!-- ./wrapper -->
+      </section>
+
+      <section id="home-social" class="section section-home-social">
+        <div class="wrapper section__wrapper | mx-auto p-4 flow">
+          <h2 class="section__heading | text-4xl text-bold text-center">
+            Connect with Me
+          </h2>
+
+          <div class="card-socials">
+            <a
+              href="https://www.youtube.com/channel/UCh-C6LhCRyVxlzdFc4WCrDw"
+              target="_blank"
+              class="card-social card-social-youtube"
+            >
+              <div class="card-social__icon card-social__icon">
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+              <p class="card-social__content">Various videos</p>
+            </a>
+            <!-- ./card-social -->
+
+            <a
+              href="https://github.com/davinaleong"
+              target="_blank"
+              class="card-social card-social-github"
+            >
+              <div class="card-social__icon card-social__icon">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <p class="card-social__content">Code</p>
+            </a>
+            <!-- ./card-social -->
+
+            <a
+              href="https://www.instagram.com/davinaleong/"
+              target="_blank"
+              class="card-social card-social-instagram"
+            >
+              <div class="card-social__icon card-social__icon">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <p class="card-social__content">News</p>
+            </a>
+            <!-- ./card-social -->
+
+            <a
+              href="https://www.linkedin.com/in/davina-leong-s9115675g/"
+              target="_blank"
+              class="card-social card-social-linkedin"
+            >
+              <div class="card-social__icon card-social__icon">
+                <i class="fa-brands fa-linkedin"></i>
+              </div>
+              <p class="card-social__content">Professional</p>
+            </a>
+            <!-- ./card-social -->
+          </div>
+        </div>
+	</section>
 </Main>
