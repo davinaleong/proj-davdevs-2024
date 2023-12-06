@@ -36,6 +36,7 @@ function main() {
   toggleMenu()
   toggleTheme(cookie)
   toggleCookieDialog(cookie)
+  triggerPrint()
 }
 
 /// Functions - Elements
@@ -152,6 +153,18 @@ function toggleCookieDialog(cookie) {
     }
 
     cookieDialogEl.close()
+  })
+}
+
+function triggerPrint() {
+  logFunction(`triggerPrint`)
+
+  const btnPrintEl = getElement(`btn-print`)
+  if (!btnPrintEl) return
+
+  btnPrintEl.addEventListener(`click`, function (event) {
+    event.preventDefault()
+    window.print()
   })
 }
 
