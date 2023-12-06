@@ -73,33 +73,57 @@ function getElement(key = ``, parent = null) {
   logFunction(`getElement`, { key, parent })
 
   if (parent) {
-    return parent.querySelector(`[${DATA_ELEMENT_ATTR}="${key}"]`)
+    try {
+      return parent.querySelector(`[${DATA_ELEMENT_ATTR}="${key}"]`)
+    } catch (error) {
+      console.error(error)
+    }
   }
 
-  return document.querySelector(`[${DATA_ELEMENT_ATTR}="${key}"]`)
+  try {
+    return document.querySelector(`[${DATA_ELEMENT_ATTR}="${key}"]`)
+  } catch (error) {
+    console.error(error)
+  }
 }
 
 function getElements(key = ``, parent = null) {
   logFunction(`getElements`, { key, parent })
 
   if (parent) {
-    return parent.querySelectorAll(`[${DATA_ELEMENT_ATTR}="${key}"]`)
+    try {
+      return parent.querySelectorAll(`[${DATA_ELEMENT_ATTR}="${key}"]`)
+    } catch (error) {
+      console.error(error)
+    }
   }
 
-  return document.querySelectorAll(`[${DATA_ELEMENT_ATTR}="${key}"]`)
+  try {
+    return document.querySelectorAll(`[${DATA_ELEMENT_ATTR}="${key}"]`)
+  } catch (error) {
+    console.error(error)
+  }
 }
 
 function getLocalStorage(key) {
   logFunction(`getLocalStorage`, { key })
 
-  return localStorage.getItem(key)
+  try {
+    return localStorage.getItem(key)
+  } catch (error) {
+    console.error(error)
+  }
 }
 
 function setLocalStorage(key, value = null) {
   logFunction(`setLocalStorage`, { key, value })
 
   if (value) {
-    localStorage.setItem(key, value)
+    try {
+      localStorage.setItem(key, value)
+    } catch (error) {
+      console.error(error)
+    }
   }
 }
 
