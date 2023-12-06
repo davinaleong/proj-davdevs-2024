@@ -65,11 +65,11 @@
     --_section-bg-clr: theme("colors.neutral.950");
 
     &-hero {
-      --_section-bg-img: url("/src/assets/images/project-hero-desktop.svg");
+      --_section-bg-img: url("/src/assets/images/project-hero-mobile-dark.svg");
     }
 
     &-content {
-      --_section-bg-img: url("/src/assets/images/footer-desktop.svg");
+      --_section-bg-img: url("/src/assets/images/footer-mobile-dark.svg");
     }
   }
 }

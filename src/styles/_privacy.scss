@@ -28,13 +28,17 @@
 
 .theme-dark,
 [data-theme="dark"] {
+  --_section-bg-clr: theme("colors.neutral.950");
+
   .section-privacy {
+    --_section-bg-clr: theme("colors.neutral.950");
     &-hero {
-      --_section-bg-img: url("/src/assets/images/privacy-hero-desktop.svg");
+      --_section-bg-img: url("/src/assets/images/privacy-hero-mobile-dark.svg");
     }
 
     &-end {
-      --_section-bg-img: url("/src/assets/images/footer-desktop.svg");
+      --_section-bg-clr: theme("colors.neutral.950");
+      --_section-bg-img: url("/src/assets/images/footer-mobile-dark.svg");
     }
   }
 }
@@ -60,6 +64,7 @@
       }
 
       &-end {
+        --_section-bg-clr: theme("colors.neutral.950");
         --_section-bg-img: url("/src/assets/images/footer-desktop-dark.svg");
       }
     }

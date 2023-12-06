@@ -164,11 +164,11 @@
     --_section-bg-clr: theme("colors.neutral.950");
 
     &-hero {
-      --_section-bg-img: url("/src/assets/images/portfolio-hero-desktop.svg");
+      --_section-bg-img: url("/src/assets/images/portfolio-hero-mobile-dark.svg");
     }
 
     &-end {
-      --_section-bg-img: url("/src/assets/images/footer-desktop.svg");
+      --_section-bg-img: url("/src/assets/images/footer-mobile-dark.svg");
     }
   }
 }

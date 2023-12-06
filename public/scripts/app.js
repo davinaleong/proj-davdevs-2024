@@ -4,6 +4,7 @@ logLoaded(`app.js`)
 /// Variables
 const DATA_ELEMENT_ATTR = `data-element`
 const DATA_ACTIVE_ATTR = `data-active`
+const DATA_THEME_ATTR = `data-theme`
 
 const KEY_COOKIE = `cookie`
 const KEY_THEME = `theme`
@@ -28,7 +29,10 @@ const THEME_STRINGS = {
 function main() {
   logFunction(`main`)
 
+  const cookie = getLocalStorage(KEY_COOKIE)
+
   toggleMenu()
+  toggleTheme(cookie)
 }
 
 /// Functions - Elements
@@ -54,6 +58,49 @@ function toggleMenu() {
     event.preventDefault()
     primaryHeaderEl.removeAttribute(DATA_ACTIVE_ATTR)
   })
+}
+
+function toggleTheme(cookie) {
+  logFunction(`toggleTheme`)
+
+  let theme = THEME_LIGHT
+  if (cookie === COOKIE_YES) {
+    const themeValue = getLocalStorage(KEY_THEME)
+    if (themeValue !== ``) {
+      theme = themeValue
+    }
+  }
+
+  try {
+    const body = document.querySelector(`body`)
+    if (!body) return
+    console.log(body)
+    body.setAttribute(DATA_THEME_ATTR, theme)
+
+    const btnThemeEl = getElement(`btn-theme`)
+    if (!btnThemeEl) return
+
+    btnThemeEl.addEventListener(`click`, function (event) {
+      event.preventDefault()
+
+      const dataTheme = body.getAttribute(DATA_THEME_ATTR)
+      logVariable(`dataTheme`, dataTheme)
+
+      if (dataTheme && dataTheme === THEME_LIGHT) {
+        body.setAttribute(DATA_THEME_ATTR, THEME_DARK)
+        if (cookie === COOKIE_YES) {
+          setLocalStorage(KEY_THEME, THEME_DARK)
+        }
+      } else {
+        body.setAttribute(DATA_THEME_ATTR, THEME_LIGHT)
+        if (cookie === COOKIE_YES) {
+          setLocalStorage(KEY_THEME, THEME_LIGHT)
+        }
+      }
+    })
+  } catch (error) {
+    console.error(error)
+  }
 }
 
 /// Functions - Helpers
