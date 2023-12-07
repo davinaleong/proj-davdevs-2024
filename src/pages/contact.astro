@@ -1,9 +1,9 @@
 ---
-import Main from "../layouts/main.astro"
+import MainLayoutAstro from "../layouts/main.layout.astro"
 import * as contact from "../content/contact/main.md"
 const { title } = contact.frontmatter
 ---
-<Main title={title}>
+<MainLayoutAstro title={title}>
   <section
   id="contact-hero"
   class="section section-contact section-contact-hero"
@@ -84,4 +84,4 @@ const { title } = contact.frontmatter
   </div>
   <!-- ./wrapper -->
 </section>
-</Main>
+</MainLayoutAstro>

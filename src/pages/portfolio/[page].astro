@@ -1,14 +1,15 @@
 ---
-import Portfolio from "../../layouts/portfolio.astro";
-import { sortPostsDesc } from "./../../utilities/helpers"
+import PortfolioLayoutAstro from "../../layouts/portfolio.layout.astro";
+import { sortPostsDesc } from "../../utilities/helpers.utilities"
 
-// export async function getStaticPaths({ paginate }: any) {
-//   const projectPages = await Astro.glob("./../projects/*.md")
-//   const projects = sortPostsDesc(projectPages.filter((post) => !post.frontmatter.draft), "date")
-//   return paginate(projects, { pageSize: import.meta.env.PER_PAGE })
-// }
+export async function getStaticPaths({ paginate }: any) {
+  const projectPages = await Astro.glob("./../projects/*.md")
+  console.log(`projectPages`, projectPages)
+  const projects = sortPostsDesc(projectPages.filter((post) => !post.frontmatter.draft), "date")
+  return paginate(projects, { pageSize: 12 })
+}
 
-// const { page } = Astro.props
+const { page } = Astro.props
 ---
 
-<Portfolio />
+<PortfolioLayoutAstro page={page}/>

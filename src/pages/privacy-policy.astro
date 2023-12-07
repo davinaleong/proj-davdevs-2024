@@ -1,9 +1,9 @@
 ---
-import Main from "../layouts/main.astro"
+import MainLayoutAstro from "../layouts/main.layout.astro"
 import * as privacyPolicy from "../content/privacy-policy/main.md"
 const { title } = privacyPolicy.frontmatter
 ---
-<Main title={title}>
+<MainLayoutAstro title={title}>
     <section
         id="privacy-hero"
         class="section section-half section-privacy section-privacy-hero"
@@ -30,4 +30,4 @@ const { title } = privacyPolicy.frontmatter
         id="privacy-end"
         class="section section-half section-privacy section-privacy-end"
       ></div>
-</Main>
+</MainLayoutAstro>

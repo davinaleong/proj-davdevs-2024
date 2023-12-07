@@ -1,8 +1,8 @@
 ---
 import dayjs from "dayjs"
 
-import Main from "../layouts/main.astro"
-import { sort, sortPostsDesc } from "./../utilities/helpers"
+import MainLayoutAstro from "../layouts/main.layout.astro"
+import { sort, sortPostsDesc } from "../utilities/helpers.utilities"
 
 import * as resume from "../content/resume/main.md"
 const { title, overview, skills, talks, hobbies } = resume.frontmatter
@@ -17,7 +17,7 @@ const certificatesPosts = await Astro.glob('./../content/resume/certificates/*.m
 const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontmatter.draft), "start")
 ---
 
-<Main title={title}>
+<MainLayoutAstro title={title}>
     <section
         id="resume-hero"
         class="section section-half section-resume-hero"

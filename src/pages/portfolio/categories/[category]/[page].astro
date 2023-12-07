@@ -1,6 +1,6 @@
 ---
-import PortfolioAstroLayout from "./../../../../layouts/portfolio.layout.astro"
-import { sortPostsDesc } from "./../../../../utilities/helpers"
+import PortfolioLayoutAstro from "./../../../../layouts/portfolio.layout.astro"
+import { sortPostsDesc } from "../../../../utilities/helpers.utilities"
 import * as main from "./../../../../content/index/main.md"
 
 export async function getStaticPaths({ paginate }: any) {
@@ -24,4 +24,4 @@ const { category } = Astro.params
 const { page } = Astro.props
 ---
 
-<PortfolioAstroLayout page={page} category={category} portfolioRoute="../../1" categoriesRoute="../"/>
+<PortfolioLayoutAstro page={page}/>
