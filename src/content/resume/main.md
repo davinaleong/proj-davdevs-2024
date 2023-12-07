@@ -1,8 +1,11 @@
 ---
-title: "Davina Leong"
-draft: 0
+title: "Resume"
+draft: 1
 
-introduction: "With 8 years of experience as a skilled full-stack web developer, I am actively seeking a challenging position that can fully leverage my expertise in Laravel, React, and REST API development. My unrelenting passion for learning and my self-driven attitude make me a true asset to any team. I am eager to make a meaningful contribution to a forward-thinking and innovative organization."
+overview: {
+    name: "Davina Leong",
+    introduction: "With 8 years of experience as a skilled full-stack web developer, I am actively seeking a challenging position that can fully leverage my expertise in Laravel, React, and REST API development. My unrelenting passion for learning and my self-driven attitude make me a true asset to any team. I am eager to make a meaningful contribution to a forward-thinking and innovative organization.",
+}
 
 links: [
     {
