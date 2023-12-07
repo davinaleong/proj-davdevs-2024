@@ -19,6 +19,16 @@
     --_section-bg-img: url("/src/assets/images/footer-mobile.svg");
     --_section-bg-position: bottom center;
   }
+
+  ul {
+    list-style-type: disc;
+    margin-inline-start: theme("padding.4");
+  }
+
+  ol {
+    list-style-type: decimal;
+    margin-inline-start: theme("padding.4");
+  }
 }
 
 .text-grid {
