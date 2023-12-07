@@ -3,9 +3,9 @@ import "./../styles/app.scss"
 // import favicon from "./../assets/images/logo-png-32x32.png"
 import favicon from "./../assets/images/logo-svg.svg"
 
-import PrimaryHeader from "../components/primary-header.astro"
-import PrimaryFooter from "../components/primary-footer.astro"
-import CookieDialog from "../components/cookie-dialog.astro"
+import PrimaryHeaderComponentAstro from "../components/primary-header.component.astro"
+import PrimaryFooterComponentAstro from "../components/primary-footer.component.astro"
+import CookieDialogComponentAstro from "../components/cookie-dialog.component.astro"
 
 const { title = `` } = Astro.props
 const theTitle: string = title === `` ? `Dav/Devs` : `Dav/Devs - ${title}`
@@ -25,7 +25,7 @@ const home: boolean = currentPath === `/`
 			crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<PrimaryHeader />
+		<PrimaryHeaderComponentAstro />
 
         <main class="primary-main container-q container-q-primary-main">
             <button class="btn btn-theme" type="button" data-element="btn-theme">
@@ -42,8 +42,8 @@ const home: boolean = currentPath === `/`
             <slot />
         </main>
 
-        <PrimaryFooter />
+        <PrimaryFooterComponentAstro />
 
-        {home && <CookieDialog />}
+        {home && <CookieDialogComponentAstro />}
 	</body>
 </html>
