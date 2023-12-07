@@ -4,11 +4,17 @@ import dayjs from "dayjs"
 import Main from "../layouts/main.astro"
 import { sort, sortPostsDesc } from "./../utilities/helpers"
 
-import * as resume from "../content/resume.md"
+import * as resume from "../content/resume/main.md"
 const { title, overview, skills, talks, hobbies } = resume.frontmatter
 
 const experiencePosts = await Astro.glob('./../content/resume/experience/*.md')
 const experiences = sortPostsDesc(experiencePosts.filter(post => !post.frontmatter.draft), "start")
+
+const educationPosts = await Astro.glob('./../content/resume/education/*.md')
+const education = sortPostsDesc(educationPosts.filter(post => !post.frontmatter.draft), "start")
+
+const certificatesPosts = await Astro.glob('./../content/resume/certificates/*.md')
+const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontmatter.draft), "start")
 ---
 
 <Main title="Resume">
@@ -78,32 +84,30 @@ const experiences = sortPostsDesc(experiencePosts.filter(post => !post.frontmatt
           <!-- ./Objective -->
 
           <!-- Skills -->
-          {
-            () => {
-              const { draft, title, content } = skills
-              if (!draft) {
-                return (
-                  <>
-                    <h2
-                      id="resume-skills"
-                      class="section-hero-resume__heading | text-3xl font-bold"
-                    >
-                      {title}
-                    </h2>
+          {() => {
+            const { draft, title, content } = skills
+            if (!draft) {
+              return (
+                <>
+                  <h2
+                    id="resume-skills"
+                    class="section-hero-resume__heading | text-3xl font-bold"
+                  >
+                    {title}
+                  </h2>
 
-                    {content.map(({ label, value }) => {
-                      return (
-                        <>
-                          <h3 class="font-bold">{label}</h3>
-                          <p class="text-sm">{value}</p>
-                        </>
-                      )
-                    })}
-                  </>
-                )
-              }
+                  {content.map(({ label, value }) => {
+                    return (
+                      <>
+                        <h3 class="font-bold">{label}</h3>
+                        <p class="text-sm">{value}</p>
+                      </>
+                    )
+                  })}
+                </>
+              )
             }
-          }
+          }}
           <!-- ./Skills -->
 
           <!-- Experience -->
@@ -120,7 +124,7 @@ const experiences = sortPostsDesc(experiencePosts.filter(post => !post.frontmatt
             const endDate = end.toLowerCase() === `present` ? end : dayjs(end).format(`MMM YYYY`)
             return (
               <>
-                <div class="flow text-sm mt-4" style="--_flow-spacer: 0.5em">
+                <div class="flow text-sm mt-5" style="--_flow-spacer: 0.5em">
                   <p class="text-grid text-sm">
                     <span class="text-grid__label | font-bold">Company:</span>
                     <span>{title}</span>
@@ -152,59 +156,32 @@ const experiences = sortPostsDesc(experiencePosts.filter(post => !post.frontmatt
           <!-- Education -->
           <h2 id="resume-education" class="text-2xl font-bold">Education</h2>
 
-          <div class="flow" style="--_flow-spacer: 0.5em">
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Qualification:</span>
-              <span> Certificate </span>
-            </p>
+          {education.map(({ frontmatter, Content }) => {
+            const { title, start, end, subtitle } = frontmatter
+            const startDate = dayjs(start).format(`MMM YYYY`)
+            const endDate = end.toLowerCase() === `present` ? end : dayjs(end).format(`MMM YYYY`)
 
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Period:</span>
-              <span> May 2022 &ndash; May 2023 </span>
-            </p>
+            return (
+              <div class="flow text-sm mt-5"  style="--_flow-spacer: 0.5em">
+                <p class="text-grid | text-sm">
+                  <span class="text-grid__label | font-bold">Qualification:</span>
+                  <span>{title}</span>
+                </p>
 
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Institiution:</span>
-              <span> Orchard Road, Singapore </span>
-            </p>
-          </div>
-          <!-- ./flow -->
+                <p class="text-grid | text-sm">
+                  <span class="text-grid__label | font-bold">Period:</span>
+                  <span> {startDate} &ndash; {endDate} </span>
+                </p>
 
-          <div class="flow" style="--_flow-spacer: 0.5em">
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Qualification:</span>
-              <span> Certificate </span>
-            </p>
+                <p class="text-grid | text-sm">
+                  <span class="text-grid__label | font-bold">Institiution:</span>
+                  <span> {subtitle} </span>
+                </p>
 
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Period:</span>
-              <span> May 2022 &ndash; May 2023 </span>
-            </p>
-
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Institiution:</span>
-              <span> Orchard Road, Singapore </span>
-            </p>
-          </div>
-          <!-- ./flow -->
-
-          <div class="flow" style="--_flow-spacer: 0.5em">
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Qualification:</span>
-              <span> Certificate </span>
-            </p>
-
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Period:</span>
-              <span> May 2022 &ndash; May 2023 </span>
-            </p>
-
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Institiution:</span>
-              <span> Orchard Road, Singapore </span>
-            </p>
-          </div>
-          <!-- ./flow -->
+                <Content />
+              </div>
+            )
+          })}
           <!-- ./Education -->
 
           <!-- Certificate -->
@@ -212,59 +189,29 @@ const experiences = sortPostsDesc(experiencePosts.filter(post => !post.frontmatt
             Certificates
           </h2>
 
-          <div class="flow" style="--_flow-spacer: 0.5em">
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Certificate:</span>
-              <span> Lorem Ipsum </span>
-            </p>
+          {certificates.map(({ frontmatter }) => {
+            const { title, date, subtitle } = frontmatter
+            const dateStr = dayjs(date).format(`MMM YYYY`)
 
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Date:</span>
-              <span> May 2022 </span>
-            </p>
+            return (
+              <div class="flow text-sm mt-5"  style="--_flow-spacer: 0.5em">
+                <p class="text-grid | text-sm">
+                  <span class="text-grid__label | font-bold">Certificate:</span>
+                  <span>{ title }</span>
+                </p>
 
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Institiution:</span>
-              <span> Orchard Road, Singapore </span>
-            </p>
-          </div>
-          <!-- ./flow -->
+                <p class="text-grid | text-sm">
+                  <span class="text-grid__label | font-bold">Date:</span>
+                  <span>{ date }</span>
+                </p>
 
-          <div class="flow" style="--_flow-spacer: 0.5em">
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Certificate:</span>
-              <span> Lorem Ipsum </span>
-            </p>
-
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Date:</span>
-              <span> May 2022 </span>
-            </p>
-
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Institiution:</span>
-              <span> Orchard Road, Singapore </span>
-            </p>
-          </div>
-          <!-- ./flow -->
-
-          <div class="flow" style="--_flow-spacer: 0.5em">
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Certificate:</span>
-              <span> Lorem Ipsum </span>
-            </p>
-
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Date:</span>
-              <span> May 2022 </span>
-            </p>
-
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Institiution:</span>
-              <span> Orchard Road, Singapore </span>
-            </p>
-          </div>
-          <!-- ./flow -->
+                <p class="text-grid | text-sm">
+                  <span class="text-grid__label | font-bold">Institiution:</span>
+                  <span>{ subtitle }</span>
+                </p>  
+              </div>
+            )
+          })}
           <!-- ./Certificates -->
 
           <!-- Talkes -->
