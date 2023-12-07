@@ -1,7 +1,8 @@
 ---
 import Main from "../layouts/main.astro"
 
-import * as main from "../content/resume/main.md"
+import * as resume from "../content/resume.md"
+const { title, overview, skills, talks, hobbies } = resume.frontmatter
 ---
 
 <Main title="Resume">
@@ -13,7 +14,7 @@ import * as main from "../content/resume/main.md"
           <h1
             class="section-hero-home__heading | text-center text-4xl font-bold text-neutral-50"
           >
-            {main.frontmatter.title}
+            {title}
           </h1>
         </div>
       </section>
@@ -24,58 +25,79 @@ import * as main from "../content/resume/main.md"
       >
         <div class="wrapper section__wrapper | mx-auto p-4 flow">
           <!-- Objective -->
-          <div class="flex items-center justify-between g-4">
-            <h2
-              id="resume-objective"
-              class="section-hero-resume__heading | text-4xl font-bold"
-            >
-              {main.frontmatter.overview.name}
-            </h2>
-
-            <div>
-              <button
-                class="btn btn-print"
-                type="button"
-                data-element="btn-print"
-              >
-                <i class="fa-light fa-light fa-print"></i> Print
-              </button>
-            </div>
-          </div>
-
-          <div class="flow" style="--_flow-spacer: 0.5em">
-            {main.frontmatter.links.map(({ title, label, link, target }) => {
-              const targetAttr = target === `` ? `_self` : `${target}`
-              const aEl = link === `` ? label : (<a href={link} target={target}>{label}</a>)
-
+          {() => {
+            const { title, draft, description, content } = overview
+            if (!draft) {
               return (
-              <p class="text-grid | text-sm">
-                <span class="text-grid__label | font-bold">{title}</span>
-                <span>{aEl}</span>
-              </p>
-              )
-            })}
-          </div>
+                <>
+                  <div class="flex items-center justify-between g-4">
+                    <h2
+                      id="resume-objective"
+                      class="section-hero-resume__heading | text-4xl font-bold"
+                    >
+                      {title}
+                    </h2>
 
-          <p class="text-sm">{main.frontmatter.overview.overview}</p>
+                    <div>
+                      <button
+                        class="btn btn-print"
+                        type="button"
+                        data-element="btn-print"
+                      >
+                        <i class="fa-light fa-light fa-print"></i> Print
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="flow" style="--_flow-spacer: 0.5em">
+                    {content.map(({ title, label, link, target }) => {
+                      const targetAttr = target === `` ? `_self` : `${target}`
+                      const aEl = link === `` ? label : (<a href={link} target={target}>{label}</a>)
+
+                      return (
+                      <p class="text-grid | text-sm">
+                        <span class="text-grid__label | font-bold">{title}</span>
+                        <span>{aEl}</span>
+                      </p>
+                      )
+                    })}
+                  </div>
+
+                  <p class="text-sm">{description}</p>
+                </>
+              )
+              
+            }
+          }}
           <!-- ./Objective -->
 
           <!-- Skills -->
-          <h2
-            id="resume-skills"
-            class="section-hero-resume__heading | text-3xl font-bold"
-          >
-            Skills
-          </h2>
+          {
+            () => {
+              const { draft, title, content } = skills
+              if (!draft) {
+                return (
+                  <>
+                    <h2
+                      id="resume-skills"
+                      class="section-hero-resume__heading | text-3xl font-bold"
+                    >
+                      {title}
+                    </h2>
 
-          {main.frontmatter.skills.map(({ label, value }) => {
-            return (
-              <>
-                <h3 class="font-bold">{label}</h3>
-                <p class="text-sm">{value}</p>
-              </>
-            )
-          })}
+                    {content.map(({ label, value }) => {
+                      return (
+                        <>
+                          <h3 class="font-bold">{label}</h3>
+                          <p class="text-sm">{value}</p>
+                        </>
+                      )
+                    })}
+                  </>
+                )
+              }
+            }
+          }
           <!-- ./Skills -->
 
           <!-- Experience -->
@@ -396,24 +418,46 @@ import * as main from "../content/resume/main.md"
           <!-- ./Certificates -->
 
           <!-- Talkes -->
-          <h2 id="resume-talks" class="text-2xl font-bold">Talks</h2>
+          {
+            () => {
+              const { title, draft, content } = talks
+              if (!draft) {
+                return (
+                <>
+                  <h2 id="resume-talks" class="text-2xl font-bold">{title}</h2>
 
-          <ul class="list">
-            <li><a href="#">A Healthy Lifestyle</a></li>
-            <li><a href="#">CraftCMS</a></li>
-          </ul>
+                  <ul class="list">
+                    {content.map(({ label, link, target }) => {
+                      const targetAttr = target === `` ? `_self` : `${target}`
+                      return (
+                        <li><a href={link} target={targetAttr}>{label}</a></li>
+                      )
+                    })}
+                  </ul>
+                </>
+                )
+              }
+            }
+          }
+          
           <!-- ./Talkes -->
 
           <!-- Hobbies -->
-          <h2 id="resume-hobbies" class="text-2xl font-bold">Hobbies</h2>
+          {() => {
+            const { title, draft, content } = hobbies
+            if (!draft) {
+              return (
+                <>
+                  <h2 id="resume-hobbies" class="text-2xl font-bold">{title}</h2>
 
-          <ul class="list">
-            <li>Spending time with Jesus</li>
-            <li>Programming</li>
-            <li>Food</li>
-            <li>Board & card games</li>
-            <li>Gym</li>
-          </ul>
+                  <ul class="list">
+                    {content.map(({ label }) => <li>{label}</li>)}
+                  </ul>
+                </>
+              )
+            }
+          }}
+          
           <!-- ./Talks -->
         </div>
         <!-- ./wrapper -->
