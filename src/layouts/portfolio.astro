@@ -1,0 +1,227 @@
+---
+import Main from "../layouts/main.astro"
+
+import * as portfolio from "../content/portfolio/main.md"
+const { title, categories } = portfolio.frontmatter
+---
+<Main title={title}>
+    <section
+        id="portfolio-hero"
+        class="section section-portfolio section-portfolio-hero"
+      >
+        <div class="wrapper section__wrapper mx-auto p-4 | flow">
+          <h1
+            class="section-hero-home__heading | text-5xl font-bold text-neutral-50 uppercase"
+          >
+            {title}
+          </h1>
+        </div>
+        <!-- ./wrapper -->
+      </section>
+
+      <section
+        id="portfolio-projects"
+        class="section section-portfolio section-portfolio-projects"
+      >
+        <div class="wrapper section__wrapper | mx-auto p-4 flow">
+          <nav class="filters">
+            <a href="./" class="btn btn-filter btn-filter-all">All</a>
+            {categories.map(({ label, slug, categoryClass }) => <a href={`./${slug}`} class={`btn btn-filter ${categoryClass}`}>{label}</a>)}
+          </nav>
+
+          <div class="cards-grid">
+            <div class="card">
+              <img
+                src="/src/assets/images/project.png"
+                alt="Project Screenshot"
+                class="card__img"
+              />
+              <div class="card__overlay | flow">
+                <h3 class="card__overlay__heading">
+                  <a href="project/">Project Title</a>
+                </h3>
+              </div>
+              <!-- ./card__overlay -->
+            </div>
+            <!-- ./card -->
+
+            <div class="card">
+              <img
+                src="/src/assets/images/project.png"
+                alt="Project Screenshot"
+                class="card__img"
+              />
+              <div class="card__overlay | flow mx-auto">
+                <h3 class="card__overlay__heading">
+                  <a href="project/">Project Title</a>
+                </h3>
+              </div>
+              <!-- ./card__overlay -->
+            </div>
+            <!-- ./card -->
+            <div class="card">
+              <img
+                src="/src/assets/images/project.png"
+                alt="Project Screenshot"
+                class="card__img"
+              />
+              <div class="card__overlay | flow">
+                <h3 class="card__overlay__heading">
+                  <a href="project/">Project Title</a>
+                </h3>
+              </div>
+              <!-- ./card__overlay -->
+            </div>
+            <!-- ./card -->
+
+            <div class="card">
+              <img
+                src="/src/assets/images/project.png"
+                alt="Project Screenshot"
+                class="card__img"
+              />
+              <div class="card__overlay | flow mx-auto">
+                <h3 class="card__overlay__heading">
+                  <a href="project/">Project Title</a>
+                </h3>
+              </div>
+              <!-- ./card__overlay -->
+            </div>
+            <!-- ./card -->
+            <div class="card">
+              <img
+                src="/src/assets/images/project.png"
+                alt="Project Screenshot"
+                class="card__img"
+              />
+              <div class="card__overlay | flow">
+                <h3 class="card__overlay__heading">
+                  <a href="project/">Project Title</a>
+                </h3>
+              </div>
+              <!-- ./card__overlay -->
+            </div>
+            <!-- ./card -->
+
+            <div class="card">
+              <img
+                src="/src/assets/images/project.png"
+                alt="Project Screenshot"
+                class="card__img"
+              />
+              <div class="card__overlay | flow mx-auto">
+                <h3 class="card__overlay__heading">
+                  <a href="project/">Project Title</a>
+                </h3>
+              </div>
+              <!-- ./card__overlay -->
+            </div>
+            <!-- ./card -->
+            <div class="card">
+              <img
+                src="/src/assets/images/project.png"
+                alt="Project Screenshot"
+                class="card__img"
+              />
+              <div class="card__overlay | flow">
+                <h3 class="card__overlay__heading">
+                  <a href="project/">Project Title</a>
+                </h3>
+              </div>
+              <!-- ./card__overlay -->
+            </div>
+            <!-- ./card -->
+
+            <div class="card">
+              <img
+                src="/src/assets/images/project.png"
+                alt="Project Screenshot"
+                class="card__img"
+              />
+              <div class="card__overlay | flow mx-auto">
+                <h3 class="card__overlay__heading">
+                  <a href="project/">Project Title</a>
+                </h3>
+              </div>
+              <!-- ./card__overlay -->
+            </div>
+            <!-- ./card -->
+            <div class="card">
+              <img
+                src="/src/assets/images/project.png"
+                alt="Project Screenshot"
+                class="card__img"
+              />
+              <div class="card__overlay | flow">
+                <h3 class="card__overlay__heading">
+                  <a href="project/">Project Title</a>
+                </h3>
+              </div>
+              <!-- ./card__overlay -->
+            </div>
+            <!-- ./card -->
+
+            <div class="card">
+              <img
+                src="/src/assets/images/project.png"
+                alt="Project Screenshot"
+                class="card__img"
+              />
+              <div class="card__overlay | flow mx-auto">
+                <h3 class="card__overlay__heading">
+                  <a href="project/">Project Title</a>
+                </h3>
+              </div>
+              <!-- ./card__overlay -->
+            </div>
+            <!-- ./card -->
+            <div class="card">
+              <img
+                src="/src/assets/images/project.png"
+                alt="Project Screenshot"
+                class="card__img"
+              />
+              <div class="card__overlay | flow">
+                <h3 class="card__overlay__heading">
+                  <a href="project/">Project Title</a>
+                </h3>
+              </div>
+              <!-- ./card__overlay -->
+            </div>
+            <!-- ./card -->
+
+            <div class="card">
+              <img
+                src="/src/assets/images/project.png"
+                alt="Project Screenshot"
+                class="card__img"
+              />
+              <div class="card__overlay | flow mx-auto">
+                <h3 class="card__overlay__heading">
+                  <a href="project/">Project Title</a>
+                </h3>
+              </div>
+              <!-- ./card__overlay -->
+            </div>
+            <!-- ./card -->
+          </div>
+          <!-- ./card-grid -->
+
+          <nav class="pagination">
+            <a href="#" class="pagination__link">1</a>
+            <span class="pagination__item">&hellip;</span>
+            <a href="#" class="pagination__link">3</a>
+            <a href="#" class="pagination__link" data-active="true">4</a>
+            <a href="#" class="pagination__link">5</a>
+            <span class="pagination__item">&hellip;</span>
+            <a href="#" class="pagination__link">7</a>
+          </nav>
+        </div>
+        <!-- ./wrapper -->
+      </section>
+
+      <div
+        id="portfolio-end"
+        class="section section-portfolio section-portfolio-end"
+      ></div>
+</Main>

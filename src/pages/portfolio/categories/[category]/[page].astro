@@ -1,0 +1,27 @@
+---
+import PortfolioAstroLayout from "./../../../../layouts/portfolio.layout.astro"
+import { sortPostsDesc } from "./../../../../utilities/helpers"
+import * as main from "./../../../../content/index/main.md"
+
+export async function getStaticPaths({ paginate }: any) {
+  const { categories } = main.frontmatter
+  const publishedCategories = categories.filter(
+    (category: any) => !category.draft
+  )
+
+  const projectPages = await Astro.glob("./../../../projects/*.md")
+
+  return publishedCategories.map(({ slug }: any) => {
+    const projects = sortPostsDesc(projectPages.filter((post) => !post.frontmatter.draft && post.frontmatter.category === slug), "date")
+    return paginate(projects, {
+      params: { category: slug },
+      pageSize: import.meta.env.PER_PAGE
+    })
+  })
+}
+
+const { category } = Astro.params
+const { page } = Astro.props
+---
+
+<PortfolioAstroLayout page={page} category={category} portfolioRoute="../../1" categoriesRoute="../"/>

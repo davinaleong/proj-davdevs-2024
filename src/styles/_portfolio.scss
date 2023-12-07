@@ -41,7 +41,7 @@
     background-color: var(--_btn-hover-bg-clr);
   }
 
-  &__all {
+  &-all {
     --_btn-clr: theme("colors.neutral.50");
     --_btn-bg-clr: theme("colors.neutral.500");
     --_btn-border-clr: theme("colors.neutral.500");
@@ -50,7 +50,7 @@
     --_btn-hover-border-clr: theme("colors.neutral.700");
   }
 
-  &__html {
+  &-html {
     --_btn-clr: theme("colors.neutral.50");
     --_btn-bg-clr: theme("colors.html.base");
     --_btn-border-clr: theme("colors.html.base");
@@ -59,7 +59,7 @@
     --_btn-hover-border-clr: theme("colors.html.light");
   }
 
-  &__css {
+  &-css {
     --_btn-clr: theme("colors.neutral.50");
     --_btn-bg-clr: theme("colors.css.base");
     --_btn-border-clr: theme("colors.css.base");
@@ -68,7 +68,7 @@
     --_btn-border-clr: theme("colors.css.light");
   }
 
-  &__sass {
+  &-sass {
     --_btn-clr: theme("colors.neutral.50");
     --_btn-bg-clr: theme("colors.sass.base");
     --_btn-border-clr: theme("colors.sass.base");
@@ -77,7 +77,7 @@
     --_btn-border-clr: theme("colors.sass.light");
   }
 
-  &__bootstrap {
+  &-bootstrap {
     --_btn-clr: theme("colors.neutral.50");
     --_btn-bg-clr: theme("colors.bootstrap.base");
     --_btn-border-clr: theme("colors.bootstrap.base");
@@ -86,7 +86,7 @@
     --_btn-hover-border-clr: theme("colors.bootstrap.light");
   }
 
-  &__javascript {
+  &-javascript {
     --_btn-clr: theme("colors.neutral.950");
     --_btn-bg-clr: theme("colors.javascript.base");
     --_btn-border-clr: theme("colors.javascript.base");
@@ -95,7 +95,7 @@
     --_btn-hover-border-clr: theme("colors.javascript.dark");
   }
 
-  &__php {
+  &-php {
     --_btn-clr: theme("colors.neutral.50");
     --_btn-bg-clr: theme("colors.php.base");
     --_btn-border-clr: theme("colors.php.base");
@@ -104,7 +104,7 @@
     --_btn-hover-border-clr: theme("colors.php.light");
   }
 
-  &__laravel {
+  &-laravel {
     --_btn-clr: theme("colors.neutral.50");
     --_btn-bg-clr: theme("colors.laravel.base");
     --_btn-border-clr: theme("colors.laravel.base");
@@ -113,7 +113,7 @@
     --_btn-hover-border-clr: theme("colors.laravel.light");
   }
 
-  &__sql {
+  &-sql {
     --_btn-clr: theme("colors.neutral.50");
     --_btn-bg-clr: theme("colors.sql.base");
     --_btn-border-clr: theme("colors.sql.base");
@@ -122,7 +122,7 @@
     --_btn-hover-border-clr: theme("colors.sql.light");
   }
 
-  &__astro {
+  &-astro {
     --_btn-clr: theme("colors.neutral.50");
     --_btn-bg-clr: theme("colors.astro.base");
     --_btn-border-clr: theme("colors.astro.base");
@@ -131,7 +131,7 @@
     --_btn-hover-border-clr: theme("colors.astro.light");
   }
 
-  &__react {
+  &-react {
     --_btn-clr: theme("colors.neutral.950");
     --_btn-bg-clr: theme("colors.react.base");
     --_btn-border-clr: theme("colors.react.base");
