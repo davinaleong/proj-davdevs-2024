@@ -1,6 +1,6 @@
 ---
 title: "Resume"
-draft: 1
+draft: 0
 
 overview: {
     name: "Davina Leong",
