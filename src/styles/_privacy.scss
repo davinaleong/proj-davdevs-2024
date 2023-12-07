@@ -24,6 +24,30 @@
     --_section-bg-img: url("/src/assets/images/footer-mobile.svg");
     --_section-bg-position: bottom center;
   }
+
+  h2 {
+    font-size: theme("fontSize.3xl");
+    font-weight: theme("fontWeight.bold");
+  }
+
+  h3 {
+    font-size: theme("fontSize.2xl");
+    font-weight: theme("fontWeight.bold");
+  }
+
+  h4 {
+    font-size: theme("fontSize.xl");
+    font-weight: theme("fontWeight.bold");
+  }
+
+  h5 {
+    font-size: theme("fontSize.lg");
+    font-weight: theme("fontWeight.bold");
+  }
+
+  h6 {
+    font-weight: theme("fontWeight.bold");
+  }
 }
 
 .theme-dark,
