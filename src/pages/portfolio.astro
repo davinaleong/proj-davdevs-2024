@@ -1,7 +1,10 @@
 ---
-import Main from "../layouts/main.astro";
+import Main from "../layouts/main.astro"
+
+import * as portfolio from "../content/portfolio/main.md"
+const { title } = portfolio.frontmatter
 ---
-<Main title="Portfolio">
+<Main title={title}>
     <section
         id="portfolio-hero"
         class="section section-portfolio section-portfolio-hero"
@@ -10,7 +13,7 @@ import Main from "../layouts/main.astro";
           <h1
             class="section-hero-home__heading | text-5xl font-bold text-neutral-50 uppercase"
           >
-            Portfolio
+            {title}
           </h1>
         </div>
         <!-- ./wrapper -->

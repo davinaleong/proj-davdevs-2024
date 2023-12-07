@@ -1,7 +1,9 @@
 ---
 import Main from "../layouts/main.astro"
+import * as privacyPolicy from "../content/privacy-policy/main.md"
+const { title } = privacyPolicy.frontmatter
 ---
-<Main title="Privacy Policy">
+<Main title={title}>
     <section
         id="privacy-hero"
         class="section section-half section-privacy section-privacy-hero"
@@ -10,7 +12,7 @@ import Main from "../layouts/main.astro"
           <h1
             class="section-hero-home__heading | text-center text-4xl font-bold text-neutral-50"
           >
-            Privacy Policy
+            {title}
           </h1>
         </div>
       </section>

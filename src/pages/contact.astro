@@ -1,7 +1,9 @@
 ---
-import Main from "../layouts/main.astro";
+import Main from "../layouts/main.astro"
+import * as contact from "../content/contact/main.md"
+const { title } = contact.frontmatter
 ---
-<Main title="Contact">
+<Main title={title}>
   <section
   id="contact-hero"
   class="section section-contact section-contact-hero"
@@ -10,7 +12,7 @@ import Main from "../layouts/main.astro";
     <h1
       class="section-hero-home__heading | text-5xl font-bold text-neutral-50 uppercase"
     >
-      Contact
+      {title}
     </h1>
   </div>
   <!-- ./wrapper -->

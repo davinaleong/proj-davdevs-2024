@@ -1,7 +1,9 @@
 ---
-import Main from "../layouts/main.astro";
+import Main from "../layouts/main.astro"
+import * as funny from "../content/funny/main.md"
+const { title } = funny.frontmatter
 ---
-<Main title="Funny">
+<Main title={title}>
     <section
         id="funny-hero"
         class="section section-funny section-funny-hero"
@@ -10,7 +12,7 @@ import Main from "../layouts/main.astro";
           <h1
             class="section-hero-home__heading | text-5xl font-bold text-neutral-50 uppercase"
           >
-            Funny😆
+            {title}
           </h1>
         </div>
         <!-- ./wrapper -->

@@ -17,7 +17,7 @@ const certificatesPosts = await Astro.glob('./../content/resume/certificates/*.m
 const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontmatter.draft), "start")
 ---
 
-<Main title="Resume">
+<Main title={title}>
     <section
         id="resume-hero"
         class="section section-half section-resume-hero"
