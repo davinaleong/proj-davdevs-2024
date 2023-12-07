@@ -2,7 +2,6 @@
 import Main from "../layouts/main.astro"
 
 import * as main from "../content/resume/main.md"
-console.log(main.frontmatter, main.frontmatter.title)
 ---
 
 <Main title="Resume">
@@ -14,7 +13,7 @@ console.log(main.frontmatter, main.frontmatter.title)
           <h1
             class="section-hero-home__heading | text-center text-4xl font-bold text-neutral-50"
           >
-            Resume
+            {main.frontmatter.title}
           </h1>
         </div>
       </section>
@@ -30,7 +29,7 @@ console.log(main.frontmatter, main.frontmatter.title)
               id="resume-objective"
               class="section-hero-resume__heading | text-4xl font-bold"
             >
-              Davina Leong
+              {main.frontmatter.overview.name}
             </h2>
 
             <div>
@@ -45,50 +44,20 @@ console.log(main.frontmatter, main.frontmatter.title)
           </div>
 
           <div class="flow" style="--_flow-spacer: 0.5em">
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Address:</span>
-              <span>West, Singapore</span>
-            </p>
+            {main.frontmatter.links.map(({ title, label, link, target }) => {
+              const targetAttr = target === `` ? `_self` : `${target}`
+              const aEl = link === `` ? label : (<a href={link} target={target}>{label}</a>)
 
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Email:</span>
-              <span>
-                <a href="mailto:leong.shi.yun@gmail.com">
-                  leong.shi.yun@gmail.com
-                </a>
-              </span>
-            </p>
-
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">LinkedIn:</span>
-              <span>
-                <a
-                  href="https://www.linkedin.com/in/davina-leong-s9115675g/"
-                  target="_blank"
-                >
-                  davina-leong-s9115675g
-                </a>
-              </span>
-            </p>
-
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">GitHub:</span>
-              <span>
-                <a href="https://github.com/davinaleong" target="_blank">
-                  github.com/davinaleong
-                </a>
-              </span>
-            </p>
-
-            <p class="text-grid | text-sm">
-              <span class="text-grid__label | font-bold">Portfolio:</span>
-              <span>
-                <a href="https://davina-devs.com"> davina-devs.com </a>
-              </span>
-            </p>
+              return (
+              <p class="text-grid | text-sm">
+                <span class="text-grid__label | font-bold">{title}</span>
+                <span>{aEl}</span>
+              </p>
+              )
+            })}
           </div>
 
-          <p class="text-sm">Lorem Ipsum</p>
+          <p class="text-sm">{main.frontmatter.overview.overview}</p>
           <!-- ./Objective -->
 
           <!-- Skills -->
@@ -99,20 +68,14 @@ console.log(main.frontmatter, main.frontmatter.title)
             Skills
           </h2>
 
-          <h3 class="font-bold">Develop</h3>
-          <p class="text-sm">
-            HTML5, CSS3, Responsive web design, JavaScript ES6, PHP, Laravel,
-            SQL, React, Typescript, REST API, GraphQL
-          </p>
-
-          <h3 class="font-bold">Design</h3>
-          <p class="text-sm">XD, Photoshop, Illustrator</p>
-
-          <h3 class="font-bold">DevOps</h3>
-          <p class="text-sm">AWS, Heroku, Netlify</p>
-
-          <h3 class="font-bold">Languages</h3>
-          <p class="text-sm">English, Chinese (Mandarin)</p>
+          {main.frontmatter.skills.map(({ label, value }) => {
+            return (
+              <>
+                <h3 class="font-bold">{label}</h3>
+                <p class="text-sm">{value}</p>
+              </>
+            )
+          })}
           <!-- ./Skills -->
 
           <!-- Experience -->
