@@ -27,19 +27,19 @@ featured: { title: "Digital Projects", draft: 0 }
 
 talks:
   {
-    title: "Knowledge Sharing Hello",
+    title: "Knowledge Sharing",
     draft: 0,
     content:
       [
         {
-          label: "Project Title",
-          link: "#",
-          image: "./src/assets/images/project.png",
+          label: "Latest Post on DEV",
+          link: "https://dev.to/davinaleong/7-useful-js-fiddles-1mg0",
+          image: "latest-dev-post.png",
         },
         {
-          label: "Project Title",
-          link: "#",
-          image: "./src/assets/images/project.png",
+          label: "Talks",
+          link: "https://engineers.sg/episodes/search?search=davina+leong",
+          image: "talks.png",
         },
       ],
   }
