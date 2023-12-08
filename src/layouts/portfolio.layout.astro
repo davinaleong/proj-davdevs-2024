@@ -15,7 +15,7 @@ const publishedCategories: any = categories.filter(({ draft }: any ) => draft ==
 let paginationRoute: string = "/portfolio/"
 let selectedCategory: any = null
 if (category) {
-  selectedCategory = categories.filter((cat: any) => cat.slug === category)[0]
+  selectedCategory = categories.filter(({ slug }: any) => slug === category)[0]
   paginationRoute += `categories/${category}/`
 }
 ---
@@ -40,8 +40,11 @@ if (category) {
       >
         <div class="wrapper section__wrapper | mx-auto p-4 flow">
           <nav class="filters">
-            <a href="./" class="btn btn-skill btn-skill-all">All</a>
-            {publishedCategories.map(({ label, slug, categoryClass }: any) => <a href={`./${slug}/1`} class={`btn btn-skill ${categoryClass}`}>{label}</a>)}
+            <a href="./" class="btn btn-skill btn-skill-all" data-active={`${selectedCategory === null}`}>All</a>
+            {publishedCategories.map(({ label, slug, categoryClass }: any) => {
+              const active: string = `${(selectedCategory !== null && selectedCategory.slug === slug)}`
+              return (<a href={`./${slug}/1`} class={`btn btn-skill ${categoryClass}`} data-active={active}>{label}</a>)
+            })}
           </nav>
 
           <div class="cards-grid">

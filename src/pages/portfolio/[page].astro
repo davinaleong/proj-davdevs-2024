@@ -4,7 +4,7 @@ import { sortPostsDesc } from "../../utilities/helpers.utilities"
 
 export async function getStaticPaths({ paginate }: any) {
   const projectPages = await Astro.glob("./../projects/*.md")
-  console.log(`projectPages`, projectPages)
+  // console.log(`projectPages`, projectPages)
   const projects = sortPostsDesc(projectPages.filter((post) => !post.frontmatter.draft), "date")
   return paginate(projects, { pageSize: import.meta.env.PER_PAGE })
 }

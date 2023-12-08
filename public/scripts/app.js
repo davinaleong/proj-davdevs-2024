@@ -78,7 +78,6 @@ function toggleTheme(cookie) {
   try {
     const body = document.querySelector(`body`)
     if (!body) return
-    console.log(body)
     body.setAttribute(DATA_THEME_ATTR, theme)
 
     const btnThemeEl = getElement(`btn-theme`)
