@@ -1,0 +1,19 @@
+---
+const { page, paginationRoute } = Astro.props
+const { currentPage, lastPage } = page
+
+interface PaginationInterface {
+    page: number,
+    active: boolean,
+}
+
+const firstPage: number = 1
+
+const paginations: PaginationInterface[] = []
+for (let i: number = firstPage; i <= Number(lastPage); ++i) {
+    paginations.push({ page: i, active: (i === Number(currentPage))})
+}
+---
+<nav class="pagination">
+    {paginations.map(({ page, active }: PaginationInterface) => <a href={`${paginationRoute}${page}`} class="pagination__link" data-active={`${active}`}>{page}</a>)}
+</nav>
