@@ -41,10 +41,10 @@ if (category) {
       >
         <div class="wrapper section__wrapper | mx-auto p-4 flow">
           <nav class="filters">
-            <a href="./" class="btn btn-skill btn-skill-all" data-active={`${selectedCategory === null}`}>All</a>
+            <a href={`${categoriesRoute}`}class="btn btn-skill btn-skill-all" data-active={`${selectedCategory === null}`}>All</a>
             {publishedCategories.map(({ label, slug, categoryClass }: any) => {
               const active: string = `${(selectedCategory !== null && selectedCategory.slug === slug)}`
-              return (<a href={`./${slug}/1`} class={`btn btn-skill ${categoryClass}`} data-active={active}>{label}</a>)
+              return (<a href={`${categoriesRoute}${slug}/1`} class={`btn btn-skill ${categoryClass}`} data-active={active}>{label}</a>)
             })}
           </nav>
 
