@@ -3,6 +3,21 @@ import MainLayoutAstro from "./main.layout.astro"
 
 import * as portfolio from "../content/portfolio/main.md"
 const { title, categories } = portfolio.frontmatter
+
+const {
+  page,
+  category,
+  portfolioRoute = "/1/",
+  categoriesRoute = "categories/"
+} = Astro.props
+
+const publishedCategories: any = categories.filter(({ draft }: any ) => draft === 0)
+let paginationRoute: string = "/portfolio/"
+let selectedCategory: any = null
+if (category) {
+  selectedCategory = categories.filter((cat: any) => cat.slug === category)[0]
+  paginationRoute += `categories/${category}/`
+}
 ---
 <MainLayoutAstro title={title}>
     <section
@@ -25,8 +40,8 @@ const { title, categories } = portfolio.frontmatter
       >
         <div class="wrapper section__wrapper | mx-auto p-4 flow">
           <nav class="filters">
-            <a href="./" class="btn btn-filter btn-filter-all">All</a>
-            {categories.map(({ label, slug, categoryClass }) => <a href={`./${slug}/1`} class={`btn btn-filter ${categoryClass}`}>{label}</a>)}
+            <a href="./" class="btn btn-skill btn-skill-all">All</a>
+            {publishedCategories.map(({ label, slug, categoryClass }: any) => <a href={`./${slug}/1`} class={`btn btn-skill ${categoryClass}`}>{label}</a>)}
           </nav>
 
           <div class="cards-grid">
