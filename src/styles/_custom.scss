@@ -125,6 +125,13 @@ a {
     text-decoration: var(--_btn-hover-td);
   }
 
+  &[data-active="true"] {
+    --_btn-border-clr: theme("colors.neutral.50");
+    --_btn-border: 2px solid var(--_btn-border-clr);
+
+    outline: 2px solid theme("colors.neutral.950");
+  }
+
   & > img {
     max-width: var(--_btn-img-size);
     min-height: var(--_btn-img-size);
