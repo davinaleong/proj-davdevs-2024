@@ -167,6 +167,121 @@ a {
 
     box-shadow: theme("boxShadow.md");
   }
+
+  &-skill {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: theme("colors.blue.500");
+    --_btn-border-clr: theme("colors.blue.500");
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: theme("colors.blue.700");
+    --_btn-hover-border-clr: theme("colors.blue.700");
+    --_btn-spacer-inline: theme("padding.3");
+    --_btn-spacer-block: theme("padding.2");
+
+    &:hover {
+      color: var(--_btn-hover-clr);
+      background-color: var(--_btn-hover-bg-clr);
+    }
+
+    &-all {
+      --_btn-clr: theme("colors.neutral.50");
+      --_btn-bg-clr: theme("colors.neutral.500");
+      --_btn-border-clr: theme("colors.neutral.500");
+      --_btn-hover-clr: theme("colors.neutral.50");
+      --_btn-hover-bg-clr: theme("colors.neutral.700");
+      --_btn-hover-border-clr: theme("colors.neutral.700");
+    }
+
+    &-html {
+      --_btn-clr: theme("colors.neutral.50");
+      --_btn-bg-clr: theme("colors.html.base");
+      --_btn-border-clr: theme("colors.html.base");
+      --_btn-hover-clr: theme("colors.neutral.50");
+      --_btn-hover-bg-clr: theme("colors.html.light");
+      --_btn-hover-border-clr: theme("colors.html.light");
+    }
+
+    &-css {
+      --_btn-clr: theme("colors.neutral.50");
+      --_btn-bg-clr: theme("colors.css.base");
+      --_btn-border-clr: theme("colors.css.base");
+      --_btn-hover-clr: theme("colors.neutral.50");
+      --_btn-hover-bg-clr: theme("colors.css.light");
+      --_btn-hover-border-clr: theme("colors.css.light");
+    }
+
+    &-sass {
+      --_btn-clr: theme("colors.neutral.50");
+      --_btn-bg-clr: theme("colors.sass.base");
+      --_btn-border-clr: theme("colors.sass.base");
+      --_btn-hover-clr: theme("colors.neutral.50");
+      --_btn-hover-bg-clr: theme("colors.sass.light");
+      --_btn-hover-border-clr: theme("colors.sass.light");
+    }
+
+    &-bootstrap {
+      --_btn-clr: theme("colors.neutral.50");
+      --_btn-bg-clr: theme("colors.bootstrap.base");
+      --_btn-border-clr: theme("colors.bootstrap.base");
+      --_btn-hover-clr: theme("colors.neutral.50");
+      --_btn-hover-bg-clr: theme("colors.bootstrap.light");
+      --_btn-hover-border-clr: theme("colors.bootstrap.light");
+    }
+
+    &-javascript {
+      --_btn-clr: theme("colors.neutral.950");
+      --_btn-bg-clr: theme("colors.javascript.base");
+      --_btn-border-clr: theme("colors.javascript.base");
+      --_btn-hover-clr: theme("colors.neutral.950");
+      --_btn-hover-bg-clr: theme("colors.javascript.dark");
+      --_btn-hover-border-clr: theme("colors.javascript.dark");
+    }
+
+    &-php {
+      --_btn-clr: theme("colors.neutral.50");
+      --_btn-bg-clr: theme("colors.php.base");
+      --_btn-border-clr: theme("colors.php.base");
+      --_btn-hover-clr: theme("colors.neutral.50");
+      --_btn-hover-bg-clr: theme("colors.php.light");
+      --_btn-hover-border-clr: theme("colors.php.light");
+    }
+
+    &-laravel {
+      --_btn-clr: theme("colors.neutral.50");
+      --_btn-bg-clr: theme("colors.laravel.base");
+      --_btn-border-clr: theme("colors.laravel.base");
+      --_btn-hover-clr: theme("colors.neutral.50");
+      --_btn-hover-bg-clr: theme("colors.laravel.light");
+      --_btn-hover-border-clr: theme("colors.laravel.light");
+    }
+
+    &-sql {
+      --_btn-clr: theme("colors.neutral.50");
+      --_btn-bg-clr: theme("colors.sql.base");
+      --_btn-border-clr: theme("colors.sql.base");
+      --_btn-hover-clr: theme("colors.neutral.50");
+      --_btn-hover-bg-clr: theme("colors.sql.light");
+      --_btn-hover-border-clr: theme("colors.sql.light");
+    }
+
+    &-astro {
+      --_btn-clr: theme("colors.neutral.50");
+      --_btn-bg-clr: theme("colors.astro.base");
+      --_btn-border-clr: theme("colors.astro.base");
+      --_btn-hover-clr: theme("colors.neutral.50");
+      --_btn-hover-bg-clr: theme("colors.astro.light");
+      --_btn-hover-border-clr: theme("colors.astro.light");
+    }
+
+    &-react {
+      --_btn-clr: theme("colors.neutral.950");
+      --_btn-bg-clr: theme("colors.react.base");
+      --_btn-border-clr: theme("colors.react.base");
+      --_btn-hover-clr: theme("colors.neutral.950");
+      --_btn-hover-bg-clr: theme("colors.react.dark");
+      --_btn-hover-border-clr: theme("colors.react.dark");
+    }
+  }
 }
 
 .container-q {

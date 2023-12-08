@@ -10,16 +10,16 @@ skills:
     draft: 0,
     content:
       [
-        { label: "HTML", skillClass: "skill__html" },
-        { label: "CSS", skillClass: "skill__css" },
-        { label: "JavaScript", skillClass: "skill__javascript" },
-        { label: "SASS", skillClass: "skill__sass" },
-        { label: "Bootstrap", skillClass: "skill__bootstrap" },
-        { label: "React", skillClass: "skill__react" },
-        { label: "SQL", skillClass: "skill__sql" },
-        { label: "PHP", skillClass: "skill__php" },
-        { label: "Laravel", skillClass: "skill__laravel" },
-        { label: "Astro SSG", skillClass: "skill__astro" },
+        { label: "HTML", skillClass: "btn-skill-html" },
+        { label: "CSS", skillClass: "btn-skill-css" },
+        { label: "JavaScript", skillClass: "btn-skill-javascript" },
+        { label: "SASS", skillClass: "btn-skill-sass" },
+        { label: "Bootstrap", skillClass: "btn-skill-bootstrap" },
+        { label: "React", skillClass: "btn-skill-react" },
+        { label: "SQL", skillClass: "btn-skill-sql" },
+        { label: "PHP", skillClass: "btn-skill-php" },
+        { label: "Laravel", skillClass: "btn-skill-laravel" },
+        { label: "Astro SSG", skillClass: "btn-skill-astro" },
       ],
   }
 

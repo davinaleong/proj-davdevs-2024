@@ -3,23 +3,50 @@ title: "Portfolio"
 draft: 0
 categories:
   [
-    { label: "HTML", slug: "html", categoryClass: "btn-filter-html" },
-    { label: "CSS", slug: "css", categoryClass: "btn-filter-css" },
-    { label: "SASS", slug: "sass", categoryClass: "btn-filter-sass" },
+    {
+      label: "HTML",
+      slug: "html",
+      id: "html",
+      categoryClass: "btn-skill-html",
+    },
+    { label: "CSS", slug: "css", id: "css", categoryClass: "btn-skill-css" },
+    {
+      label: "SASS",
+      slug: "sass",
+      id: "sass",
+      categoryClass: "btn-skill-sass",
+    },
     {
       label: "Bootstrap",
       slug: "bootstrap",
-      categoryClass: "btn-filter-bootstrap",
+      id: "bootstrap",
+      categoryClass: "btn-skill-bootstrap",
     },
     {
       label: "JavaScript",
       slug: "javascript",
-      categoryClass: "btn-filter-javascript",
+      id: "javascript",
+      categoryClass: "btn-skill-javascript",
     },
-    { label: "PHP", slug: "php", categoryClass: "btn-filter-php" },
-    { label: "Laravel", slug: "laravel", categoryClass: "btn-filter-laravel" },
-    { label: "SQL", slug: "sql", categoryClass: "btn-filter-sql" },
-    { label: "Astro SSG", slug: "astro", categoryClass: "btn-filter-astro" },
-    { label: "React", slug: "react", categoryClass: "btn-filter-react" },
+    { label: "PHP", slug: "php", id: "php", categoryClass: "btn-skill-php" },
+    {
+      label: "Laravel",
+      slug: "laravel",
+      id: "laravel",
+      categoryClass: "btn-skill-laravel",
+    },
+    { label: "SQL", slug: "sql", id: "sql", categoryClass: "btn-skill-sql" },
+    {
+      label: "Astro SSG",
+      slug: "astro",
+      id: "astro",
+      categoryClass: "btn-skill-astro",
+    },
+    {
+      label: "React",
+      slug: "react",
+      id: "react",
+      categoryClass: "btn-skill-react",
+    },
   ]
 ---

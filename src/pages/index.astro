@@ -41,7 +41,7 @@ const { title, subtitle, slogan, skills, featured, talks, social } = index.front
                   </h2>
 
                   <p class="skills | mx-auto">
-                    {content.map(({ label, skillClass }) => (<span class={`skill ${skillClass} | shadow-md`}>{label}</span>))}
+                    {content.map(({ label, skillClass }) => (<span class={`btn btn-skill ${skillClass} | shadow-md`}>{label}</span>))}
                   </p>
                 </div>
                 <!-- ./wrapper -->
@@ -72,6 +72,10 @@ const { title, subtitle, slogan, skills, featured, talks, social } = index.front
                       <h3 class="card__body__heading | font-bold text-2xl">
                         Project Title
                       </h3>
+
+                      <p>
+                        <a href="#" class="btn btn-skill btn-skill-html">HTML</a>  
+                      </p>
 
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.

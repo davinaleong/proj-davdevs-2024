@@ -26,7 +26,7 @@ const { title, categories } = portfolio.frontmatter
         <div class="wrapper section__wrapper | mx-auto p-4 flow">
           <nav class="filters">
             <a href="./" class="btn btn-filter btn-filter-all">All</a>
-            {categories.map(({ label, slug, categoryClass }) => <a href={`./${slug}`} class={`btn btn-filter ${categoryClass}`}>{label}</a>)}
+            {categories.map(({ label, slug, categoryClass }) => <a href={`./${slug}/1`} class={`btn btn-filter ${categoryClass}`}>{label}</a>)}
           </nav>
 
           <div class="cards-grid">
@@ -37,9 +37,12 @@ const { title, categories } = portfolio.frontmatter
                 class="card__img"
               />
               <div class="card__overlay | flow">
-                <h3 class="card__overlay__heading">
-                  <a href="project/">Project Title</a>
-                </h3>
+                <header class="card__overlay__header">
+                  <h3 class="card__overlay__heading">
+                    <a href="project/">Project Title</a>
+                  </h3>
+                  <span class="btn btn-skill btn-skill-html text-sm">HTML</span>
+                </header>
               </div>
               <!-- ./card__overlay -->
             </div>
@@ -52,9 +55,12 @@ const { title, categories } = portfolio.frontmatter
                 class="card__img"
               />
               <div class="card__overlay | flow mx-auto">
-                <h3 class="card__overlay__heading">
-                  <a href="project/">Project Title</a>
-                </h3>
+                <header class="card__overlay__header">
+                  <h3 class="card__overlay__heading">
+                    <a href="project/">Project Title</a>
+                  </h3>
+                  <span class="btn btn-skill btn-skill-html text-sm">HTML</span>
+                </header>
               </div>
               <!-- ./card__overlay -->
             </div>
@@ -66,9 +72,12 @@ const { title, categories } = portfolio.frontmatter
                 class="card__img"
               />
               <div class="card__overlay | flow">
-                <h3 class="card__overlay__heading">
-                  <a href="project/">Project Title</a>
-                </h3>
+                <header class="card__overlay__header">
+                  <h3 class="card__overlay__heading">
+                    <a href="project/">Project Title</a>
+                  </h3>
+                  <span class="btn btn-skill btn-skill-html text-sm">HTML</span>
+                </header>
               </div>
               <!-- ./card__overlay -->
             </div>
@@ -81,9 +90,12 @@ const { title, categories } = portfolio.frontmatter
                 class="card__img"
               />
               <div class="card__overlay | flow mx-auto">
-                <h3 class="card__overlay__heading">
-                  <a href="project/">Project Title</a>
-                </h3>
+                <header class="card__overlay__header">
+                  <h3 class="card__overlay__heading">
+                    <a href="project/">Project Title</a>
+                  </h3>
+                  <span class="btn btn-skill btn-skill-html text-sm">HTML</span>
+                </header>
               </div>
               <!-- ./card__overlay -->
             </div>
@@ -95,9 +107,12 @@ const { title, categories } = portfolio.frontmatter
                 class="card__img"
               />
               <div class="card__overlay | flow">
-                <h3 class="card__overlay__heading">
-                  <a href="project/">Project Title</a>
-                </h3>
+                <header class="card__overlay__header">
+                  <h3 class="card__overlay__heading">
+                    <a href="project/">Project Title</a>
+                  </h3>
+                  <span class="btn btn-skill btn-skill-html text-sm">HTML</span>
+                </header>
               </div>
               <!-- ./card__overlay -->
             </div>
@@ -110,9 +125,12 @@ const { title, categories } = portfolio.frontmatter
                 class="card__img"
               />
               <div class="card__overlay | flow mx-auto">
-                <h3 class="card__overlay__heading">
-                  <a href="project/">Project Title</a>
-                </h3>
+                <header class="card__overlay__header">
+                  <h3 class="card__overlay__heading">
+                    <a href="project/">Project Title</a>
+                  </h3>
+                  <span class="btn btn-skill btn-skill-html text-sm">HTML</span>
+                </header>
               </div>
               <!-- ./card__overlay -->
             </div>
@@ -124,9 +142,12 @@ const { title, categories } = portfolio.frontmatter
                 class="card__img"
               />
               <div class="card__overlay | flow">
-                <h3 class="card__overlay__heading">
-                  <a href="project/">Project Title</a>
-                </h3>
+                <header class="card__overlay__header">
+                  <h3 class="card__overlay__heading">
+                    <a href="project/">Project Title</a>
+                  </h3>
+                  <span class="btn btn-skill btn-skill-html text-sm">HTML</span>
+                </header>
               </div>
               <!-- ./card__overlay -->
             </div>
@@ -139,9 +160,12 @@ const { title, categories } = portfolio.frontmatter
                 class="card__img"
               />
               <div class="card__overlay | flow mx-auto">
-                <h3 class="card__overlay__heading">
-                  <a href="project/">Project Title</a>
-                </h3>
+                <header class="card__overlay__header">
+                  <h3 class="card__overlay__heading">
+                    <a href="project/">Project Title</a>
+                  </h3>
+                  <span class="btn btn-skill btn-skill-html text-sm">HTML</span>
+                </header>
               </div>
               <!-- ./card__overlay -->
             </div>
@@ -153,9 +177,12 @@ const { title, categories } = portfolio.frontmatter
                 class="card__img"
               />
               <div class="card__overlay | flow">
-                <h3 class="card__overlay__heading">
-                  <a href="project/">Project Title</a>
-                </h3>
+                <header class="card__overlay__header">
+                  <h3 class="card__overlay__heading">
+                    <a href="project/">Project Title</a>
+                  </h3>
+                  <span class="btn btn-skill btn-skill-html text-sm">HTML</span>
+                </header>
               </div>
               <!-- ./card__overlay -->
             </div>
@@ -168,9 +195,12 @@ const { title, categories } = portfolio.frontmatter
                 class="card__img"
               />
               <div class="card__overlay | flow mx-auto">
-                <h3 class="card__overlay__heading">
-                  <a href="project/">Project Title</a>
-                </h3>
+                <header class="card__overlay__header">
+                  <h3 class="card__overlay__heading">
+                    <a href="project/">Project Title</a>
+                  </h3>
+                  <span class="btn btn-skill btn-skill-html text-sm">HTML</span>
+                </header>
               </div>
               <!-- ./card__overlay -->
             </div>
@@ -182,9 +212,12 @@ const { title, categories } = portfolio.frontmatter
                 class="card__img"
               />
               <div class="card__overlay | flow">
-                <h3 class="card__overlay__heading">
-                  <a href="project/">Project Title</a>
-                </h3>
+                <header class="card__overlay__header">
+                  <h3 class="card__overlay__heading">
+                    <a href="project/">Project Title</a>
+                  </h3>
+                  <span class="btn btn-skill btn-skill-html text-sm">HTML</span>
+                </header>
               </div>
               <!-- ./card__overlay -->
             </div>
@@ -197,9 +230,12 @@ const { title, categories } = portfolio.frontmatter
                 class="card__img"
               />
               <div class="card__overlay | flow mx-auto">
-                <h3 class="card__overlay__heading">
-                  <a href="project/">Project Title</a>
-                </h3>
+                <header class="card__overlay__header">
+                  <h3 class="card__overlay__heading">
+                    <a href="project/">Project Title</a>
+                  </h3>
+                  <span class="btn btn-skill btn-skill-html text-sm">HTML</span>
+                </header>
               </div>
               <!-- ./card__overlay -->
             </div>
