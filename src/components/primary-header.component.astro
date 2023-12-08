@@ -3,12 +3,12 @@ import { Image } from 'astro:assets'
 import logo from "../assets/images/logo-white-svg.svg"
 
 const currentPath: string = Astro.url.pathname
-const homePath: string = currentPath === `/` ? '/' : '../'
-const resumePath: string = currentPath === `/` ? 'resume/' : '../resume/'
-const portfolioPath: string = currentPath === `/` ? 'portfolio/1/' : '../portfolio/1/'
-const projectPath: string = currentPath === `/` ? 'project/' : '../project/'
-const contactPath: string = currentPath === `/` ? 'contact/' : '../contact/'
-const funnyPath: string = currentPath === `/` ? 'funny/' : '../funny/'
+const homePath: string = `/`; //currentPath === `/` ? '/' : '../'
+const resumePath: string = `/resume`
+const portfolioPath: string = `/portfolio/1`
+const projectPath: string = `/project`
+const contactPath: string = `/contact`
+const funnyPath: string = `/funny`
 ---
 <header class="primary-header" data-element="primary-header">
     <div class="wrapper primary-header-wrapper mx-auto">
