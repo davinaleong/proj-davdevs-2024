@@ -20,6 +20,9 @@ const COOKIE_YES = `yes`
 const THEME_LIGHT = `light`
 const THEME_DARK = `dark`
 
+const STATUS_ERROR = `ERROR`
+const STATUS_SUCCESS = `SUCCESS`
+
 const COOKIE_DIALOG_DELAY = 3000
 
 const COOKIE_STRINGS = {
@@ -37,7 +40,7 @@ const VALIDATE_MIN_LENGTH_NAME = 1
 const VALIDATE_EMAIL = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
 /// Functions
-function main() {
+async function main() {
   logFunction(`main`)
 
   const cookie = getLocalStorage(KEY_COOKIE)
@@ -46,7 +49,7 @@ function main() {
   toggleTheme(cookie)
   toggleCookieDialog(cookie)
   triggerPrint()
-  contactFormHandler()
+  contactForm()
   fillForm()
 }
 
@@ -178,8 +181,8 @@ function triggerPrint() {
   })
 }
 
-function contactFormHandler() {
-  logFunction(`contactFormHandler`)
+async function contactForm() {
+  logFunction(`contactForm`)
 
   const contactFormEl = getElement(`contact-form`)
   if (!contactFormEl) return
@@ -187,70 +190,45 @@ function contactFormHandler() {
   disableForm(contactFormEl, [false])
   contactFormEl.reset()
 
-  // let errors = []
-  // const firstNameInputEl = contactFormEl.querySelector(
-  //   `input[name="first_name"]`
-  // )
-  // const lastNameInputEl = contactFormEl.querySelector(`input[name="last_name"]`)
-  // const emailInputEl = contactFormEl.querySelector(`input[name="email"]`)
-  // const subjectInputEl = contactFormEl.querySelector(`select[name="subject"]`)
-  // const messageInputEl = contactFormEl.querySelector(`textarea[name="message"]`)
-  // const btnSubmitEl = getElement(`btn-submit`, contactFormEl)
+  contactFormEl.addEventListener(`submit`, (event) =>
+    submitFormHandler(contactFormEl, event)
+  )
+}
 
-  contactFormEl.addEventListener(`submit`, function (event) {
-    disableForm(contactFormEl, [false])
+async function contactFormHandler(formEl, event) {
+  logFunction(`contactFormHandler`)
 
-    let errors = []
-    const firstNameInputEl = contactFormEl.querySelector(
-      `input[name="first_name"]`
-    )
-    const lastNameInputEl = contactFormEl.querySelector(
-      `input[name="last_name"]`
-    )
-    const emailInputEl = contactFormEl.querySelector(`input[name="email"]`)
-    const subjectInputEl = contactFormEl.querySelector(`select[name="subject"]`)
-    const messageInputEl = contactFormEl.querySelector(
-      `textarea[name="message"]`
-    )
-    const btnSubmitEl = getElement(`btn-submit`, contactFormEl)
+  event.preventDefault()
+  disableForm(contactFormEl, [true])
 
-    // console.log(`subjectInputEl`, subjectInputEl.value)
-    // return
+  const form = event.currentTarget
+  const url = form.action
 
-    if (lastNameInputEl.value) {
-      disableForm(contactFormEl, [false])
-      toggleFormAlert(contactFormEl, [errors, ``])
-      errors = []
-      contactFormEl.reset()
-      return
+  try {
+    const formData = new FormData(form)
+    const responseData = await postFormDataAsJson(url, formData)
+    const { message, status, errors } = responseData
+
+    toggleFormAlert(contactFormEl, [
+      true,
+      ``,
+      `Oops 😮!`,
+      `form__alert-danger`,
+      errors,
+    ])
+
+    if (status && status === STATUS_SUCCESS) {
+      toggleFormAlert(contactFormEl, [
+        true,
+        message,
+        `Done 😁.`,
+        `form__alert-danger`,
+        null,
+      ])
     }
-
-    if (firstNameInputEl.value.length <= VALIDATE_MIN_LENGTH_NAME) {
-      errors.push(
-        `The Name field must be at least ${VALIDATE_MIN_LENGTH_NAME} chars long.`
-      )
-    }
-
-    if (emailInputEl.value.length <= VALIDATE_MIN_LENGTH) {
-      errors.push(
-        `The Email field must be at least ${VALIDATE_MIN_LENGTH} chars long.`
-      )
-    }
-
-    if (!VALIDATE_EMAIL.test(emailInputEl.value)) {
-      errors.push(`The Email field is invalid.`)
-    }
-
-    if (!subjectInputEl.value) {
-      errors.push(`The Subject field is required.`)
-    }
-
-    if (messageInputEl.value.length <= VALIDATE_MIN_LENGTH) {
-      errors.push(
-        `The Message field must be at least ${VALIDATE_MIN_LENGTH} chars long.`
-      )
-    }
-  }) // ./addEventListener
+  } catch (error) {
+    console.error(error)
+  }
 }
 
 function disableForm(formEl, params = []) {
@@ -306,24 +284,30 @@ function toggleFormAlert(formEl, params = []) {
   const formAlertEl = getElement(formEl, `form-alert`)
   if (!formAlertEl) return
 
-  const [errors, heading, type] = params
-  if (errors.length >= 0) {
+  const [toggle, message, heading, type, errors] = params
+  if (!toggle) {
     formAlertEl.setAttribute(CLASS_ATTR, `form__alert`)
     formAlertEl.removeAttribute(DATA_ACTIVE_ATTR)
     return
   }
 
   let errorsHtml = ``
-  error.forEach(function (error) {
-    errorsHtml += `<li>${error}</li>`
+  const errorKeys = Object.keys(errors)
+
+  errorKeys.map(function (errorKey) {
+    const errorList = errors[errorKey]
+    errorList.map(function (message) {
+      errorsHtml += `<li>${message}</li>`
+    })
   })
 
   const headingHtml =
     heading === ``
       ? ``
       : `<h3 class="form__alert__header | text-2xl font-bold">${heading}</h3>`
-
-  formAlertEl.innerHTML = `${headingHtml} <ol class="list">${errorsHtml}</ol>`
+  const bodyHtml =
+    message === `` ? `<ol class="list">${errorsHtml}</ol>` : `<p>${message}</p>`
+  formAlertEl.innerHTML = `${headingHtml} ${bodyHtml}`
   formAlertEl.classList.add(type)
   formAlertEl.setAttribute(DATA_ACTIVE_ATTR, String(true))
 }
@@ -464,6 +448,23 @@ function setLocalStorage(key, value = null) {
       console.error(error)
     }
   }
+}
+
+async function postFormDataAsJson(url, formData) {
+  const plainFormData = Object.fromEntries(formData.entries())
+  const formDataJsonString = JSON.stringify(plainFormData)
+
+  const fetchOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: formDataJsonString,
+  }
+
+  const response = await fetch(url, fetchOptions)
+  return response.json()
 }
 
 /// Execution
