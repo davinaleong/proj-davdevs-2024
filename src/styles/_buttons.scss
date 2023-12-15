@@ -41,6 +41,18 @@
     text-decoration: var(--_btn-hover-td);
   }
 
+  &:disabled {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: theme("colors.neutral.300");
+    --_btn-border-clr: theme("colors.neutral.300");
+
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: theme("colors.neutral.300");
+    --_btn-hover-border-clr: theme("colors.neutral.300");
+
+    cursor: not-allowed;
+  }
+
   &[data-active="true"] {
     --_btn-border-clr: theme("colors.neutral.50");
     --_btn-border: 2px solid var(--_btn-border-clr);
@@ -223,14 +235,26 @@
 
 .theme-dark,
 [data-theme="dark"] {
-  .btn-theme {
-    &__label {
-      &-light {
-        display: flex;
-      }
+  .btn {
+    &:disabled {
+      --_btn-clr: theme("colors.neutral.950");
+      --_btn-bg-clr: theme("colors.neutral.800");
+      --_btn-border-clr: theme("colors.neutral.800");
 
-      &-dark {
-        display: none;
+      --_btn-hover-clr: theme("colors.neutral.950");
+      --_btn-hover-bg-clr: theme("colors.neutral.800");
+      --_btn-hover-border-clr: theme("colors.neutral.800");
+    }
+
+    &-theme {
+      &__label {
+        &-light {
+          display: flex;
+        }
+
+        &-dark {
+          display: none;
+        }
       }
     }
   }
@@ -261,7 +285,45 @@
 
   .theme-dark,
   [data-theme="dark"] {
-    .btn-theme {
+    .btn {
+      &:disabled {
+        --_btn-clr: theme("colors.neutral.950");
+        --_btn-bg-clr: theme("colors.neutral.800");
+        --_btn-border-clr: theme("colors.neutral.800");
+
+        --_btn-hover-clr: theme("colors.neutral.950");
+        --_btn-hover-bg-clr: theme("colors.neutral.800");
+        --_btn-hover-border-clr: theme("colors.neutral.800");
+      }
+
+      &-theme {
+        &__label {
+          &-light {
+            display: flex;
+          }
+
+          &-dark {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn {
+    &:disabled {
+      --_btn-clr: theme("colors.neutral.950");
+      --_btn-bg-clr: theme("colors.neutral.800");
+      --_btn-border-clr: theme("colors.neutral.800");
+
+      --_btn-hover-clr: theme("colors.neutral.950");
+      --_btn-hover-bg-clr: theme("colors.neutral.800");
+      --_btn-hover-border-clr: theme("colors.neutral.800");
+    }
+
+    &-theme {
       &__label {
         &-light {
           display: flex;
@@ -270,20 +332,6 @@
         &-dark {
           display: none;
         }
-      }
-    }
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .btn-theme {
-    &__label {
-      &-light {
-        display: flex;
-      }
-
-      &-dark {
-        display: none;
       }
     }
   }

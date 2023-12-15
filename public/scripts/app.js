@@ -6,6 +6,8 @@ const DATA_ELEMENT_ATTR = `data-element`
 const DATA_ACTIVE_ATTR = `data-active`
 const DATA_THEME_ATTR = `data-theme`
 
+const DISABLED_ATTR = `disabled`
+
 const KEY_COOKIE = `cookie`
 const KEY_THEME = `theme`
 
@@ -37,6 +39,7 @@ function main() {
   toggleTheme(cookie)
   toggleCookieDialog(cookie)
   triggerPrint()
+  submitContactForm()
 }
 
 /// Functions - Elements
@@ -164,6 +167,58 @@ function triggerPrint() {
   btnPrintEl.addEventListener(`click`, function (event) {
     event.preventDefault()
     window.print()
+  })
+}
+
+function submitContactForm() {
+  logFunction(`submitContactForm`)
+
+  const contactFormEl = getElement(`contact-form`)
+  if (!contactFormEl) return
+
+  disableForm(contactFormEl, true)
+}
+
+function disableForm(formEl, toggle = false) {
+  logFunction(`disableForm`, { formEl, toggle })
+
+  if (!formEl) return
+
+  const inputEls = formEl.querySelectorAll(`input`)
+  const selectEls = formEl.querySelectorAll(`select`)
+  const textareaEls = formEl.querySelectorAll(`textarea`)
+  const btnEls = formEl.querySelectorAll(`button`)
+
+  inputEls.forEach(function (inputEl) {
+    inputEl.removeAttribute(DISABLED_ATTR)
+
+    if (toggle) {
+      inputEl.setAttribute(DISABLED_ATTR, `${toggle}`)
+    }
+  })
+
+  selectEls.forEach(function (selectEl) {
+    selectEl.removeAttribute(DISABLED_ATTR)
+
+    if (toggle) {
+      selectEl.setAttribute(DISABLED_ATTR, `${toggle}`)
+    }
+  })
+
+  textareaEls.forEach(function (textareaEl) {
+    textareaEl.removeAttribute(DISABLED_ATTR)
+
+    if (toggle) {
+      textareaEl.setAttribute(DISABLED_ATTR, `${toggle}`)
+    }
+  })
+
+  btnEls.forEach(function (btnEl) {
+    btnEl.removeAttribute(DISABLED_ATTR)
+
+    if (toggle) {
+      btnEl.setAttribute(DISABLED_ATTR, `${toggle}`)
+    }
   })
 }
 

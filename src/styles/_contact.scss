@@ -26,6 +26,30 @@
     gap: theme("gap.4");
   }
 
+  &__alert {
+    --_form-alert-clr: theme("colors.neutral.800");
+    --_form-alert-bg-clr: theme("colors.neutral.100");
+
+    color: var(--_form-alert-clr);
+    background-color: var(--_form-alert-bg-clr);
+    border-radius: theme("borderRadius.sm");
+    box-shadow: theme("boxShadow.md");
+    padding: theme("padding.4");
+    display: none;
+
+    &[data-active="true"] {
+      display: block;
+    }
+
+    &-danger {
+      --_form-alert-bg-clr: theme("colors.red.100");
+    }
+
+    &-success {
+      --_form-alert-bg-clr: theme("colors.green.100");
+    }
+  }
+
   &__field {
     width: 100%;
     min-height: theme("fontSize.base");
@@ -36,6 +60,12 @@
 
     &-hidden {
       display: none;
+    }
+
+    &:disabled {
+      color: theme("colors.neutral.500");
+      border-block-end: thin solid theme("colors.neutral.500");
+      cursor: not-allowed;
     }
   }
 }
@@ -55,6 +85,19 @@
   }
 
   .form {
+    &__alert {
+      --_form-alert-clr: theme("colors.neutral.100");
+      --_form-alert-bg-clr: theme("colors.neutral.800");
+
+      &-danger {
+        --_form-alert-bg-clr: theme("colors.red.800");
+      }
+
+      &-success {
+        --_form-alert-bg-clr: theme("colors.green.800");
+      }
+    }
+
     &__field {
       color: theme("colors.neutral.300");
       background-color: theme("colors.neutral.950");
@@ -87,6 +130,27 @@
         --_section-bg-img: url("/src/assets/images/footer-desktop-dark.svg");
       }
     }
+
+    .form {
+      &__alert {
+        --_form-alert-clr: theme("colors.neutral.100");
+        --_form-alert-bg-clr: theme("colors.neutral.800");
+
+        &-danger {
+          --_form-alert-bg-clr: theme("colors.red.800");
+        }
+
+        &-success {
+          --_form-alert-bg-clr: theme("colors.green.800");
+        }
+      }
+
+      &__field {
+        color: theme("colors.neutral.300");
+        background-color: theme("colors.neutral.950");
+        border-block-end: thin solid theme("colors.neutral.300");
+      }
+    }
   }
 }
 
@@ -94,16 +158,21 @@
   .form-contact {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, min-content);
+    grid-template-rows: repeat(4, min-content);
+
+    .form__alert {
+      grid-column: 1 / 4;
+      grid-row: 1;
+    }
 
     .form__field-message {
       grid-column: 1 / 4;
-      grid-row: 2;
+      grid-row: 3;
     }
 
     .btn-form {
       grid-column: 1;
-      grid-row: 3;
+      grid-row: 4;
     }
   }
 }

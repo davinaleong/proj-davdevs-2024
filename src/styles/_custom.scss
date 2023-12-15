@@ -107,10 +107,21 @@ ol.list {
   margin-inline-start: theme("padding.4");
 }
 
+.theme-dark,
+[data-theme="dark"] {
+  :focus {
+    outline: 0.1em solid theme("colors.neutral.800");
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     color: theme("colors.neutral.200");
     background-color: theme("colors.neutral.950");
+  }
+
+  :focus {
+    outline: 0.1em solid theme("colors.neutral.300");
   }
 }
 
