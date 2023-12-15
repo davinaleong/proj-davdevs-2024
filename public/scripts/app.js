@@ -32,6 +32,10 @@ const THEME_STRINGS = {
   DARK: THEME_DARK,
 }
 
+const VALIDATE_MIN_LENGTH = 5
+const VALIDATE_MIN_LENGTH_NAME = 1
+const VALIDATE_EMAIL = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
 /// Functions
 function main() {
   logFunction(`main`)
@@ -210,8 +214,8 @@ function contactFormHandler() {
     )
     const btnSubmitEl = getElement(`btn-submit`, contactFormEl)
 
-    console.log(`subjectInputEl`, subjectInputEl.value)
-    return
+    // console.log(`subjectInputEl`, subjectInputEl.value)
+    // return
 
     if (lastNameInputEl.value) {
       disableForm(contactFormEl, [false])
@@ -221,18 +225,30 @@ function contactFormHandler() {
       return
     }
 
-    if (firstNameInputEl.value.length <= 5) {
-      errors.push(`The Name field is required.`)
+    if (firstNameInputEl.value.length <= VALIDATE_MIN_LENGTH_NAME) {
+      errors.push(
+        `The Name field must be at least ${VALIDATE_MIN_LENGTH_NAME} chars long.`
+      )
     }
 
-    if (emailInputEl.value.length <= 5) {
-      errors.push(`The Email field is required.`)
+    if (emailInputEl.value.length <= VALIDATE_MIN_LENGTH) {
+      errors.push(
+        `The Email field must be at least ${VALIDATE_MIN_LENGTH} chars long.`
+      )
     }
 
-    if (
-      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInputEl.value)
-    ) {
+    if (!VALIDATE_EMAIL.test(emailInputEl.value)) {
       errors.push(`The Email field is invalid.`)
+    }
+
+    if (!subjectInputEl.value) {
+      errors.push(`The Subject field is required.`)
+    }
+
+    if (messageInputEl.value.length <= VALIDATE_MIN_LENGTH) {
+      errors.push(
+        `The Message field must be at least ${VALIDATE_MIN_LENGTH} chars long.`
+      )
     }
   }) // ./addEventListener
 }
