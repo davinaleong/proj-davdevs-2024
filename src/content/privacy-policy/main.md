@@ -1,6 +1,5 @@
 ---
 title: "Privacy Policy"
-draft: 0
 ---
 
 ## Privacy Policy for Dav/Devs Portfolio Website

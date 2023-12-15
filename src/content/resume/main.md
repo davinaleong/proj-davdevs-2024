@@ -1,6 +1,5 @@
 ---
 title: "Resume"
-draft: 0
 
 overview:
   {

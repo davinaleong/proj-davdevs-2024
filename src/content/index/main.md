@@ -1,6 +1,5 @@
 ---
 title: "Dav/Devs"
-draft: 0
 subtitle: "Full-stack Web Developer"
 slogan: "Building modern high-quality websites!"
 

@@ -1,6 +1,5 @@
 ---
 title: "Portfolio"
-draft: 0
 categories:
   [
     {

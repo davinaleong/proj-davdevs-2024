@@ -9,6 +9,7 @@ const DATA_THEME_ATTR = `data-theme`
 const ACTION_ATTR = `action`
 const DISABLED_ATTR = `disabled`
 const SELECTED_ATTR = `selected`
+const CLASS_ATTR = `class`
 
 const KEY_COOKIE = `cookie`
 const KEY_THEME = `theme`
@@ -289,8 +290,9 @@ function toggleFormAlert(formEl, params = []) {
   const formAlertEl = getElement(formEl, `form-alert`)
   if (!formAlertEl) return
 
-  const [errors, heading] = params
+  const [errors, heading, type] = params
   if (errors.length >= 0) {
+    formAlertEl.setAttribute(CLASS_ATTR, `form__alert`)
     formAlertEl.removeAttribute(DATA_ACTIVE_ATTR)
     return
   }
@@ -306,6 +308,7 @@ function toggleFormAlert(formEl, params = []) {
       : `<h3 class="form__alert__header | text-2xl font-bold">${heading}</h3>`
 
   formAlertEl.innerHTML = `${headingHtml} <ol class="list">${errorsHtml}</ol>`
+  formAlertEl.classList.add(type)
   formAlertEl.setAttribute(DATA_ACTIVE_ATTR, String(true))
 }
 
@@ -341,7 +344,38 @@ function fillForm() {
 
     firstNameInputEl.value = `Jane Doe`
     emailInputEl.value = `janedoe@example.com`
-    subjectInputEl.querySelector(`option`)
+    subjectInputEl
+      .querySelector(`option:nth-of-type(2)`)
+      .setAttribute(SELECTED_ATTR, true)
+    messageInputEl.value = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, repellendus.`
+  })
+}
+
+function resetForm() {
+  logFunction(`resetForm`)
+
+  const contactFormEl = getElement(`contact-form`)
+  if (!contactFormEl) return
+
+  const btnResetEl = contactFormEl.querySelector(`button[type="reset"]`)
+  if (!btnResetEl) return
+
+  btnResetEl.addEventListener(`click`, function (event) {
+    event.preventDefault()
+
+    contactFormEl.reset()
+
+    const subjectInputEl = contactFormEl.querySelector(`select[name="subject"]`)
+    if (!subjectInputEl) return
+
+    const optionEls = subjectInputEl.querySelectorAll(`option`)
+    optionEls.forEach(function (optionEl, index) {
+      optionEl.removeAttribute(SELECTED_ATTR)
+
+      if (index === 0) {
+        optionEl.setAttribute(SELECTED_ATTR, true)
+      }
+    })
   })
 }
 
