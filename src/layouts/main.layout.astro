@@ -7,8 +7,15 @@ import PrimaryHeaderComponentAstro from "../components/primary-header.component.
 import PrimaryFooterComponentAstro from "../components/primary-footer.component.astro"
 import CookieDialogComponentAstro from "../components/cookie-dialog.component.astro"
 
-const { title = `` } = Astro.props
-const theTitle: string = title === `` ? `Dav/Devs` : `Dav/Devs - ${title}`
+const { API_URL, PUBLIC_APP_SLUG } = import.meta.env
+
+const response = await fetch(`${API_URL}misc/apps/${PUBLIC_APP_SLUG
+}`)
+const data = await response.json()
+const { meta_title, meta_description, meta_author, meta_keywords } = data.apps[0]
+
+const { title = ``, description = meta_description, keywords = meta_keywords } = Astro.props
+const theTitle: string = title === `` ? meta_title : `${meta_title} - ${title}`
 
 const currentPath: string = Astro.url.pathname
 const home: boolean = currentPath === `/`
@@ -18,8 +25,14 @@ const home: boolean = currentPath === `/`
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+    <meta name="author" content={meta_author}/>
+    <meta name="description" content={description}/>
+    <meta name="keywords" content={keywords}/>
+
 		<link rel="icon" type="image/png" href={favicon.src} />
+
 		<title>{theTitle}</title>
+
     <script is:inline src="/scripts/app.js"></script>
 		<script is:inline src="https://kit.fontawesome.com/1b82ea5cb2.js"
 			crossorigin="anonymous"></script>

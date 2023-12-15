@@ -10,7 +10,7 @@ const { frontmatter } = Astro.props
 const { title, subtitle, date, description, keywords, category, image, link, repo, technologies } = frontmatter
 const { label, categoryClass } = categories.filter(({ slug }: any) => slug === category)[0]
 ---
-<MainLayoutAstro title="Project">
+<MainLayoutAstro title={title} description={description} keywords={keywords}>
     <section
         id="project-hero"
         class="section section-project section-project-hero"
