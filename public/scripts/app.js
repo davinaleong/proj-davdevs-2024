@@ -40,7 +40,7 @@ const VALIDATE_MIN_LENGTH_NAME = 1
 const VALIDATE_EMAIL = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
 /// Functions
-async function main() {
+function main() {
   logFunction(`main`)
 
   const cookie = getLocalStorage(KEY_COOKIE)
@@ -181,7 +181,7 @@ function triggerPrint() {
   })
 }
 
-async function contactForm() {
+function contactForm() {
   logFunction(`contactForm`)
 
   const contactFormEl = getElement(`contact-form`)
@@ -190,16 +190,14 @@ async function contactForm() {
   disableForm(contactFormEl, [false])
   contactFormEl.reset()
 
-  contactFormEl.addEventListener(`submit`, (event) =>
-    submitFormHandler(contactFormEl, event)
-  )
+  contactFormEl.addEventListener(`submit`, function (event) {
+    event.preventDefault()
+    contactFormHandler(event)
+  })
 }
 
-async function contactFormHandler(formEl, event) {
+async function contactFormHandler(event) {
   logFunction(`contactFormHandler`)
-
-  event.preventDefault()
-  disableForm(contactFormEl, [true])
 
   const form = event.currentTarget
   const url = form.action
@@ -451,6 +449,8 @@ function setLocalStorage(key, value = null) {
 }
 
 async function postFormDataAsJson(url, formData) {
+  logFunction(`postFormDataAsJson`, { url, formData })
+
   const plainFormData = Object.fromEntries(formData.entries())
   const formDataJsonString = JSON.stringify(plainFormData)
 

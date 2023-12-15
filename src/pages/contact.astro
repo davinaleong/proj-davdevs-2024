@@ -3,7 +3,10 @@ import MainLayoutAstro from "../layouts/main.layout.astro"
 import * as contact from "../content/contact/main.md"
 const { title, action } = contact.frontmatter
 
-const response = await fetch(`${import.meta.env.API_URL}misc/messageTypes/${import.meta.env.PUBLIC_APP_SLUG}/`)
+const { API_URL, PUBLIC_APP_SLUG } = import.meta.env
+const thisAction = `${API_URL}${action}`
+
+const response = await fetch(`${API_URL}misc/messageTypes/${PUBLIC_APP_SLUG}/`)
 const data = await response.json()
 const { messageTypes } = data
 ---
@@ -28,7 +31,7 @@ const { messageTypes } = data
 >
   <div class="wrapper section__wrapper | mx-auto p-4 flow">
     <form
-      action=""
+      action={thisAction}
       method="post"
       class="form form-contact"
       data-element="contact-form"

@@ -1,4 +1,4 @@
 ---
 title: "Contact"
-action: "https://proj-davinas-cms.test//api/misc/messages/davdevs"
+action: "misc/messages/davdevs"
 ---
