@@ -6,7 +6,9 @@ const DATA_ELEMENT_ATTR = `data-element`
 const DATA_ACTIVE_ATTR = `data-active`
 const DATA_THEME_ATTR = `data-theme`
 
+const ACTION_ATTR = `action`
 const DISABLED_ATTR = `disabled`
+const SELECTED_ATTR = `selected`
 
 const KEY_COOKIE = `cookie`
 const KEY_THEME = `theme`
@@ -39,7 +41,8 @@ function main() {
   toggleTheme(cookie)
   toggleCookieDialog(cookie)
   triggerPrint()
-  submitContactForm()
+  contactFormHandler()
+  fillForm()
 }
 
 /// Functions - Elements
@@ -170,17 +173,73 @@ function triggerPrint() {
   })
 }
 
-function submitContactForm() {
-  logFunction(`submitContactForm`)
+function contactFormHandler() {
+  logFunction(`contactFormHandler`)
 
   const contactFormEl = getElement(`contact-form`)
   if (!contactFormEl) return
 
-  disableForm(contactFormEl, true)
+  disableForm(contactFormEl, [false])
+  contactFormEl.reset()
+
+  // let errors = []
+  // const firstNameInputEl = contactFormEl.querySelector(
+  //   `input[name="first_name"]`
+  // )
+  // const lastNameInputEl = contactFormEl.querySelector(`input[name="last_name"]`)
+  // const emailInputEl = contactFormEl.querySelector(`input[name="email"]`)
+  // const subjectInputEl = contactFormEl.querySelector(`select[name="subject"]`)
+  // const messageInputEl = contactFormEl.querySelector(`textarea[name="message"]`)
+  // const btnSubmitEl = getElement(`btn-submit`, contactFormEl)
+
+  contactFormEl.addEventListener(`submit`, function (event) {
+    disableForm(contactFormEl, [false])
+
+    let errors = []
+    const firstNameInputEl = contactFormEl.querySelector(
+      `input[name="first_name"]`
+    )
+    const lastNameInputEl = contactFormEl.querySelector(
+      `input[name="last_name"]`
+    )
+    const emailInputEl = contactFormEl.querySelector(`input[name="email"]`)
+    const subjectInputEl = contactFormEl.querySelector(`select[name="subject"]`)
+    const messageInputEl = contactFormEl.querySelector(
+      `textarea[name="message"]`
+    )
+    const btnSubmitEl = getElement(`btn-submit`, contactFormEl)
+
+    console.log(`subjectInputEl`, subjectInputEl.value)
+    return
+
+    if (lastNameInputEl.value) {
+      disableForm(contactFormEl, [false])
+      toggleFormAlert(contactFormEl, [errors, ``])
+      errors = []
+      contactFormEl.reset()
+      return
+    }
+
+    if (firstNameInputEl.value.length <= 5) {
+      errors.push(`The Name field is required.`)
+    }
+
+    if (emailInputEl.value.length <= 5) {
+      errors.push(`The Email field is required.`)
+    }
+
+    if (
+      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInputEl.value)
+    ) {
+      errors.push(`The Email field is invalid.`)
+    }
+  }) // ./addEventListener
 }
 
-function disableForm(formEl, toggle = false) {
-  logFunction(`disableForm`, { formEl, toggle })
+function disableForm(formEl, params = []) {
+  logFunction(`disableForm`, { params })
+
+  const [toggle] = params
 
   if (!formEl) return
 
@@ -219,6 +278,70 @@ function disableForm(formEl, toggle = false) {
     if (toggle) {
       btnEl.setAttribute(DISABLED_ATTR, `${toggle}`)
     }
+  })
+}
+
+function toggleFormAlert(formEl, params = []) {
+  logFunction(`toggleFormAlert`, { params })
+
+  if (!formEl) return
+
+  const formAlertEl = getElement(formEl, `form-alert`)
+  if (!formAlertEl) return
+
+  const [errors, heading] = params
+  if (errors.length >= 0) {
+    formAlertEl.removeAttribute(DATA_ACTIVE_ATTR)
+    return
+  }
+
+  let errorsHtml = ``
+  error.forEach(function (error) {
+    errorsHtml += `<li>${error}</li>`
+  })
+
+  const headingHtml =
+    heading === ``
+      ? ``
+      : `<h3 class="form__alert__header | text-2xl font-bold">${heading}</h3>`
+
+  formAlertEl.innerHTML = `${headingHtml} <ol class="list">${errorsHtml}</ol>`
+  formAlertEl.setAttribute(DATA_ACTIVE_ATTR, String(true))
+}
+
+function fillForm() {
+  logFunction(`fillForm`)
+
+  const contactFormEl = getElement(`contact-form`)
+  const btnFillFormEl = getElement(`btn-fill-form`)
+
+  if (!contactFormEl || !btnFillFormEl) return
+
+  btnFillFormEl.addEventListener(`click`, function (event) {
+    event.preventDefault()
+
+    contactFormEl.reset()
+
+    const firstNameInputEl = contactFormEl.querySelector(
+      `input[name="first_name"]`
+    )
+    const emailInputEl = contactFormEl.querySelector(`input[name="email"]`)
+    const subjectInputEl = contactFormEl.querySelector(`select[name="subject"]`)
+    const messageInputEl = contactFormEl.querySelector(
+      `textarea[name="message"]`
+    )
+
+    if (
+      !firstNameInputEl ||
+      !emailInputEl ||
+      !subjectInputEl ||
+      !messageInputEl
+    )
+      return
+
+    firstNameInputEl.value = `Jane Doe`
+    emailInputEl.value = `janedoe@example.com`
+    subjectInputEl.querySelector(`option`)
   })
 }
 

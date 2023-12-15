@@ -231,6 +231,182 @@
       --_btn-hover-border-clr: theme("colors.react.dark");
     }
   }
+
+  &-slate {
+    --_btn-bg-clr: theme("colors.slate.500");
+    --_btn-border-clr: theme("colors.slate.500");
+
+    --_btn-hover-bg-clr: theme("colors.slate.600");
+    --_btn-hover-border-clr: theme("colors.slate.600");
+  }
+
+  &-gray {
+    --_btn-bg-clr: theme("colors.gray.500");
+    --_btn-border-clr: theme("colors.gray.500");
+
+    --_btn-hover-bg-clr: theme("colors.gray.600");
+    --_btn-hover-border-clr: theme("colors.gray.600");
+  }
+
+  &-zinc {
+    --_btn-bg-clr: theme("colors.zinc.500");
+    --_btn-border-clr: theme("colors.zinc.500");
+
+    --_btn-hover-bg-clr: theme("colors.zinc.600");
+    --_btn-hover-border-clr: theme("colors.zinc.600");
+  }
+
+  &-neutral {
+    --_btn-bg-clr: theme("colors.neutral.500");
+    --_btn-border-clr: theme("colors.neutral.500");
+
+    --_btn-hover-bg-clr: theme("colors.neutral.600");
+    --_btn-hover-border-clr: theme("colors.neutral.600");
+  }
+
+  &-stone {
+    --_btn-bg-clr: theme("colors.stone.500");
+    --_btn-border-clr: theme("colors.stone.500");
+
+    --_btn-hover-bg-clr: theme("colors.stone.600");
+    --_btn-hover-border-clr: theme("colors.stone.600");
+  }
+
+  &-red {
+    --_btn-bg-clr: theme("colors.red.500");
+    --_btn-border-clr: theme("colors.red.500");
+
+    --_btn-hover-bg-clr: theme("colors.red.600");
+    --_btn-hover-border-clr: theme("colors.red.600");
+  }
+
+  &-orange {
+    --_btn-bg-clr: theme("colors.orange.500");
+    --_btn-border-clr: theme("colors.orange.500");
+
+    --_btn-hover-bg-clr: theme("colors.orange.600");
+    --_btn-hover-border-clr: theme("colors.orange.600");
+  }
+
+  &-amber {
+    --_btn-bg-clr: theme("colors.amber.500");
+    --_btn-border-clr: theme("colors.amber.500");
+
+    --_btn-hover-bg-clr: theme("colors.amber.600");
+    --_btn-hover-border-clr: theme("colors.amber.600");
+  }
+
+  &-yellow {
+    --_btn-bg-clr: theme("colors.yellow.500");
+    --_btn-border-clr: theme("colors.yellow.500");
+
+    --_btn-hover-bg-clr: theme("colors.yellow.600");
+    --_btn-hover-border-clr: theme("colors.yellow.600");
+  }
+
+  &-lime {
+    --_btn-bg-clr: theme("colors.lime.500");
+    --_btn-border-clr: theme("colors.lime.500");
+
+    --_btn-hover-bg-clr: theme("colors.lime.600");
+    --_btn-hover-border-clr: theme("colors.lime.600");
+  }
+
+  &-green {
+    --_btn-bg-clr: theme("colors.green.500");
+    --_btn-border-clr: theme("colors.green.500");
+
+    --_btn-hover-bg-clr: theme("colors.green.600");
+    --_btn-hover-border-clr: theme("colors.green.600");
+  }
+
+  &-emerald {
+    --_btn-bg-clr: theme("colors.emerald.500");
+    --_btn-border-clr: theme("colors.emerald.500");
+
+    --_btn-hover-bg-clr: theme("colors.emerald.600");
+    --_btn-hover-border-clr: theme("colors.emerald.600");
+  }
+
+  &-teal {
+    --_btn-bg-clr: theme("colors.teal.500");
+    --_btn-border-clr: theme("colors.teal.500");
+
+    --_btn-hover-bg-clr: theme("colors.teal.600");
+    --_btn-hover-border-clr: theme("colors.teal.600");
+  }
+
+  &-cyan {
+    --_btn-bg-clr: theme("colors.cyan.500");
+    --_btn-border-clr: theme("colors.cyan.500");
+
+    --_btn-hover-bg-clr: theme("colors.cyan.600");
+    --_btn-hover-border-clr: theme("colors.cyan.600");
+  }
+
+  &-sky {
+    --_btn-bg-clr: theme("colors.sky.500");
+    --_btn-border-clr: theme("colors.sky.500");
+
+    --_btn-hover-bg-clr: theme("colors.sky.600");
+    --_btn-hover-border-clr: theme("colors.sky.600");
+  }
+
+  &-blue {
+    --_btn-bg-clr: theme("colors.blue.500");
+    --_btn-border-clr: theme("colors.blue.500");
+
+    --_btn-hover-bg-clr: theme("colors.blue.600");
+    --_btn-hover-border-clr: theme("colors.blue.600");
+  }
+
+  &-indigo {
+    --_btn-bg-clr: theme("colors.indigo.500");
+    --_btn-border-clr: theme("colors.indigo.500");
+
+    --_btn-hover-bg-clr: theme("colors.indigo.600");
+    --_btn-hover-border-clr: theme("colors.indigo.600");
+  }
+
+  &-violet {
+    --_btn-bg-clr: theme("colors.violet.500");
+    --_btn-border-clr: theme("colors.violet.500");
+
+    --_btn-hover-bg-clr: theme("colors.violet.600");
+    --_btn-hover-border-clr: theme("colors.violet.600");
+  }
+
+  &-purple {
+    --_btn-bg-clr: theme("colors.purple.500");
+    --_btn-border-clr: theme("colors.purple.500");
+
+    --_btn-hover-bg-clr: theme("colors.purple.600");
+    --_btn-hover-border-clr: theme("colors.purple.600");
+  }
+
+  &-fuchsia {
+    --_btn-bg-clr: theme("colors.fuchsia.500");
+    --_btn-border-clr: theme("colors.fuchsia.500");
+
+    --_btn-hover-bg-clr: theme("colors.fuchsia.600");
+    --_btn-hover-border-clr: theme("colors.fuchsia.600");
+  }
+
+  &-pink {
+    --_btn-bg-clr: theme("colors.pink.500");
+    --_btn-border-clr: theme("colors.pink.500");
+
+    --_btn-hover-bg-clr: theme("colors.pink.600");
+    --_btn-hover-border-clr: theme("colors.pink.600");
+  }
+
+  &-rose {
+    --_btn-bg-clr: theme("colors.rose.500");
+    --_btn-border-clr: theme("colors.rose.500");
+
+    --_btn-hover-bg-clr: theme("colors.rose.600");
+    --_btn-hover-border-clr: theme("colors.rose.600");
+  }
 }
 
 .theme-dark,
