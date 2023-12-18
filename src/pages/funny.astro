@@ -1,7 +1,14 @@
 ---
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { getEntries } from "../scripts/contentful-lib"
+import { getRandomInt } from "../scripts/helpers"
 import MainLayoutAstro from "../layouts/main.layout.astro"
 import * as funny from "../content/funny/main.md"
 const { title } = funny.frontmatter
+
+const entries = await getEntries()
+const randomIndex: number = getRandomInt(0, entries.length - 1)
+const { fields } = entries[randomIndex]
 ---
 <MainLayoutAstro title={title}>
     <section
@@ -23,18 +30,10 @@ const { title } = funny.frontmatter
         class="section section-half section-funny section-funny-content"
       >
         <div class="wrapper section__wrapper | mx-auto p-4 flow">
-          <div class="funny-content-wrapper | flow">
-            <h2 class="text-3xl font-bold">Lorem Ipsum</h2>
+          <div class="funny-content-wrapper | flow" data-element="funny-content">
+            <h2 class="text-3xl font-bold">{fields.title}</h2>
 
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam,
-              nulla?
-            </p>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Reprehenderit consectetur omnis dolor cupiditate corrupti tempore.
-            </p>
+            <div class="flow" set:html={documentToHtmlString(fields.content)} />
           </div>
         </div>
         <!-- ./wrapper -->

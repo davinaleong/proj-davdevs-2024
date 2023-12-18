@@ -25,6 +25,10 @@ const STATUS_SUCCESS = `SUCCESS`
 
 const COOKIE_DIALOG_DELAY = 3000
 
+const CONTENTFUL_URL = `https://cdn.contentful.com/spaces/9v840dm5l6au/environments/master/entries`
+const CONTENTFUL_ACCESS_TOKEN = `mOHtiKlVzYKgvMoSBQxrAmJ6elmN_ttEieh8SNCksys`
+const CONTENTFUL_LIMIT = 1000
+
 const COOKIE_STRINGS = {
   NO: COOKIE_NO,
   YES: COOKIE_YES,
@@ -51,6 +55,7 @@ function main() {
   triggerPrint()
   contactForm()
   fillForm()
+  //renderFunny()
 }
 
 /// Functions - Elements
@@ -375,6 +380,25 @@ function resetForm() {
       }
     })
   })
+}
+
+async function renderFunny() {
+  logFunction(`renderFunny`)
+
+  const funnyContentEl = getElement(`funny-content`)
+  if (!funnyContentEl) return
+
+  // Fetch Jokes
+  /*
+  fetch('https://reqbin.com/echo/get/json', {
+  headers: {Authorization: 'Bearer {token}'}
+})
+  */
+  const response = await fetch(CONTENTFUL_URL, {
+    headers: { Authorization: `Bearer ${CONTENTFUL_ACCESS_TOKEN}` },
+  })
+  const { items } = await response.json()
+  console.log(`data`, data)
 }
 
 /// Functions - Helpers

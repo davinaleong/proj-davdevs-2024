@@ -1,6 +1,10 @@
-import { DATA_ACTIVE_ATTR, DATA_ELEMENT_ATTR } from "./strings"
+import { DATA_ACTIVE_ATTR, DATA_ELEMENT_ATTR, STR_TRUE } from "./strings"
 
 logLoaded(`helpers.ts`)
+
+export const COOKIE_DIALOG_DELAY: number = 3000
+
+export const now: Date = new Date()
 
 export interface HelpersInterface {
   COOKIE_DIALOG_DELAY: number
@@ -13,25 +17,24 @@ export interface HelpersInterface {
   toggleAttribute(element: HTMLElement, toggle: boolean, attr: string): void
   getLocalStorage(key: string): string
   setLocalStorage(key: string, value: string): void
+  getRandomInt(min: number, max: number): number
 }
 
-export const COOKIE_DIALOG_DELAY: number = 3000
-
-export const now: Date = new Date()
-
 export function logLoaded(name: string): void {
-  console.log(`${name} loaded.`)
+  if (import.meta.env.LOG_TO_CONSOLE === STR_TRUE)
+    console.log(`${name} loaded.`)
 }
 
 export function logFunction(name: string, params: any = {}): void {
-  console.log(`fn: ${name}:(${JSON.stringify(params)})`)
+  if (import.meta.env.LOG_TO_CONSOLE === STR_TRUE)
+    console.log(`fn: ${name}:(${JSON.stringify(params)})`)
 }
 
 export function logValue(
   name: string,
   value: string | number | boolean | null
 ): void {
-  console.log(name, value)
+  if (import.meta.env.LOG_TO_CONSOLE === STR_TRUE) console.log(name, value)
 }
 
 export function getElement(
@@ -100,6 +103,12 @@ export function setLocalStorage(key: string, value: string): void {
   }
 }
 
+export function getRandomInt(min: number, max: number): number {
+  logFunction(`getRandomInt`, { min, max })
+
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
 export const helpers: HelpersInterface = {
   COOKIE_DIALOG_DELAY,
   now,
@@ -111,4 +120,5 @@ export const helpers: HelpersInterface = {
   toggleAttribute,
   getLocalStorage,
   setLocalStorage,
+  getRandomInt,
 }
