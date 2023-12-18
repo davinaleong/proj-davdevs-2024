@@ -1,0 +1,57 @@
+/// Coming Soon
+
+.coming-soon {
+  --_coming-soon-clr: theme("colors.neutral.300");
+  --_coming-soon-bg-clr: theme("colors.neutral.100");
+  --_coming-soon-spacer: theme("padding.4");
+
+  display: none;
+  place-items: center;
+  opacity: 0.5;
+  position: absolute;
+  inset: 0;
+  padding-block-start: var(--_coming-soon-spacer);
+  padding-block-end: var(--_coming-soon-spacer);
+  padding-inline-start: var(--_coming-soon-spacer);
+  padding-inline-end: var(--_coming-soon-spacer);
+  color: var(--_coming-soon-clr);
+  background-color: var(--_coming-soon-bg-clr);
+  z-index: 1;
+
+  &__content {
+    font-size: theme("fontSize.4xl");
+    rotate: -15deg;
+    transform-origin: center;
+  }
+}
+
+[data-coming-soon="true"] {
+  position: relative;
+
+  .coming-soon {
+    display: grid;
+  }
+}
+
+.theme-dark,
+[data-theme="dark"] {
+  .coming-soon {
+    --_coming-soon-clr: theme("colors.neutral.700");
+    --_coming-soon-bg-clr: theme("colors.neutral.900");
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .coming-soon {
+    --_coming-soon-clr: theme("colors.neutral.700");
+    --_coming-soon-bg-clr: theme("colors.neutral.900");
+  }
+
+  .theme-dark,
+  [data-theme="dark"] {
+    .coming-soon {
+      --_coming-soon-clr: theme("colors.neutral.700");
+      --_coming-soon-bg-clr: theme("colors.neutral.900");
+    }
+  }
+}
