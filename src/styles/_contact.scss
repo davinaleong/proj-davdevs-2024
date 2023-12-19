@@ -16,6 +16,11 @@
   &-content {
     --_section-bg-img: url("/src/assets/images/footer-mobile.svg");
     --_section-bg-position: bottom center;
+
+    .section__wrapper {
+      display: grid;
+      place-items: center;
+    }
   }
 }
 
