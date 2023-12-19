@@ -3,7 +3,7 @@ import MainLayoutAstro from "../layouts/main.layout.astro"
 
 import * as index from "../content/index/main.md"
 import * as portfolio from "../content/portfolio/main.md"
-import { sortPostsDesc } from "../utilities/helpers.utilities"
+import { sortPostsDesc } from "../lib/helpers.lib"
 const { title, subtitle, slogan, skills, featured, talks, social } = index.frontmatter
 const { categories } = portfolio.frontmatter
 
@@ -48,7 +48,7 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                   </h2>
 
                   <p class="skills | mx-auto">
-                    {content.map(({ label, skillClass }) => (<span class={`btn btn-skill ${skillClass} | shadow-md`}>{label}</span>))}
+                    {content.map(({ label, skillClass }: any) => (<span class={`btn btn-skill ${skillClass} | shadow-md`}>{label}</span>))}
                   </p>
                 </div>
                 <!-- ./wrapper -->
@@ -69,7 +69,7 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                     {title}
                   </h2>
 
-                  {selectedFeaturedPosts.map(({ frontmatter, url }: any, index: number) => {
+                  {selectedFeaturedPosts.map(({ frontmatter, url }: any) => {
                     const { title, description, category, image } = frontmatter
                     const { label, slug, categoryClass } = categories.filter(({ slug }: any) => slug === category)[0]
                     return (
@@ -119,7 +119,7 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                   </h2>
 
                   <div class="cards-grid">
-                    {content.map(({ label, link, image }) => (
+                    {content.map(({ label, link, image }: any) => (
                       <>
                         <div class="card">
                           <img
@@ -159,7 +159,7 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                     </h2>
 
                     <div class="card-socials">
-                      {content.map(({ label, link, icon, socialClass }) => (
+                      {content.map(({ label, link, icon, socialClass }: any) => (
                         <>
                           <a
                             href={link}
@@ -184,3 +184,4 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
 
       
 </Main>
+../lib/helpers.utilities../lib/helpers.lib

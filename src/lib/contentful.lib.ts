@@ -1,7 +1,5 @@
-import { ContentfulClientApi, createClient } from "contentful"
-import { logLoaded } from "./helpers"
-
-logLoaded(`contentful-lib`)
+import contentful from "contentful"
+const { ContentfulClientApi, createClient } = contentful
 
 // Interfaces
 export interface ContentfulLibInterface {

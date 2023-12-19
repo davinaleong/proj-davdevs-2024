@@ -1,5 +1,4 @@
 ---
-import dayjs from "dayjs"
 import MainLayoutAstro from "../layouts/main.layout.astro"
 
 import * as main from "./../content/portfolio/main.md"
@@ -7,7 +6,7 @@ import * as main from "./../content/portfolio/main.md"
 const { categories } = main.frontmatter
 
 const { frontmatter } = Astro.props
-const { title, subtitle, date, description, keywords, category, image, link, repo, technologies } = frontmatter
+const { title, subtitle, description, keywords, category, image, link, repo, technologies } = frontmatter
 const { label, categoryClass } = categories.filter(({ slug }: any) => slug === category)[0]
 ---
 <MainLayoutAstro title={title} description={description} keywords={keywords}>

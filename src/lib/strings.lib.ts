@@ -1,42 +1,42 @@
 // Interfaces
-export interface StrInterface {
+export interface StrLibInterface {
   STR_FALSE: string
   STR_TRUE: string
   STR_YES: string
   STR_NO: string
 }
 
-export interface AttrStrInterface {
+export interface AttrStrLibInterface {
   STYLE_ATTR: string
 }
 
-export interface DataAttrStrInterface {
+export interface DataAttrStrLibInterface {
   DATA_ELEMENT_ATTR: string
   DATA_ACTIVE_ATTR: string
   DATA_THEME_ATTR: string
 }
 
-export interface ThemeStrInterface {
+export interface ThemeStrLibInterface {
   THEME_LIGHT: string
   THEME_DARK: string
 }
 
-export interface ClassStrInterface {
+export interface ClassStrLibInterface {
   CLASS_THEME_LIGHT: string
   CLASS_THEME_DARK: string
 }
 
-export interface CookieStrInterface {
+export interface CookieStrLibInterface {
   COOKIE_YES: string
   COOKIE_NO: string
 }
 
-export interface KeyStrInterface {
+export interface KeyStrLibInterface {
   KEY_COOKIE: string
   KEY_THEME: string
 }
 
-export interface StrsInterface {
+export interface StrsLibInterface {
   STYLE_ATTR: string
   DATA_ELEMENT_ATTR: string
   DATA_ACTIVE_ATTR: string
@@ -53,13 +53,13 @@ export interface StrsInterface {
   STR_TRUE: string
   STR_YES: string
   STR_NO: string
-  attrStr: AttrStrInterface
-  dataAttrStr: DataAttrStrInterface
-  themeStr: ThemeStrInterface
-  classStr: ClassStrInterface
-  cookieStr: CookieStrInterface
-  keyStr: KeyStrInterface
-  str: StrInterface
+  attrStrLib: AttrStrLibInterface
+  dataAttrStrLib: DataAttrStrLibInterface
+  themeStrLib: ThemeStrLibInterface
+  classStrLib: ClassStrLibInterface
+  cookieStrLib: CookieStrLibInterface
+  keyStrLib: KeyStrLibInterface
+  str: StrLibInterface
 }
 
 // Variables
@@ -86,44 +86,44 @@ export const STR_TRUE: string = `true`
 export const STR_YES: string = `yes`
 export const STR_NO: string = `no`
 
-export const attrStr: AttrStrInterface = {
+export const attrStrLib: AttrStrLibInterface = {
   STYLE_ATTR,
 }
 
-export const dataAttrStr: DataAttrStrInterface = {
+export const dataAttrStrLib: DataAttrStrLibInterface = {
   DATA_ELEMENT_ATTR,
   DATA_ACTIVE_ATTR,
   DATA_THEME_ATTR,
 }
 
-export const themeStr: ThemeStrInterface = {
+export const themeStrLib: ThemeStrLibInterface = {
   THEME_LIGHT,
   THEME_DARK,
 }
 
-export const classStr: ClassStrInterface = {
+export const classStrLib: ClassStrLibInterface = {
   CLASS_THEME_LIGHT,
   CLASS_THEME_DARK,
 }
 
-export const cookieStr: CookieStrInterface = {
+export const cookieStrLib: CookieStrLibInterface = {
   COOKIE_YES,
   COOKIE_NO,
 }
 
-export const keyStr: KeyStrInterface = {
+export const keyStrLib: KeyStrLibInterface = {
   KEY_COOKIE,
   KEY_THEME,
 }
 
-export const str: StrInterface = {
+export const str: StrLibInterface = {
   STR_FALSE,
   STR_TRUE,
   STR_YES,
   STR_NO,
 }
 
-export const strs: StrsInterface = {
+export const strsLib: StrsLibInterface = {
   STYLE_ATTR,
   DATA_ELEMENT_ATTR,
   DATA_ACTIVE_ATTR,
@@ -140,11 +140,11 @@ export const strs: StrsInterface = {
   STR_TRUE,
   STR_YES,
   STR_NO,
-  attrStr,
-  dataAttrStr,
-  themeStr,
-  classStr,
-  cookieStr,
-  keyStr,
+  attrStrLib,
+  dataAttrStrLib,
+  themeStrLib,
+  classStrLib,
+  cookieStrLib,
+  keyStrLib,
   str,
 }

@@ -1,7 +1,3 @@
-import { logLoaded } from "./helpers"
-
-logLoaded(`config.ts`)
-
 export interface ConfigInterface {
   appName: string
   author: string

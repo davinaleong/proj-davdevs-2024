@@ -2,12 +2,11 @@ import "../styles/app.scss"
 import {
   logFunction,
   getElement,
-  logLoaded,
   getLocalStorage,
   setLocalStorage,
   COOKIE_DIALOG_DELAY,
   logValue,
-} from "./helpers"
+} from "../lib/helpers.lib"
 import {
   DATA_ACTIVE_ATTR,
   DATA_THEME_ATTR,
@@ -17,10 +16,8 @@ import {
   COOKIE_NO,
   COOKIE_YES,
   KEY_THEME,
-} from "./strings"
+} from "../lib/strings.lib"
 import { config } from "./config"
-
-logLoaded(`app.ts`)
 
 /// Variables
 

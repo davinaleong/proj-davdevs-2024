@@ -55,7 +55,6 @@ function main() {
   triggerPrint()
   contactForm()
   fillForm()
-  //renderFunny()
 }
 
 /// Functions - Elements
@@ -197,11 +196,11 @@ function contactForm() {
 
   contactFormEl.addEventListener(`submit`, function (event) {
     event.preventDefault()
-    contactFormHandler(event)
+    contactFormHandler(contactFormEl, event)
   })
 }
 
-async function contactFormHandler(event) {
+async function contactFormHandler(contactFormEl, event) {
   logFunction(`contactFormHandler`)
 
   const form = event.currentTarget
@@ -380,25 +379,6 @@ function resetForm() {
       }
     })
   })
-}
-
-async function renderFunny() {
-  logFunction(`renderFunny`)
-
-  const funnyContentEl = getElement(`funny-content`)
-  if (!funnyContentEl) return
-
-  // Fetch Jokes
-  /*
-  fetch('https://reqbin.com/echo/get/json', {
-  headers: {Authorization: 'Bearer {token}'}
-})
-  */
-  const response = await fetch(CONTENTFUL_URL, {
-    headers: { Authorization: `Bearer ${CONTENTFUL_ACCESS_TOKEN}` },
-  })
-  const { items } = await response.json()
-  console.log(`data`, data)
 }
 
 /// Functions - Helpers

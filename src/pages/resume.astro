@@ -2,7 +2,7 @@
 import dayjs from "dayjs"
 
 import MainLayoutAstro from "../layouts/main.layout.astro"
-import { sort, sortPostsDesc } from "../utilities/helpers.utilities"
+import { sortPostsDesc } from "../lib/helpers.lib"
 
 import * as resume from "../content/resume/main.md"
 const { title, overview, skills, talks, hobbies } = resume.frontmatter
@@ -20,11 +20,11 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
 <MainLayoutAstro title={title}>
     <section
         id="resume-hero"
-        class="section section-half section-resume-hero"
+        class="section section-resume-hero"
       >
         <div class="wrapper section__wrapper | mx-auto p-4">
           <h1
-            class="section-hero-home__heading | text-center text-4xl font-bold text-neutral-50"
+            class="section-hero-home__heading | text-5xl font-bold text-neutral-50 uppercase"
           >
             {title}
           </h1>
@@ -62,9 +62,9 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
                   </div>
 
                   <div class="flow" style="--_flow-spacer: 0.5em">
-                    {content.map(({ title, label, link, target }) => {
+                    {content.map(({ title, label, link, target }: any) => {
                       const targetAttr = target === `` ? `_self` : `${target}`
-                      const aEl = link === `` ? label : (<a href={link} target={target}>{label}</a>)
+                      const aEl = link === `` ? label : (<a href={link} target={targetAttr}>{label}</a>)
 
                       return (
                       <p class="text-grid | text-sm">
@@ -96,7 +96,7 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
                     {title}
                   </h2>
 
-                  {content.map(({ label, value }) => {
+                  {content.map(({ label, value }: any) => {
                     return (
                       <>
                         <h3 class="font-bold">{label}</h3>
@@ -118,7 +118,7 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
             Experience
           </h2>
 
-          {experiences.map(({ frontmatter, Content }) => {
+          {experiences.map(({ frontmatter, Content }: any) => {
             const { title, start, end, subtitle, position} = frontmatter
             const startDate = dayjs(start).format(`MMM YYYY`)
             const endDate = end.toLowerCase() === `present` ? end : dayjs(end).format(`MMM YYYY`)
@@ -156,7 +156,7 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
           <!-- Education -->
           <h2 id="resume-education" class="text-2xl font-bold">Education</h2>
 
-          {education.map(({ frontmatter, Content }) => {
+          {education.map(({ frontmatter, Content }: any) => {
             const { title, start, end, subtitle } = frontmatter
             const startDate = dayjs(start).format(`MMM YYYY`)
             const endDate = end.toLowerCase() === `present` ? end : dayjs(end).format(`MMM YYYY`)
@@ -189,7 +189,7 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
             Certificates
           </h2>
 
-          {certificates.map(({ frontmatter }) => {
+          {certificates.map(({ frontmatter }: any) => {
             const { title, date, subtitle } = frontmatter
             const dateStr = dayjs(date).format(`MMM YYYY`)
 
@@ -202,7 +202,7 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
 
                 <p class="text-grid | text-sm">
                   <span class="text-grid__label | font-bold">Date:</span>
-                  <span>{ date }</span>
+                  <span>{ dateStr }</span>
                 </p>
 
                 <p class="text-grid | text-sm">
@@ -224,7 +224,7 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
                   <h2 id="resume-talks" class="text-2xl font-bold">{title}</h2>
 
                   <ul class="list">
-                    {content.map(({ label, link, target }) => {
+                    {content.map(({ label, link, target }: any) => {
                       const targetAttr = target === `` ? `_self` : `${target}`
                       return (
                         <li><a href={link} target={targetAttr}>{label}</a></li>
@@ -248,7 +248,7 @@ const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontm
                   <h2 id="resume-hobbies" class="text-2xl font-bold">{title}</h2>
 
                   <ul class="list">
-                    {content.map(({ label }) => <li>{label}</li>)}
+                    {content.map(({ label }: any) => <li>{label}</li>)}
                   </ul>
                 </>
               )
