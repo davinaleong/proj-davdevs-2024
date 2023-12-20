@@ -48,7 +48,7 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                   </h2>
 
                   <p class="skills | mx-auto">
-                    {content.map(({ label, skillClass }: any) => (<span class={`btn btn-skill ${skillClass} | shadow-md`}>{label}</span>))}
+                    {content.map(({ label, className }: any) => (<span class={`btn btn-skill ${className} | shadow-md`}>{label}</span>))}
                   </p>
                 </div>
                 <!-- ./wrapper -->
@@ -159,12 +159,12 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                     </h2>
 
                     <div class="card-socials">
-                      {content.map(({ label, link, icon, socialClass }: any) => (
+                      {content.map(({ label, link, icon, className }: any) => (
                         <>
                           <a
                             href={link}
                             target="_blank"
-                            class={`card-social ${socialClass}`}
+                            class={`card-social ${className}`}
                           >
                             <div class="card-social__icon card-social__icon">
                               <i class={`fa-brands ${icon}`}></i>
