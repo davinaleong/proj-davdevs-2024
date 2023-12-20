@@ -45,7 +45,7 @@ talks:
 
 social:
   {
-    title: "Connect with Me Hello",
+    title: "Connect with Me",
     draft: 0,
     content:
       [
