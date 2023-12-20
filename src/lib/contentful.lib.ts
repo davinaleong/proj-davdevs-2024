@@ -1,5 +1,5 @@
 import contentful from "contentful"
-const { ContentfulClientApi, createClient } = contentful
+const { createClient } = contentful
 
 // Interfaces
 export interface ContentfulLibInterface {
@@ -10,7 +10,7 @@ export interface ContentfulLibInterface {
   CONTENTFUL_TYPE_ID: string
   CONTENTFUL_TAG_ID: string
   CONTENTFUL_LIMIT: string
-  client: ContentfulClientApi<undefined>
+  client: any
   getEntries(): Promise<any>
 }
 
