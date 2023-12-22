@@ -17,6 +17,7 @@
   left: theme("padding.4");
   right: theme("padding.4");
   bottom: theme("padding.4");
+  z-index: 1;
 
   &__body {
     display: flex;

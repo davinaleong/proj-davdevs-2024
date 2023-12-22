@@ -74,7 +74,7 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                     const { label, slug, categoryClass } = categories.filter(({ slug }: any) => slug === category)[0]
                     return (
                       <>
-                        <div class="card card-home">
+                        <div class="card card-featured">
                           <img
                             src={`/screenshots/${image}`}
                             alt="Project Screenshot"
@@ -121,7 +121,7 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                   <div class="cards-grid">
                     {content.map(({ label, link, image }: any) => (
                       <>
-                        <div class="card">
+                        <div class="card card-talk">
                           <img
                             src={`/screenshots/${image}`}
                             alt="Project Screenshot"
