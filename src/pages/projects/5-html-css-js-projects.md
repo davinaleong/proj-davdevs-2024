@@ -1,10 +1,10 @@
 ---
 layout: "./../../layouts/project.layout.astro"
-title: "5 HTML, CSS, JS Projects"
+title: "5 Coding Projects"
 subtitle: "JavaScript Demos"
 date: "2022-08-11"
-description: "5 projects I built following a tutorial video by Traversy Media."
-keywords: "davina, davina leong, leong, line, clamp, webkit"
+description: "Implementing five diverse projects inspired by Traversy Media's tutorial. Exploring practical applications for these components, including integrating dynamism into the Dav/Devs site. Despite commitments, dedicated time is prioritized. The tutorial acts as a technical catalyst, fostering creativity for future endeavors."
+keywords: "5 Coding Projects, Traversy Media Tutorial, Practical Applications, Dav/Devs Dynamism, Time Prioritization, Technical Catalyst, Creative Coding"
 category: "javascript"
 image: "5-html-css-js-projects.png"
 link: "https://davinaleong.github.io/proj-five-projects/"
@@ -18,4 +18,4 @@ technologies:
 draft: 0
 ---
 
-I did these 5 projects following this [video tutorial](https://www.youtube.com/watch?v=JkeyKeK3V24&t=91s) by [Traversey Media](https://www.youtube.com/@TraversyMedia). I still have not figured out where I would use these components. Perhaps I would implement the content placeholder when I revamp this Dav/Devs site. Hopefully I will be able to find time for such a project!
+I embarked on these five projects inspired by [Traversy Media's video tutorial](https://www.youtube.com/@TraversyMedia). As I continue to explore, I'm pondering the ideal applications for these components in my work. One intriguing possibility is integrating the content placeholder into the redesign of the Dav/Devs site, adding a dynamic touch. As I navigate through commitments, finding dedicated time for this project remains a goal. The tutorial served as a catalyst, igniting my creativity, and I look forward to discovering more ways to leverage these skills in future endeavors.

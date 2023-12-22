@@ -3,8 +3,8 @@ layout: "./../../layouts/project.layout.astro"
 title: "Bootstrap 4 Admin Dashboard Template"
 subtitle: "Bootstrap 4 Template"
 date: "2022-08-19"
-description: "A simple Bootstrap 4 template ready to use out-of-the-box!"
-keywords: "Davina, Leong, Davina Leong, Personal Website, Bootstrap, Admin, Template, Bootstrap 4 Admin Dashboard Template, HTML, CSS, Font Awesome 5, Bootstrap 4, ParsleyJS, DataTables, MomentJS, Tempus Dominus, DateTimePicker, PrismJS"
+description: "Simplified Bootstrap 4 template for admin dashboards. Streamlined setup, featuring essential packages like ParsleyJS, DataTables, MomentJS, Tempus Dominus, and PrismJS."
+keywords: "Bootstrap 4, Admin Template, ParsleyJS, DataTables, MomentJS, Tempus Dominus, PrismJS, Web Development, Streamlined Setup, Essential Packages"
 category: "bootstrap"
 image: "b4-admin-template.png"
 link: "https://davinaleong.github.io/proj-b4-admin-template/"
@@ -28,12 +28,20 @@ technologies:
 draft: 0
 ---
 
-This project is built using **Bootstrap 4**.
+Built on **Bootstrap 4**, this template prioritizes simplicity and minimal setup for immediate usability. Unlike many admin dashboard templates, this one is engineered to be straightforward and easy to use.
 
-I built this template with the mindset that it should be usable right out of the box, with minimal setup required. I often find myself in need of a simple, pure Bootstrap 4 template. I find many of the admin dashboard templates I've come across online overly engineered and complicated to setup and use.
+## Usage
 
-Feel free to use this template for your own admin-dashboard projects.
+Feel free to use this template for your admin-dashboard projects.
 
-This project also comes packaged with packages I use quite often in my web-development projects.
+## Included Packages
 
-Included packages: `ParsleyJS` for _form validation_, `DataTables` - _sort, search and paginate table data_, `MomentJS` - _format date-times_, `Tempus Dominus` - _datetime picker_, `PrismJS` - _syntax highlighting_.
+This project comes bundled with essential packages commonly used in my web development projects:
+
+- **ParsleyJS:** Form validation
+- **DataTables:** Sort, search, and paginate table data
+- **MomentJS:** Format date-times
+- **Tempus Dominus:** Datetime picker
+- **PrismJS:** Syntax highlighting
+
+Integrate and enhance your web development projects effortlessly with this Bootstrap 4 template.

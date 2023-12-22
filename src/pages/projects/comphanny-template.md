@@ -3,8 +3,8 @@ layout: "./../../layouts/project.layout.astro"
 title: "Comphanny Template"
 subtitle: "Bootstrap 4 Template"
 date: "2020-01-16"
-description: "The template portion of CraftCMS demo I built for a talk."
-keywords: "Davina, Leong, Davina Leong, Personal Website, Comphanny, Template, Comphanny Template, HTML, CSS, SASS, Font Awesome 5, Bootstrap 4"
+description: "Bootstrap 4 template demo for a CraftCMS talk. Features SASS, Font Awesome 5 icons, and a fictional company 'Comphanny.' Read more on DEV Community."
+keywords: "Bootstrap, CraftCMS, SASS, Font Awesome, Web Design, PHP Community"
 category: "bootstrap"
 image: "comphanny-template.png"
 link: "https://davinaleong.github.io/proj-comphanny-template/"
@@ -20,12 +20,6 @@ technologies:
 draft: 0
 ---
 
-This template is the first part of a 2-part demo I was building. I was asked to give a talk on [CraftCMS](https://craftcms.com/) at a local `PHP` meetup. Hence, the aim of this demo was to showcase CraftCMS.
+This template is part one of a two-part demo for a CraftCMS talk at a local PHP meetup. It's Bootstrap 4-based with Font Awesome 5 icons. For code readability and reusability, I opted for SASS. Note: no bundled SASS compiler; consider the Live Sass Compiler VS Code extension.
 
-This project was built in Bootrap 4. The icons are from [Font Awesome 5](https://fontawesome.com/). To maintain code readability and reusability, I used `SASS` as the `CSS` pre-processor. Note that this project doesn't come bundled with its own _`SASS` compiler_, as I was lazy to code up one 😛... If you're using [VS Code](https://code.visualstudio.com/), you can simply use the free [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) VS Code extension.
-
-[Write up](https://dev.to/davinaleong/released-my-first-bootstrap-4-template-2b00) on [DEV Community](https://dev.to/).
-
-I came up with the idea of creating a fake company. This company specializes in developing custom web and mobile applications for clients. The audience of the talk was a local `PHP` community. Hence, I came up with the company's name "Comphanny" which is a play on the words "company", "php", and "ph" being pronunced as "f" in "elephant" which is the animal typically associated with `PHP`.
-
-I initally wanted to build this template from scratch, to practise my `CSS` & web design skills, as well as explore **Flex** and **CSS Grid**. But due to time constraint from my day job, and still having the CraftCMS part of the project to build, I felt it was too ambitious. So I decided to go building off Bootstrap since it was what I was familiar with.
+Check the [write-up](https://dev.to/davinaleong/released-my-first-bootstrap-4-template-2b00) on DEV Community. Created for a fictional company, "Comphanny," specializing in web and mobile app development. The name plays on "company," "php," and "ph" pronounced as "f." Originally intended a scratch build but opted for Bootstrap due to time constraints from my day job and the upcoming CraftCMS project.
