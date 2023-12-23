@@ -15,28 +15,23 @@ const funnyPath: string = `/funny`
         </a>
 
         <nav class="primary-header__nav">
-            <a href="#" class="primary-header__nav__dropdown" data-element="primary-header__nav__dropdown">
-                <div class="primary-header__nav__dropdown__link">Demos</div>
-
-                <nav class="primary-header__nav__dropdown__nav">
-                    <a href={portfolioPath} class="primary-header__nav__link">Portfolio</a>
-                    <a href="https://davinaleong.github.io/proj-dav-fem/" class="primary-header__nav__link" target="_blank" title="Frontend Mentor Demos">FEM</a>
-                </nav>
-            </a>
-            <a href={homePath} class="primary-header__nav__link">Home</a>
-            <a href={resumePath} class="primary-header__nav__link">Resume</a>
-            <a href={portfolioPath} class="primary-header__nav__link">Portfolio</a>
-            <a href="https://davinaleong.github.io/proj-dav-fem/" class="primary-header__nav__link" target="_blank" title="Frontend Mentor Demos">FEM Demos</a>
-            <a href="#" class="primary-header__nav__dropdown" data-element="primary-header__nav__dropdown">
-                <div class="primary-header__nav__dropdown__link">Demos</div>
-
-                <nav class="primary-header__nav__dropdown__nav">
-                    <a href={portfolioPath} class="primary-header__nav__link">Portfolio</a>
-                    <a href="https://davinaleong.github.io/proj-dav-fem/" class="primary-header__nav__link" target="_blank" title="Frontend Mentor Demos">FEM</a>
-                </nav>
-            </a>
-            <a href={contactPath} class="primary-header__nav__link">Contact</a>
-            <a href={funnyPath} class="primary-header__nav__link">Funny</a>
+            <ul class="primary-header__ul">
+                <li class="primary-header__li">
+                    <a href={homePath} class="primary-header__link">Home</a>
+                </li>
+                <li class="primary-header__li">
+                    <a href={resumePath} class="primary-header__link">Resume</a>
+                </li>
+                <li class="primary-header__li">
+                    <a href={portfolioPath} class="primary-header__link">Portfolio</a>
+                </li>
+                <li class="primary-header__li">
+                    <a href={contactPath} class="primary-header__link">Contact</a>
+                </li>
+                <li class="primary-header__li">
+                    <a href={funnyPath} class="primary-header__link">Funny</a>
+                </li>
+            </ul>
         </nav>
 
         <button

@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets'
+import logo from "../assets/images/logo-white-svg.svg"
+
+const homePath: string = `/`; //currentPath === `/` ? '/' : '../'
+const resumePath: string = `/resume`
+const portfolioPath: string = `/portfolio/1`
+const contactPath: string = `/contact`
+const funnyPath: string = `/funny`
+---
+<header class="primary-header" data-element="primary-header">
+    <div class="wrapper primary-header-wrapper mx-auto">
+        <a href={homePath} class="btn btn-primary-header">
+            <Image src={logo} alt="Dav/Devs Footer Logo" /> Dav/Devs
+        </a>
+
+        <nav class="primary-header__nav">
+            <a href="#" class="primary-header__nav__dropdown" data-element="primary-header__nav__dropdown">
+                <div class="primary-header__nav__dropdown__link">Demos</div>
+
+                <nav class="primary-header__nav__dropdown__nav">
+                    <a href={portfolioPath} class="primary-header__nav__link">Portfolio</a>
+                    <a href="https://davinaleong.github.io/proj-dav-fem/" class="primary-header__nav__link" target="_blank" title="Frontend Mentor Demos">FEM</a>
+                </nav>
+            </a>
+            <a href={homePath} class="primary-header__nav__link">Home</a>
+            <a href={resumePath} class="primary-header__nav__link">Resume</a>
+            <a href={portfolioPath} class="primary-header__nav__link">Portfolio</a>
+            <a href="https://davinaleong.github.io/proj-dav-fem/" class="primary-header__nav__link" target="_blank" title="Frontend Mentor Demos">FEM Demos</a>
+            <a href="#" class="primary-header__nav__dropdown" data-element="primary-header__nav__dropdown">
+                <div class="primary-header__nav__dropdown__link">Demos</div>
+
+                <nav class="primary-header__nav__dropdown__nav">
+                    <a href={portfolioPath} class="primary-header__nav__link">Portfolio</a>
+                    <a href="https://davinaleong.github.io/proj-dav-fem/" class="primary-header__nav__link" target="_blank" title="Frontend Mentor Demos">FEM</a>
+                </nav>
+            </a>
+            <a href={contactPath} class="primary-header__nav__link">Contact</a>
+            <a href={funnyPath} class="primary-header__nav__link">Funny</a>
+        </nav>
+
+        <button
+            type="button"
+            class="btn btn-primary-header"
+            data-element="primary-header__menu">
+                <i class="fa-thin fa-sharp fa-bars"></i>
+                <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <button
+        type="button"
+        class="btn btn-primary-header"
+        data-element="primary-header__close">
+            <i class="fa-thin fa-sharp fa-xmark"></i>
+            <span class="sr-only">Close</span>
+    </button>
+</header>
