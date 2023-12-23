@@ -6,9 +6,8 @@ date: "2020-08-02"
 description: "A simple Laravel Todo app."
 keywords: "Davina, Leong, Davina Leong, Personal Website, Todo, Palettes, Todo, Frontend, Backend, HTML, CSS, Bootstrap 4, SB Admin 2, Laravel, MySQL, Heroku"
 category: "laravel"
-image: "todo-laravel.png"
-link: ""
-repo: ""
+images: [{ url: "todo-laravel.png", alt: "TODO Laravel" }]
+links: []
 featured: false
 technologies:
   [
