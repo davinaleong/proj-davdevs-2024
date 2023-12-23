@@ -6,9 +6,12 @@ date: "2022-09-20"
 description: "A collection of demos I built for Frontend Mentor's challenges."
 keywords: "davina, davina leong, leong, fem, frontend mentor, collection, projects, project, demo, demos, challenges, challenge, html, css, json, grid, flex, flexbox"
 category: "html"
-image: "fem-projects.jpg"
-link: "https://davinaleong.github.io/proj-dav-fem/"
-repo: ""
+images: [{ url: "fem-projects.jpg", alt: "Frontend Mentor Demo Collection" }]
+links:
+  [
+    { label: "See Demo", url: "https://davinaleong.github.io/proj-dav-fem/" },
+    { label: "See Repo", url: "https://github.com/davinaleong/proj-dav-fem" },
+  ]
 featured: false
 technologies:
   [

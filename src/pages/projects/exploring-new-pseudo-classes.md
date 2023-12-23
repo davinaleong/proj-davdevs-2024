@@ -6,9 +6,24 @@ date: "2022-09-20"
 description: "Here are some demos I've put together using the :has() pseudo class."
 keywords: "davina, davina leong, leong, pseudo, pseudo class, new, html, html5, css, css3, has, placeholder-shown"
 category: "css"
-image: "exploring-new-pseudo-classes.png"
-link: "https://davinaleong.github.io/proj-exploring-new-pseudo-classes/"
-repo: "https://github.com/davinaleong/proj-exploring-new-pseudo-classes"
+images:
+  [
+    {
+      url: "exploring-new-pseudo-classes.png",
+      alt: "Exploring New Pseudo Classe",
+    },
+  ]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-exploring-new-pseudo-classes/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-exploring-new-pseudo-classes",
+    },
+  ]
 featured: false
 technologies:
   [

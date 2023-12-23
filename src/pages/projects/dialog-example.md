@@ -6,9 +6,18 @@ date: "2022-09-20"
 description: "A preview of the new dialog element with example code on GitHub."
 keywords: "davina, davina leong, leong, dialog, dialog element, new, html, html5, css, css3, js, javascript, github"
 category: "javascript"
-image: "dialog-example.png"
-link: "https://davinaleong.github.io/proj-dialog-example/"
-repo: "https://github.com/davinaleong/proj-dialog-example"
+images: [{ url: "dialog-example.png", alt: "New Dialog Element Example" }]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-dialog-example/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-dialog-example",
+    },
+  ]
 featured: false
 technologies:
   [

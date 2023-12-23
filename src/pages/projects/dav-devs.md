@@ -6,9 +6,15 @@ date: "2020-01-16"
 description: "My portfolio website."
 keywords: "Davina, Leong, Davina Leong, Personal Website, Davina Devs, Davina-Devs, Dav / Devs, HTML, CSS, SASS, jQuery, JSON, Font Awesome 5, CSS Grid, Flex, GatsbyJS, ReactJS, Netlify, Affinity Designer"
 category: "javascript"
-image: "dav-devs.png"
-link: "https://davina-devs.com/"
-repo: "https://github.com/davinaleong/proj-davdevs-2023-astro"
+images: [{ url: "dav-devs.png", alt: "Dav/Devs" }]
+links:
+  [
+    { label: "See Demo", url: "https://davina-devs.com/" },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-davdevs-2024",
+    },
+  ]
 featured: true
 technologies:
   [

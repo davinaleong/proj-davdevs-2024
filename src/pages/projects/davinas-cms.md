@@ -6,9 +6,8 @@ date: "2022-04-18"
 description: "A one-in-all CMS for all my projects' content."
 keywords: "Davina, Leong, Davina Leong, CMS, HTML, CSS, buttons, animation, css animation, flex, flexbox, Laravel, PHP, projects"
 category: "laravel"
-image: "davinas-cms.png"
-link: ""
-repo: ""
+images: [{ url: "davinas-cms.png", alt: "Davina's CMS" }]
+links: []
 featured: false
 technologies:
   [
