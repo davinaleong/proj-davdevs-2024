@@ -1,4 +1,5 @@
 ---
+import { LinkInterface, ImageInterface } from "../lib/interfaces.lib"
 import MainLayoutAstro from "../layouts/main.layout.astro"
 
 import * as main from "./../content/portfolio/main.md"
@@ -6,7 +7,7 @@ import * as main from "./../content/portfolio/main.md"
 const { categories } = main.frontmatter
 
 const { frontmatter } = Astro.props
-const { title, subtitle, description, keywords, category, image, link, repo, technologies } = frontmatter
+const { title, subtitle, description, keywords, category, images, links, technologies } = frontmatter
 const { label, categoryClass } = categories.filter(({ slug }: any) => slug === category)[0]
 ---
 <MainLayoutAstro title={title} description={description} keywords={keywords}>
@@ -37,14 +38,15 @@ const { label, categoryClass } = categories.filter(({ slug }: any) => slug === c
 
           <div class="project-content">
             <div class="project-content__body">
-              <img
-                src={`/screenshots/${image}`}
-                alt="Project Screenshot"
-                class="project-content__body__img"
-              />
+              <div class="project-content__body__images">
+                {images.map(({ url, alt }: ImageInterface) => <img
+                  src={`/screenshots/${url}`}
+                  alt={`${alt}`}
+                />)}
+              </div>
+              
               <div class="project-content__body__btn">
-                <a href={link} class="btn btn-sm" target="_blank">Demo</a>
-                <a href={repo} class="btn btn-sm" target="_blank">Repo</a>
+                {links.map(({ title, url }: LinkInterface) => <a href={url} class="btn btn-sm" target="_blank">{title}</a>)}
               </div>
             </div>
             <div class="project-content__toolkit | flow" style="--_flow-spacer: 0.5em">

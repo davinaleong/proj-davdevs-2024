@@ -6,9 +6,24 @@ date: "2022-08-19"
 description: "Simplified Bootstrap 4 template for admin dashboards. Streamlined setup, featuring essential packages like ParsleyJS, DataTables, MomentJS, Tempus Dominus, and PrismJS."
 keywords: "Bootstrap 4, Admin Template, ParsleyJS, DataTables, MomentJS, Tempus Dominus, PrismJS, Web Development, Streamlined Setup, Essential Packages"
 category: "bootstrap"
-image: "b4-admin-template.png"
-link: "https://davinaleong.github.io/proj-b4-admin-template/"
-repo: "https://github.com/davinaleong/proj-b4-admin-template"
+images:
+  [
+    {
+      url: "b4-admin-template.png",
+      alt: "Bootstrap 4 Admin Dashboard Template",
+    },
+  ]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-b4-admin-template/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-b4-admin-template",
+    },
+  ]
 featured: false
 technologies:
   [

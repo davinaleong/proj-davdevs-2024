@@ -6,9 +6,14 @@ date: "2022-08-11"
 description: "Implementing five diverse projects inspired by Traversy Media's tutorial. Exploring practical applications for these components, including integrating dynamism into the Dav/Devs site. Despite commitments, dedicated time is prioritized. The tutorial acts as a technical catalyst, fostering creativity for future endeavors."
 keywords: "5 Coding Projects, Traversy Media Tutorial, Practical Applications, Dav/Devs Dynamism, Time Prioritization, Technical Catalyst, Creative Coding"
 category: "javascript"
-image: "5-html-css-js-projects.png"
-link: "https://davinaleong.github.io/proj-five-projects/"
-repo: ""
+images: [{ url: "5-html-css-js-projects.png", alt: "5 Coding Projects" }]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-five-projects/",
+    },
+  ]
 featured: false
 technologies:
   [

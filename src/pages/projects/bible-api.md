@@ -6,9 +6,12 @@ date: "2021-02-27"
 description: "Dive into the intricacies of my ongoing Bible API project, meticulously crafted in PHP and Laravel, residing on the robust Linode platform. Unveil the dual prowess of its Content Management System (CMS) for seamless updates and a dynamic API for efficient data retrieval. Anticipate upcoming domain setup and HTTPS integration, fortified by Laravel Forge and rigorously tested with PHPUnit."
 keywords: "Bible API, PHP Development, Laravel Project, Linode Hosting, CMS, API Integration, Technical Project, Skill Enhancement, Domain Setup, HTTPS Implementation, Laravel Forge, PHPUnit Testing, Ongoing Development"
 category: "laravel"
-image: "qbible-api.png"
-link: "http://45.33.120.254/"
-repo: "https://github.com/davinaleong/proj-bible-api"
+images: [{ url: "bible-api.png", alt: "Bible API" }]
+links:
+  [
+    { label: "See Demo", url: "http://45.33.120.254/" },
+    { label: "See Repo", url: "https://github.com/davinaleong/proj-bible-api" },
+  ]
 featured: false
 technologies:
   [
