@@ -6,9 +6,18 @@ date: "2020-01-16"
 description: "Bootstrap 4 template demo for a CraftCMS talk. Features SASS, Font Awesome 5 icons, and a fictional company 'Comphanny.' Read more on DEV Community."
 keywords: "Bootstrap, CraftCMS, SASS, Font Awesome, Web Design, PHP Community"
 category: "bootstrap"
-image: "comphanny-template.png"
-link: "https://davinaleong.github.io/proj-comphanny-template/"
-repo: "https://github.com/davinaleong/proj-comphanny-template"
+images: [{ url: "comphanny-template.png", alt: "Comphanny Template" }]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-comphanny-template/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-comphanny-template",
+    },
+  ]
 featured: false
 technologies:
   [

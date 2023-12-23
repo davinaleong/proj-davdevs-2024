@@ -6,9 +6,18 @@ date: "2022-08-19"
 description: "Following a tutorial by Kevin Powell on how to do chamfered buttons"
 keywords: "Davina, Leong, Davina Leong, HTML, CSS, buttons, animation, css animation, css grid"
 category: "css"
-image: "cut-corners.png"
-link: "https://davinaleong.github.io/proj-cut-corners/"
-repo: "https://github.com/davinaleong/proj-cut-corners"
+images: [{ url: "cut-corners.png", alt: "Cut Corners Button" }]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-cut-corners/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-cut-corners",
+    },
+  ]
 featured: false
 technologies:
   [

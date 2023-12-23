@@ -6,9 +6,18 @@ date: "2020-01-15"
 description: "Responsive color palette project using HTML, CSS, flex, and CSS grid. Easily explore and copy color codes. Version 2 enhances usability."
 keywords: "Color Palette, HTML, CSS, Flex, Grid, jQuery, JavaScript, Responsive, Color Codes, UX"
 category: "javascript"
-image: "color-palettes.png"
-link: "https://davinaleong.github.io/proj-color-palette/"
-repo: "https://github.com/davinaleong/proj-color-palette-v2"
+images: [{ url: "color-palettes.png", alt: "Color Palettes" }]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-color-palette/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-color-palette-v2",
+    },
+  ]
 featured: false
 technologies:
   [

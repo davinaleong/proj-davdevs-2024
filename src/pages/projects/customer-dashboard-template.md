@@ -6,9 +6,14 @@ date: "2021-02-27"
 description: "A dashboard template for company's clients."
 keywords: "Davina, Leong, Davina Leong, Personal Website, Customer Dashboard, Customer Dashboard Template, Frontend, HTML, CSS, Bootstrap 4, Admin LTE, AWS S3"
 category: "html"
-image: "customer-dashboard.png"
-link: "https://customer-dashboard-template.s3-ap-southeast-1.amazonaws.com/dashboard.html"
-repo: ""
+images: [{ url: "customer-dashboard.png", alt: "Customer Dashboard Template" }]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://customer-dashboard-template.s3-ap-southeast-1.amazonaws.com/dashboard.html/",
+    },
+  ]
 featured: false
 technologies:
   [
