@@ -6,9 +6,18 @@ date: "2022-08-19"
 description: "A QR Code Generator I made as a side project."
 keywords: "davina, davina leong, leong, qr code generator, qr, qr code, generator"
 category: "javascript"
-image: "qr-code-generator.png"
-link: "https://davinaleong.github.io/proj-qr-code-generator/"
-repo: "https://github.com/davinaleong/proj-qr-code-generator"
+images: [{ url: "qr-code-generator.png", alt: "QR Code Generator" }]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-qr-code-generator/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-qr-code-generator",
+    },
+  ]
 featured: false
 technologies:
   [

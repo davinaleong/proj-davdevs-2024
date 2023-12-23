@@ -6,9 +6,18 @@ date: "2020-01-16"
 description: "The template portion of a Pokemon-Teams React-app."
 keywords: "Davina, Leong, Davina Leong, Personal Website, Pokemon, Template, Pokemon Teams Template, HTML, CSS, SASS, jQuery, JSON, Font Awesome 5, CSS Grid, Flex"
 category: "html"
-image: "pokemon-teams-template.png"
-link: "https://davinaleong.github.io/proj-pokemon-teams-template/"
-repo: "https://github.com/davinaleong/proj-pokemon-teams-template"
+images: [{ url: "pokemon-teams-template.png", alt: "Pokemon Teams Template" }]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-pokemon-teams-template/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-pokemon-teams-template",
+    },
+  ]
 featured: false
 technologies:
   [

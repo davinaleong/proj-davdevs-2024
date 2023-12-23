@@ -6,9 +6,18 @@ date: "2022-10-07"
 description: "A solution I came up with for the password visibility toggle found on many modern websites."
 keywords: "davina, davina leong, leong, password, password visibility, visibility, html, html5, css, css3, js, javascript"
 category: "javascript"
-image: "password-visibility.png"
-link: "https://davinaleong.github.io/password-visibility/"
-repo: "https://github.com/davinaleong/proj-password-visibility"
+images: [{ url: "password-visibility.png", alt: "Password Visibility" }]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/password-visibility/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-password-visibility",
+    },
+  ]
 featured: false
 technologies:
   [

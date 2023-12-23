@@ -6,9 +6,15 @@ date: "2020-01-15"
 description: "A React app that displays the Proverbs of the day."
 keywords: "Davina, Leong, Davina Leong, Personal Website, Proverbs, Everyday, App, Proverbs Everyday, HTML, CSS, Font Awesome 5, ReactJS, JSON, MomentJS, Netlify, CSS Grid, Flex"
 category: "react"
-image: "proverbs-everyday.png"
-link: "https://proverbs-everyday-v2.netlify.app/"
-repo: "https://github.com/davinaleong/proj-proverbs-everyday-2-app"
+images: [{ url: "proverbs-everyday.png", alt: "Proverbs Everyday" }]
+links:
+  [
+    { label: "See Demo", url: "https://proverbs-everyday-v2.netlify.app/" },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-proverbs-everyday-2-app",
+    },
+  ]
 featured: false
 technologies:
   [

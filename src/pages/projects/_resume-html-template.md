@@ -1,14 +1,23 @@
 ---
 layout: "./../../layouts/project.layout.astro"
-title: "QR Code Generator"
+title: "Resume HTML Template"
 subtitle: "HTML & JS Template"
 date: "2021-08-28"
 description: "The HTML template of my resume for my website."
 keywords: "Davina, Leong, Davina Leong, Personal Website, Resume, Template, Resume HTML Template, HTML, CSS, jQuery, JSON, Font Awesome 5, CSS Grid, Flex"
 category: "html"
-image: "resume-html-template.png"
-link: "https://davinaleong.github.io/proj-resume-html-template/"
-repo: "https://github.com/davinaleong/proj-resume-template"
+images: [{ url: "resume-html-template.png", alt: "Resume HTML Template" }]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-resume-html-template/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-resume-template",
+    },
+  ]
 featured: false
 technologies:
   [
