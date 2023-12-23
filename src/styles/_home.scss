@@ -98,7 +98,7 @@
       --_card-heading-clr: theme("colors.slate.950");
       --_card-a-clr: theme("colors.slate.800");
 
-      transform: perspective(400px) rotateY(3deg);
+      transform: perspective(var(--perspective)) rotateY(3deg);
     }
 
     &:nth-of-type(even) {
@@ -108,7 +108,7 @@
       --_card-heading-clr: theme("colors.orange.950");
       --_card-a-clr: theme("colors.orange.800");
 
-      transform: perspective(400px) rotateY(-3deg);
+      transform: perspective(var(--perspective)) rotateY(-3deg);
     }
 
     a:after {
@@ -118,11 +118,11 @@
 
   &-talk {
     &:nth-of-type(odd) {
-      transform: perspective(400px) rotateY(3deg);
+      transform: perspective(var(--perspective)) rotateY(3deg);
     }
 
     &:nth-of-type(even) {
-      transform: perspective(400px) rotateY(-3deg);
+      transform: perspective(var(--perspective)) rotateY(-3deg);
     }
   }
 
@@ -191,7 +191,12 @@
       --_card-icon-bg-clr: theme("colors.youtube.base");
       --_card-icon-hover-bg-clr: theme("colors.youtube.light");
 
+      .card-social__icon {
+        transform: perspective(var(--perspective)) rotateY(3deg);
+      }
+
       .card-social__content {
+        transform: perspective(var(--perspective)) rotateY(-3deg);
         bottom: -3em;
         left: 1em;
       }
@@ -319,14 +324,14 @@
         margin-block-start: var(--_card-alt-spacer);
         border-radius: theme("borderRadius.sm");
         box-shadow: theme("boxShadow.md");
-        transform: perspective(400px) rotateY(3deg);
+        transform: perspective(var(--perspective)) rotateY(3deg);
       }
       .card__body {
         margin-block-start: var(--_card-spacer);
         margin-block-end: var(--_card-alt-spacer);
         border-radius: theme("borderRadius.sm");
         box-shadow: theme("boxShadow.md");
-        transform: perspective(400px) rotateY(3deg);
+        transform: perspective(var(--perspective)) rotateY(3deg);
       }
     }
 
@@ -338,25 +343,25 @@
         margin-block-end: var(--_card-alt-spacer);
         border-radius: theme("borderRadius.sm");
         box-shadow: theme("boxShadow.md");
-        transform: perspective(400px) rotateY(-3deg);
+        transform: perspective(var(--perspective)) rotateY(-3deg);
       }
       .card__body {
         margin-block-end: var(--_card-spacer);
         margin-block-start: var(--_card-alt-spacer);
         border-radius: theme("borderRadius.sm");
         box-shadow: theme("boxShadow.md");
-        transform: perspective(400px) rotateY(-3deg);
+        transform: perspective(var(--perspective)) rotateY(-3deg);
       }
     }
   }
 
   .card-talk {
     &:nth-of-type(odd) {
-      transform: perspective(400px) rotateY(3deg);
+      transform: perspective(var(--perspective)) rotateY(3deg);
     }
 
     &:nth-of-type(even) {
-      transform: perspective(400px) rotateY(3deg);
+      transform: perspective(var(--perspective)) rotateY(3deg);
     }
   }
 

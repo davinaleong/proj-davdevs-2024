@@ -4,6 +4,7 @@ import MainLayoutAstro from "../layouts/main.layout.astro"
 import * as index from "../content/index/main.md"
 import * as portfolio from "../content/portfolio/main.md"
 import { sortPostsDesc } from "../lib/helpers.lib"
+import type { ImageInterface } from "../lib/interfaces.lib"
 const { title, subtitle, slogan, skills, featured, talks, social } = index.frontmatter
 const { categories } = portfolio.frontmatter
 
@@ -70,14 +71,15 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                   </h2>
 
                   {selectedFeaturedPosts.map(({ frontmatter, url }: any) => {
-                    const { title, description, category, image } = frontmatter
+                    const { title, description, category, images } = frontmatter
                     const { label, slug, categoryClass } = categories.filter(({ slug }: any) => slug === category)[0]
+                    const image: ImageInterface = images[0]
                     return (
                       <>
                         <div class="card card-featured">
                           <img
-                            src={`/screenshots/${image}`}
-                            alt="Project Screenshot"
+                            src={`/screenshots/${image.url}`}
+                            alt={`${image.alt}`}
                             class="card__img | shadow"
                           />
                           <div class="card__body | shadow flow p-4">
