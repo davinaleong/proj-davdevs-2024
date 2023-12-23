@@ -6,9 +6,18 @@ date: "2022-12-08"
 description: "My own solution to a simple image slider without any plugins."
 keywords: "davina, davina leong, leong, slider, image, html, html5, css, css3, javascript, js, vanilla javascript, css grid, flex, flexbox"
 category: "javascript"
-image: "image-sliders.png"
-link: "https://davinaleong.github.io/proj-image-slider/"
-repo: "https://github.com/davinaleong/proj-image-slider"
+images: [{ url: "image-sliders.png", alt: "Image Sliders" }]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-image-slider/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-image-slider",
+    },
+  ]
 featured: true
 technologies:
   [

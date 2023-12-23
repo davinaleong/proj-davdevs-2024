@@ -6,9 +6,18 @@ date: "2022-07-27"
 description: "A static glass interface following a video tutorial."
 keywords: "davina, davina leong, leong, glass, website, html, css, css3, html5"
 category: "css"
-image: "glass-website.png"
-link: "https://davinaleong.github.io/proj-glass-website/"
-repo: "https://github.com/davinaleong/proj-glass-website"
+images: [{ url: "glass-website.png", alt: "Glass Website" }]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-glass-website/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-glass-website",
+    },
+  ]
 featured: false
 technologies:
   [

@@ -6,9 +6,18 @@ date: "2022-11-11"
 description: "A demo on limiting lines of text."
 keywords: "davina, davina leong, leong, line, clamp, webkit"
 category: "css"
-image: "line-clamp.png"
-link: "https://davinaleong.github.io/proj-line-clamp/"
-repo: "https://github.com/davinaleong/proj-line-clamp"
+images: [{ url: "line-clamp.png", alt: "Line Clamp" }]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-line-clamp/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-line-clamp",
+    },
+  ]
 featured: false
 technologies:
   [

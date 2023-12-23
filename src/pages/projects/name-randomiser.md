@@ -6,9 +6,18 @@ date: "2021-11-20"
 description: "A tool to shuffle and/or split labels into groups."
 keywords: "label Processor, label, Processor, HTML Template, HTML, CSS, jQuery, Bootstrap 5, Font Awesome 5, Flex, JavaScript, JS"
 category: "javascript"
-image: "randomise-names.png"
-link: "https://davinaleong.github.io/proj-randomise-labels/"
-repo: "https://github.com/davinaleong/proj-randomise-names"
+images: [{ url: "randomise-names.png", alt: "Name Processor" }]
+links:
+  [
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-randomise-labels/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-randomise-names",
+    },
+  ]
 featured: false
 technologies:
   [

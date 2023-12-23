@@ -46,7 +46,7 @@ const { label, categoryClass } = categories.filter(({ slug }: any) => slug === c
               </div>
               
               <div class="project-content__body__btn">
-                {links.map(({ title, url }: LinkInterface) => <a href={url} class="btn btn-sm" target="_blank">{title}</a>)}
+                {links.map(({ label, url }: LinkInterface) => <a href={url} class="btn btn-sm" target="_blank">{label}</a>)}
               </div>
             </div>
             <div class="project-content__toolkit | flow" style="--_flow-spacer: 0.5em">

@@ -14,7 +14,7 @@ export interface ImageInterface {
 }
 
 export interface LinkInterface {
-  title: string
+  label: string
   url: string
   target?: string
 }
