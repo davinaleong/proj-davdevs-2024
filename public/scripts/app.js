@@ -70,26 +70,6 @@ function toggleMenu() {
 
   primaryHeaderEl.removeAttribute(DATA_ACTIVE_ATTR)
 
-  // const dropdownEls = getElements(`primary-header__dropdown`, primaryHeaderEl)
-
-  // dropdownEls.forEach(function (dropdownEl) {
-  //   const aEl = dropdownEl.querySelector(`a`)
-
-  //   dropdownEl.removeAttribute(DATA_ACTIVE_ATTR)
-
-  //   aEl.addEventListener(`click`, function (event) {
-  //     event.preventDefault()
-
-  //     const activeAttr = dropdownEl.getAttribute(DATA_ACTIVE_ATTR)
-
-  //     dropdownEl.setAttribute(DATA_ACTIVE_ATTR, `true`)
-
-  //     if (activeAttr && activeAttr === STR_TRUE) {
-  //       dropdownEl.removeAttribute(DATA_ACTIVE_ATTR)
-  //     }
-  //   })
-  // })
-
   const btnMenuEl = getElement(`primary-header__menu`, primaryHeaderEl)
   if (!btnMenuEl) return
   btnMenuEl.addEventListener(`click`, function (event) {
