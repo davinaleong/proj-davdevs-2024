@@ -23,6 +23,9 @@ const THEME_DARK = `dark`
 const STATUS_ERROR = `ERROR`
 const STATUS_SUCCESS = `SUCCESS`
 
+const STR_FALSE = `false`
+const STR_TRUE = `true`
+
 const COOKIE_DIALOG_DELAY = 3000
 
 const CONTENTFUL_URL = `https://cdn.contentful.com/spaces/9v840dm5l6au/environments/master/entries`
@@ -66,6 +69,26 @@ function toggleMenu() {
   if (!primaryHeaderEl) return
 
   primaryHeaderEl.removeAttribute(DATA_ACTIVE_ATTR)
+
+  // const dropdownEls = getElements(`primary-header__dropdown`, primaryHeaderEl)
+
+  // dropdownEls.forEach(function (dropdownEl) {
+  //   const aEl = dropdownEl.querySelector(`a`)
+
+  //   dropdownEl.removeAttribute(DATA_ACTIVE_ATTR)
+
+  //   aEl.addEventListener(`click`, function (event) {
+  //     event.preventDefault()
+
+  //     const activeAttr = dropdownEl.getAttribute(DATA_ACTIVE_ATTR)
+
+  //     dropdownEl.setAttribute(DATA_ACTIVE_ATTR, `true`)
+
+  //     if (activeAttr && activeAttr === STR_TRUE) {
+  //       dropdownEl.removeAttribute(DATA_ACTIVE_ATTR)
+  //     }
+  //   })
+  // })
 
   const btnMenuEl = getElement(`primary-header__menu`, primaryHeaderEl)
   if (!btnMenuEl) return
