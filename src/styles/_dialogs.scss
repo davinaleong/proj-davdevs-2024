@@ -7,7 +7,6 @@
   box-shadow: theme("boxShadow.md");
   overflow: hidden;
   position: fixed;
-  z-index: 2;
 
   &__body {
     display: flex;
@@ -35,6 +34,7 @@
     padding-inline-end: calc(var(--_dialog-spacer) * 3);
     color: theme("colors.neutral.50");
     background-color: theme("colors.blue.500");
+    z-index: 1;
   }
 
   &-skill {
@@ -44,13 +44,9 @@
     top: 50%;
     left: 50%;
     translate: -50% -50%;
+    z-index: 2;
 
     .dialog__header {
-      background-color: theme("colors.blue.500");
-      background-image: url("../assets/images/dialog.svg");
-      background-size: cover;
-      background-position: bottom center;
-      background-repeat: no-repeat;
       padding-block-start: var(--_dialog-spacer);
       padding-block-end: var(--_dialog-spacer);
       padding-inline-start: var(--_dialog-spacer);
