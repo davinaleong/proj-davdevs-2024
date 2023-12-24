@@ -160,19 +160,19 @@
     }
 
     &-fontawesome {
-      --_btn-clr: theme("colors.neutral.950");
+      --_btn-clr: theme("colors.neutral.50");
       --_btn-bg-clr: theme("colors.fontawesome.base");
       --_btn-border-clr: theme("colors.fontawesome.base");
-      --_btn-hover-clr: theme("colors.neutral.950");
+      --_btn-hover-clr: theme("colors.neutral.50");
       --_btn-hover-bg-clr: theme("colors.fontawesome.light");
       --_btn-hover-border-clr: theme("colors.fontawesome.light");
     }
 
     &-typescript {
-      --_btn-clr: theme("colors.neutral.950");
+      --_btn-clr: theme("colors.neutral.50");
       --_btn-bg-clr: theme("colors.typescript.base");
       --_btn-border-clr: theme("colors.typescript.base");
-      --_btn-hover-clr: theme("colors.neutral.950");
+      --_btn-hover-clr: theme("colors.neutral.50");
       --_btn-hover-bg-clr: theme("colors.typescript.light");
       --_btn-hover-border-clr: theme("colors.typescript.light");
     }

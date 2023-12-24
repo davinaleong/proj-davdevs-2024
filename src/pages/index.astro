@@ -8,6 +8,8 @@ import type { ImageInterface } from "../lib/interfaces.lib"
 const { title, subtitle, slogan, skills, featured, talks, social } = index.frontmatter
 const { categories } = portfolio.frontmatter
 
+const skillPosts = await Astro.glob("../content/skills/*.md")
+
 const projectPosts = await Astro.glob("./projects/*.md")
 const featuredPosts = sortPostsDesc(projectPosts.filter(({ frontmatter }: any) => frontmatter.featured), "date")
 const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATURED_COUNT)
@@ -37,7 +39,7 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
 
       {
         () => {
-          const { title, draft, content } = skills
+          const { title, draft } = skills
           if (!draft) {
             return (
               <section id="home-skills" class="section section-home-skills">
@@ -47,6 +49,16 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                   >
                     {title}
                   </h2>
+
+                  <p class="skills mx-auto">
+                    {skillPosts.map(({ frontmatter }: any) => {
+                      const { title, className } = frontmatter
+
+                      return (
+                      <buttton class={`btn btn-skill ${className} | shadow-md`}>{title}</buttton>
+                      )
+                    })}
+                  </p>
                 </div>
                 <!-- ./wrapper -->
               </section>
