@@ -2,9 +2,12 @@
 logLoaded(`app.js`)
 
 /// Variables
+const LOG_TO_CONSOLE = true
+
 const DATA_ELEMENT_ATTR = `data-element`
 const DATA_ACTIVE_ATTR = `data-active`
 const DATA_THEME_ATTR = `data-theme`
+const DATA_TARGET_ATTR = `data-target`
 
 const ACTION_ATTR = `action`
 const DISABLED_ATTR = `disabled`
@@ -55,6 +58,7 @@ function main() {
   toggleMenu()
   toggleTheme(cookie)
   toggleCookieDialog(cookie)
+  toggleSkillDialogs()
   triggerPrint()
   contactForm()
   fillForm()
@@ -173,6 +177,45 @@ function toggleCookieDialog(cookie) {
     }
 
     cookieDialogEl.close()
+  })
+}
+
+function toggleSkillDialogs() {
+  logFunction(`toggleSkillDialogs`)
+
+  const btnSkillEls = getElements(`btn-skill`)
+  if (btnSkillEls.length <= 0) return
+
+  const skillDialogEls = document.querySelectorAll(`.dialog-skill`)
+  if (skillDialogEls.length <= 0) return
+
+  btnSkillEls.forEach(function (btnSkillEl) {
+    btnSkillEl.addEventListener(`click`, function (event) {
+      event.preventDefault()
+      const targetAttr = btnSkillEl.getAttribute(DATA_TARGET_ATTR)
+
+      skillDialogEls.forEach(function (skillDialogEl) {
+        skillDialogEl.close()
+      })
+
+      if (!targetAttr || targetAttr === ``) return
+
+      const skillDialogEl = getElement(targetAttr)
+      skillDialogEl.show()
+    })
+  })
+
+  skillDialogEls.forEach(function (skillDialogEl) {
+    const btnCloseEls = getElements(`btn-close`, skillDialogEl)
+    if (!btnCloseEls || btnCloseEls.length <= 0) return
+
+    btnCloseEls.forEach(function (btnCloseEl) {
+      btnCloseEl.addEventListener(`click`, function (event) {
+        event.preventDefault()
+
+        skillDialogEl.close()
+      })
+    })
   })
 }
 
@@ -385,16 +428,16 @@ function resetForm() {
 }
 
 /// Functions - Helpers
-function logLoaded(key = `script.js`) {
-  console.log(`${key} loaded.`)
+function logLoaded(key = `script.js`, log = true) {
+  if (log) console.log(`${key} loaded.`)
 }
 
-function logFunction(key = `function`, value = {}) {
-  console.log(`fn: ${key}(${JSON.stringify(value)})`)
+function logFunction(key = `function`, value = {}, log = true) {
+  if (log) console.log(`fn: ${key}(${JSON.stringify(value)})`)
 }
 
-function logVariable(key = `variable`, value = ``) {
-  console.log(key, value)
+function logVariable(key = `variable`, value = ``, log = true) {
+  if (log) console.log(key, value)
 }
 
 function getElement(key = ``, parent = null) {
