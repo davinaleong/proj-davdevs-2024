@@ -25,7 +25,7 @@
   }
 
   &-cookie {
-    width: clamp(var(--dialog-width), 100%, 23em);
+    width: clamp(var(--dialog-width), 100% - theme("padding.6"), 23em);
     left: theme("padding.4");
     right: theme("padding.4");
     bottom: theme("padding.4");
@@ -40,11 +40,10 @@
   &-skill {
     color: theme("colors.neutral.50");
     background-color: theme("colors.blue.700");
-    width: clamp(var(--dialog-width), 100%, 50ch);
-    top: theme("padding.4");
-    right: theme("padding.4");
+    width: clamp(var(--dialog-width), 100% - theme("padding.6"), 50ch);
+    top: 50%;
     left: 50%;
-    translate: -50% 0;
+    translate: -50% -50%;
 
     .dialog__header {
       background-color: theme("colors.blue.500");
@@ -75,6 +74,15 @@
     .dialog__buttons {
       justify-content: end;
     }
+  }
+
+  .btn-skill {
+    --_btn-hover-clr: var(--_btn-clr);
+    --_btn-hover-bg-clr: var(--_btn-bg-clr);
+    --_btn-hover-border-clr: var(--_btn-border-clr);
+
+    --_btn-spacer-block: theme("padding.1");
+    --_btn-spacer-inline: theme("padding.2");
   }
 
   a {
