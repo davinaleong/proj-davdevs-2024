@@ -7,18 +7,13 @@ skills:
   {
     title: "My Toolkit",
     draft: 0,
-    content:
+    categories:
       [
-        { label: "HTML", className: "btn-skill-html" },
-        { label: "CSS", className: "btn-skill-css" },
-        { label: "JavaScript", className: "btn-skill-javascript" },
-        { label: "SASS", className: "btn-skill-sass" },
-        { label: "Bootstrap", className: "btn-skill-bootstrap" },
-        { label: "React", className: "btn-skill-react" },
-        { label: "SQL", className: "btn-skill-sql" },
-        { label: "PHP", className: "btn-skill-php" },
-        { label: "Laravel", className: "btn-skill-laravel" },
-        { label: "Astro SSG", className: "btn-skill-astro" },
+        { id: "frontend", label: "Front-end" },
+        { id: "backend", label: "Back-end" },
+        { id: "devops", label: "DevOps" },
+        { id: "design", label: "Design" },
+        { id: "languages", label: "Languages" },
       ],
   }
 
