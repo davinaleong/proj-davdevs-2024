@@ -1,9 +1,34 @@
 /// Custom Colours
 
+$netlify-hex: #24c1b1;
+$netlify-base: hsl(174, 69%, 45%);
+$netlify-light: hsl(174, 69%, 55%);
+$netlify-dark: hsl(174, 69%, 35%);
+
+$tailwindcss-hex: #48b1b5;
+$tailwindcss-base: hsl(182, 43%, 50%);
+$tailwindcss-light: hsl(182, 43%, 60%);
+$tailwindcss-dark: hsl(182, 43%, 40%);
+
+$fontawesome-hex: #2186df;
+$fontawesome-base: hsl(208, 75%, 50%);
+$fontawesome-light: hsl(208, 75%, 60%);
+$fontawesome-dark: hsl(208, 75%, 40%);
+
+$typescript-hex: #2f74c0;
+$typescript-base: hsl(211, 61%, 47%);
+$typescript-light: hsl(211, 61%, 57%);
+$typescript-dark: hsl(211, 61%, 37%);
+
 $contentful-hex: #fae501;
 $contentful-base: hsl(55, 99%, 49%);
 $contentful-light: hsl(55, 99%, 59%);
 $contentful-dark: hsl(55, 99%, 39%);
+
+$heroku-hex: #410093;
+$heroku-base: hsl(267, 100%, 29%);
+$heroku-light: hsl(267, 100%, 39%);
+$heroku-dark: hsl(267, 100%, 19%);
 
 $html-hex: #e34f26;
 $html-base: hsl(13, 77%, 52%);

@@ -141,13 +141,40 @@
       --_btn-hover-border-clr: theme("colors.neutral.700");
     }
 
-    &-html {
+    &-netlify {
       --_btn-clr: theme("colors.neutral.50");
-      --_btn-bg-clr: theme("colors.html.base");
-      --_btn-border-clr: theme("colors.html.base");
+      --_btn-bg-clr: theme("colors.netlify.base");
+      --_btn-border-clr: theme("colors.netlify.base");
       --_btn-hover-clr: theme("colors.neutral.50");
-      --_btn-hover-bg-clr: theme("colors.html.light");
-      --_btn-hover-border-clr: theme("colors.html.light");
+      --_btn-hover-bg-clr: theme("colors.netlify.light");
+      --_btn-hover-border-clr: theme("colors.netlify.light");
+    }
+
+    &-tailwindcss {
+      --_btn-clr: theme("colors.neutral.950");
+      --_btn-bg-clr: theme("colors.tailwindcss.base");
+      --_btn-border-clr: theme("colors.tailwindcss.base");
+      --_btn-hover-clr: theme("colors.neutral.950");
+      --_btn-hover-bg-clr: theme("colors.tailwindcss.light");
+      --_btn-hover-border-clr: theme("colors.tailwindcss.light");
+    }
+
+    &-fontawesome {
+      --_btn-clr: theme("colors.neutral.950");
+      --_btn-bg-clr: theme("colors.fontawesome.base");
+      --_btn-border-clr: theme("colors.fontawesome.base");
+      --_btn-hover-clr: theme("colors.neutral.950");
+      --_btn-hover-bg-clr: theme("colors.fontawesome.light");
+      --_btn-hover-border-clr: theme("colors.fontawesome.light");
+    }
+
+    &-typescript {
+      --_btn-clr: theme("colors.neutral.950");
+      --_btn-bg-clr: theme("colors.typescript.base");
+      --_btn-border-clr: theme("colors.typescript.base");
+      --_btn-hover-clr: theme("colors.neutral.950");
+      --_btn-hover-bg-clr: theme("colors.typescript.light");
+      --_btn-hover-border-clr: theme("colors.typescript.light");
     }
 
     &-contentful {
@@ -157,6 +184,24 @@
       --_btn-hover-clr: theme("colors.neutral.950");
       --_btn-hover-bg-clr: theme("colors.contentful.light");
       --_btn-hover-border-clr: theme("colors.contentful.light");
+    }
+
+    &-heroku {
+      --_btn-clr: theme("colors.neutral.50");
+      --_btn-bg-clr: theme("colors.heroku.base");
+      --_btn-border-clr: theme("colors.heroku.base");
+      --_btn-hover-clr: theme("colors.neutral.50");
+      --_btn-hover-bg-clr: theme("colors.heroku.light");
+      --_btn-hover-border-clr: theme("colors.heroku.light");
+    }
+
+    &-html {
+      --_btn-clr: theme("colors.neutral.50");
+      --_btn-bg-clr: theme("colors.html.base");
+      --_btn-border-clr: theme("colors.html.base");
+      --_btn-hover-clr: theme("colors.neutral.50");
+      --_btn-hover-bg-clr: theme("colors.html.light");
+      --_btn-hover-border-clr: theme("colors.html.light");
     }
 
     &-css {

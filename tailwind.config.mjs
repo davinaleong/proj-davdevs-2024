@@ -4,6 +4,36 @@ export default {
   theme: {
     extend: {
       colors: {
+        netlify: {
+          base: "hsl(174, 69%, 45%)",
+          light: "hsl(174, 69%, 55%)",
+          dark: "hsl(174, 69%, 35%)",
+        },
+        tailwindcss: {
+          base: "hsl(182, 43%, 50%)",
+          light: "hsl(182, 43%, 60%)",
+          dark: "hsl(182, 43%, 40%)",
+        },
+        fontawesome: {
+          base: "hsl(208, 75%, 50%)",
+          light: "hsl(208, 75%, 60%)",
+          dark: "hsl(208, 75%, 40%)",
+        },
+        typescript: {
+          base: "hsl(211, 61%, 47%)",
+          light: "hsl(211, 61%, 57%)",
+          dark: "hsl(211, 61%, 37%)",
+        },
+        contentful: {
+          base: "hsl(55, 99%, 49%)",
+          light: "hsl(55, 99%, 59%)",
+          dark: "hsl(55, 99%, 39%)",
+        },
+        heroku: {
+          base: "hsl(267, 100%, 29%)",
+          light: "hsl(267, 100%, 39%)",
+          dark: "hsl(267, 100%, 19%)",
+        },
         html: {
           base: "hsl(13, 77%, 52%)",
           light: "hsl(13, 77%, 62%)",
