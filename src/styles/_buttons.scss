@@ -150,6 +150,15 @@
       --_btn-hover-border-clr: theme("colors.html.light");
     }
 
+    &-contentful {
+      --_btn-clr: theme("colors.neutral.950");
+      --_btn-bg-clr: theme("colors.contentful.base");
+      --_btn-border-clr: theme("colors.contentful.base");
+      --_btn-hover-clr: theme("colors.neutral.950");
+      --_btn-hover-bg-clr: theme("colors.contentful.light");
+      --_btn-hover-border-clr: theme("colors.contentful.light");
+    }
+
     &-css {
       --_btn-clr: theme("colors.neutral.50");
       --_btn-bg-clr: theme("colors.css.base");
