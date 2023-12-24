@@ -1,7 +1,7 @@
 ---
 
 ---
-<dialog class="dialog" data-element="cookie-dialog">
+<dialog class="dialog dialog-cookie" data-element="cookie-dialog">
     <button
       class="btn btn-dialog btn-dialog-close"
       type="button"
@@ -10,14 +10,13 @@
       <i class="fa-thin fa-sharp fa-xmark"></i>
       <span class="btn__text">Close</span>
     </button>
-    <div class="dialog__body">
-      <div class="dialog__body__content | flow">
-        <p>
-          Accept cookies. Read the
-          <a href="privacy-policy/">privacy policy here</a>.
-        </p>
-      </div>
-      <div class="dialog__body__buttons">
+    <div class="dialog__body | flow">
+      <p>
+        By continuing to use this site, you agree to our <a href="privacy-policy/">cookie policy</a>. 🍪
+      </p>
+    </div>
+    <footer class="dialog__footer">
+      <div class="dialog__buttons">
         <button
           class="btn btn-dialog btn-green btn-sm"
           type="button"
@@ -33,5 +32,5 @@
           <i class="fa-thin fa-sharp fa-xmark"></i> No
         </button>
       </div>
-    </div>
+    </footer>
 </dialog>

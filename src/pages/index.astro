@@ -9,7 +9,7 @@ const { title, subtitle, slogan, skills, featured, talks, social } = index.front
 const { categories } = portfolio.frontmatter
 
 const projectPosts = await Astro.glob("./projects/*.md")
-const featuredPosts = sortPostsDesc(projectPosts.filter(({ frontmatter }: any) => !frontmatter.draft && frontmatter.featured), "date")
+const featuredPosts = sortPostsDesc(projectPosts.filter(({ frontmatter }: any) => frontmatter.featured), "date")
 const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATURED_COUNT)
 ---
 
@@ -47,10 +47,6 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                   >
                     {title}
                   </h2>
-
-                  <p class="skills | mx-auto">
-                    {content.map(({ label, className }: any) => (<span class={`btn btn-skill ${className} | shadow-md`}>{label}</span>))}
-                  </p>
                 </div>
                 <!-- ./wrapper -->
               </section>
