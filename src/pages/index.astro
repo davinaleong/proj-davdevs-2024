@@ -50,7 +50,7 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                     {title}
                   </h2>
 
-                  <p class="skills mx-auto">
+                  <div class="skills mx-auto">
                     {skillPosts.map(({ frontmatter }: any) => {
                       const { title, className } = frontmatter
 
@@ -58,7 +58,7 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                       <buttton class={`btn btn-skill ${className} | shadow-md`}>{title}</buttton>
                       )
                     })}
-                  </p>
+                  </div>
                 </div>
                 <!-- ./wrapper -->
               </section>

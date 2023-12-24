@@ -82,7 +82,7 @@
   align-items: center;
   justify-content: center;
   gap: theme("gap.4");
-  max-width: var(--small-content-width);
+  width: min(100%, var(--small-content-width));
 }
 
 .card {
