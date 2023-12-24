@@ -1,6 +1,5 @@
 ---
 import "./../styles/app.scss"
-// import favicon from "./../assets/images/logo-png-32x32.png"
 import favicon from "./../assets/images/logo-svg.svg"
 
 import PrimaryHeaderComponentAstro from "../components/primary-header.component.astro"
@@ -40,23 +39,54 @@ const home: boolean = currentPath === `/`
 	<body>
 		<PrimaryHeaderComponentAstro />
 
-        <main class="primary-main container-q container-q-primary-main">
-            <button class="btn btn-theme" type="button" data-element="btn-theme">
-              <span class="btn-theme__label btn-theme__label-light">
-                <i class="fa-light fa-sharp fa-lightbulb-on"></i>
-                <span class="btn-theme__label__text">Light</span>
-              </span>
-              <span class="btn-theme__label btn-theme__label-dark">
-                <i class="fa-light fa-sharp fa-lightbulb-slash"></i>
-                <span class="btn-theme__label__text">Dark</span>
-              </span>
-            </button>
+    <main class="primary-main container-q container-q-primary-main">
+        <button class="btn btn-theme" type="button" data-element="btn-theme">
+          <span class="btn-theme__label btn-theme__label-light">
+            <i class="fa-light fa-sharp fa-lightbulb-on"></i>
+            <span class="btn-theme__label__text">Light</span>
+          </span>
+          <span class="btn-theme__label btn-theme__label-dark">
+            <i class="fa-light fa-sharp fa-lightbulb-slash"></i>
+            <span class="btn-theme__label__text">Dark</span>
+          </span>
+        </button>
 
-            <slot />
-        </main>
+        <slot />
+    </main>
 
-        <PrimaryFooterComponentAstro />
+    <PrimaryFooterComponentAstro />
 
-        {home && <CookieDialogComponentAstro />}
+    {home && <CookieDialogComponentAstro />}
+
+    <dialog class="dialog dialog-skill" data-element="skill-dialog" open>
+      <button
+        class="btn btn-dialog btn-dialog-close"
+        type="button"
+        data-element="btn-close"
+      >
+        <i class="fa-thin fa-sharp fa-xmark"></i>
+        <span class="btn__text">Close</span>
+      </button>
+      <header class="dialog__header | flow">
+        <h2 class="text-2xl">HTML</h2>
+        <p>{[`Front-end`, `Back-end`].join(`, `)}</p>
+      </header>
+      <div class="dialog__body | mt-4 flow">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tempore sunt eveniet alias ab ipsa error veritatis illum ipsum nemo!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tempore sunt eveniet alias ab ipsa error veritatis illum ipsum nemo!</p>
+      </div><!-- ./dialog__body -->
+      <footer class="dialog__footer">
+        <div class="dialog__buttons">
+          <button
+            class="btn btn-dialog"
+            type="button"
+            data-element="btn-close"
+          >
+            <i class="fa-thin fa-sharp fa-xmark"></i>
+            Close
+          </button>
+        </div>
+      </footer>
+  </dialog>
 	</body>
 </html>
