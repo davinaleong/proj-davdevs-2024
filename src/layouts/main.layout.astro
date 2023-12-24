@@ -4,6 +4,7 @@ import favicon from "./../assets/images/logo-svg.svg"
 
 import PrimaryHeaderComponentAstro from "../components/primary-header.component.astro"
 import PrimaryFooterComponentAstro from "../components/primary-footer.component.astro"
+import SkillDialogsComponentAstro from "../components/skill-dialogs.component.astro"
 import CookieDialogComponentAstro from "../components/cookie-dialog.component.astro"
 
 const { API_URL, PUBLIC_APP_SLUG } = import.meta.env
@@ -56,37 +57,9 @@ const home: boolean = currentPath === `/`
 
     <PrimaryFooterComponentAstro />
 
-    {home && <CookieDialogComponentAstro />}
+    {home && <SkillDialogsComponentAstro />}
 
-    <dialog class="dialog dialog-skill" data-element="skill-dialog" open>
-      <button
-        class="btn btn-dialog btn-dialog-close"
-        type="button"
-        data-element="btn-close"
-      >
-        <i class="fa-thin fa-sharp fa-xmark"></i>
-        <span class="btn__text">Close</span>
-      </button>
-      <header class="dialog__header | flow">
-        <h2 class="btn btn-sm btn-skill btn-skill-html text-2xl">HTML</h2>
-        <p>{[`Front-end`, `Back-end`].join(`, `)}</p>
-      </header>
-      <div class="dialog__body | mt-4 flow">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tempore sunt eveniet alias ab ipsa error veritatis illum ipsum nemo!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tempore sunt eveniet alias ab ipsa error veritatis illum ipsum nemo!</p>
-      </div><!-- ./dialog__body -->
-      <footer class="dialog__footer">
-        <div class="dialog__buttons">
-          <button
-            class="btn btn-dialog"
-            type="button"
-            data-element="btn-close"
-          >
-            <i class="fa-thin fa-sharp fa-xmark"></i>
-            Close
-          </button>
-        </div>
-      </footer>
-  </dialog>
+    {home && <CookieDialogComponentAstro />}
+    </dialog>
 	</body>
 </html>

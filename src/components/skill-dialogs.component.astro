@@ -1,0 +1,5 @@
+---
+import SkillDialogComponentAstro from "./skill-dialog.component.astro"
+const skillPosts = await Astro.glob("../content/skills/*.md")
+---
+{skillPosts.map((skillPost: any, index: number) => <SkillDialogComponentAstro skillPost={skillPost} index={index} />)}

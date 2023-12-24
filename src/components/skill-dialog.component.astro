@@ -1,0 +1,34 @@
+---
+const { skillPost, index } = Astro.props
+const { frontmatter, Content } = skillPost
+const { title, className, categories } = frontmatter
+---
+<dialog class="dialog dialog-skill" data-element={`skill-dialog-${index}`}>
+    <button
+      class="btn btn-dialog btn-dialog-close"
+      type="button"
+      data-element="btn-close"
+    >
+      <i class="fa-thin fa-sharp fa-xmark"></i>
+      <span class="btn__text">Close</span>
+    </button>
+    <header class="dialog__header | flow">
+      <h2 class={`btn btn-sm btn-skill ${className} text-2xl`}>{title}</h2>
+      <p>{categories.join(`, `)}</p>
+    </header>
+    <div class="dialog__body | mt-4 flow">
+      <Content />
+    </div><!-- ./dialog__body -->
+    <footer class="dialog__footer">
+      <div class="dialog__buttons">
+        <button
+          class="btn btn-dialog"
+          type="button"
+          data-element="btn-close"
+        >
+          <i class="fa-thin fa-sharp fa-xmark"></i>
+          Close
+        </button>
+      </div>
+    </footer>
+</dialog>

@@ -51,16 +51,18 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                   </h2>
 
                   <div class="skills mx-auto">
-                    {skillPosts.map(({ frontmatter }: any) => {
+                    {skillPosts.map(({ frontmatter }: any, index: number) => {
                       const { title, className } = frontmatter
 
                       return (
-                      <buttton class={`btn btn-skill ${className} | shadow-md`}>{title}</buttton>
+                      <buttton class={`btn btn-skill ${className} | shadow-md`} data-element="btn-skill" data-target={`skill-dialog-${index}`}>{title}</buttton>
                       )
                     })}
                   </div>
 
-                  <p class="text-neutral-200 text-center"><strong class="text-neutral-50">Click on the buttons</strong> to learn more about these technologies.</p>
+                  <p class="text-neutral-200 text-center">
+                    <strong class="text-neutral-50">Click on the buttons</strong> to learn more about these technologies.
+                  </p>
                 </div>
                 <!-- ./wrapper -->
               </section>

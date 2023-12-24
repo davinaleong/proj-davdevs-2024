@@ -1,7 +1,7 @@
 ---
 title: "CSS"
 className: "btn-skill-css"
-category: "frontend"
+categories: ["Front-end"]
 ---
 
 `CSS` writeup.
