@@ -1,5 +1,4 @@
 ---
-import { LinkInterface, ImageInterface } from "../lib/interfaces.lib"
 import MainLayoutAstro from "../layouts/main.layout.astro"
 
 import * as main from "./../content/portfolio/main.md"
@@ -39,14 +38,14 @@ const { label, categoryClass } = categories.filter(({ slug }: any) => slug === c
           <div class="project-content">
             <div class="project-content__body">
               <div class="project-content__body__images">
-                {images.map(({ url, alt }: ImageInterface) => <img
+                {images.map(({ url, alt }: any) => <img
                   src={`/screenshots/portfolio/${url}`}
                   alt={`${alt}`}
                 />)}
               </div>
               
               <div class="project-content__body__btn">
-                {links.map(({ label, url }: LinkInterface) => <a href={url} class="btn btn-sm" target="_blank">{label}</a>)}
+                {links.map(({ label, url }: any) => <a href={url} class="btn btn-sm" target="_blank">{label}</a>)}
               </div>
             </div>
             <div class="project-content__toolkit | flow" style="--_flow-spacer: 0.5em">
