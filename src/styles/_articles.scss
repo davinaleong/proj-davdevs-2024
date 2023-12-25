@@ -1,0 +1,100 @@
+/// Articles
+
+.section-articles {
+  --_section-bg-clr: theme("colors.neutral.50");
+
+  &-hero {
+    --_section-bg-clr: theme("colors.blue.500");
+    --_section-bg-img: url("/src/assets/images/articles-hero-mobile.svg");
+    --_section-bg-position: center bottom;
+
+    .section__wrapper {
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  &-content {
+    --_section-height: 30vh;
+    --_section-bg-img: url("/src/assets/images/footer-mobile.svg");
+    --_section-bg-position: bottom center;
+  }
+}
+
+.imgs-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > img {
+    flex-grow: 1;
+    width: 33%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+}
+
+.theme-dark,
+[data-theme="dark"] {
+  .section-articles {
+    --_section-bg-clr: theme("colors.neutral.950");
+
+    &-hero {
+      --_section-bg-img: url("/src/assets/images/articles-hero-mobile-dark.svg");
+    }
+
+    &-content {
+      --_section-bg-img: url("/src/assets/images/footer-mobile-dark.svg");
+    }
+  }
+}
+
+@container container-q-primary-main (width > theme("screens.sm")) {
+  .section-articles {
+    &-hero {
+      --_section-bg-img: url("/src/assets/images/articles-hero-desktop.svg");
+    }
+
+    &-content {
+      --_section-bg-img: url("/src/assets/images/footer-desktop.svg");
+    }
+  }
+
+  .theme-dark,
+  [data-theme="dark"] {
+    .section-articles {
+      &-hero {
+        --_section-bg-img: url("/src/assets/images/articles-hero-desktop-dark.svg");
+      }
+
+      &-content {
+        --_section-bg-img: url("/src/assets/images/footer-desktop-dark.svg");
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .section-articles {
+    --_section-bg-clr: theme("colors.neutral.950");
+
+    &-hero {
+      --_section-bg-img: url("/src/assets/images/articles-hero-mobile-dark.svg");
+    }
+
+    &-content {
+      --_section-bg-img: url("/src/assets/images/footer-mobile-dark.svg");
+    }
+  }
+
+  @container container-q-primary-main (width > theme("screens.sm")) {
+    .section-articles {
+      &-hero {
+        --_section-bg-img: url("/src/assets/images/articles-hero-desktop-dark.svg");
+      }
+
+      &-content {
+        --_section-bg-img: url("/src/assets/images/footer-desktop-dark.svg");
+      }
+    }
+  }
+}

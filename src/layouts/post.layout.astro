@@ -1,0 +1,32 @@
+---
+import MainLayoutAstro from "./main.layout.astro"
+
+const { frontmatter } = Astro.props
+const { title, description, keywords, images } = frontmatter
+---
+<MainLayoutAstro title={title} description={description} keywords={keywords}>
+  <section id="home-post" class="section section-post-hero">
+    <div class="wrapper section__wrapper | flow mx-auto p-4">
+      <h1 class="section-article-home__heading | text-6xl font-bold text-neutral-50 text-center uppercase">
+        {title}
+      </h1>
+    </div>
+    <!-- ./wrapper -->
+  </section>
+
+  <section
+    id="post-content"
+    class="section section-post section-post-content"
+  >
+    <div class="wrapper section__wrapper | mx-auto p-4 flow">
+      <div class="imgs-grid">
+        {images.map(({ url, alt }: any) => <img src={`/posts/${url}`} alt={alt} />)}
+      </div>
+
+      <div class="post__content | flow mt-4">
+        <slot />
+      </div>
+    </div>
+    <!-- ./wrapper -->
+  </section>
+</MainLayoutAstro>

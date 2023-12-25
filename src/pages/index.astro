@@ -17,25 +17,25 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
 
 <MainLayoutAstro>
 	<section id="home-hero" class="section section-home-hero">
-        <div class="wrapper section__wrapper mx-auto p-4 | flow">
-          <h1
-            class="section-hero-home__heading | text-6xl font-bold text-neutral-50 uppercase"
-          >
-            {title}
-          </h1>
-          <p
-            class="section-hero-home__subheading | p-1 text-xl font-semibold text-neutral-50 bg-orange-500 uppercase shadow-md rounded-sm"
-          >
-            <span>{subtitle}</span>
-          </p>
-          <p
-            class="section-hero-home__slogan text-xl font-semibold uppercase text-neutral-50"
-          >
-            {slogan}
-          </p>
-        </div>
-        <!-- ./wrapper -->
-      </section>
+    <div class="wrapper section__wrapper mx-auto p-4 | flow">
+      <h1
+        class="section-hero-home__heading | text-6xl font-bold text-neutral-50 uppercase"
+      >
+        {title}
+      </h1>
+      <p
+        class="section-hero-home__subheading | p-1 text-xl font-semibold text-neutral-50 bg-orange-500 uppercase shadow-md rounded-sm"
+      >
+        <span>{subtitle}</span>
+      </p>
+      <p
+        class="section-hero-home__slogan text-xl font-semibold uppercase text-neutral-50"
+      >
+        {slogan}
+      </p>
+    </div>
+    <!-- ./wrapper -->
+  </section>
 
       {
         () => {
@@ -195,6 +195,4 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
           }
         }
       }
-
-      
-</Main>
+</MainLayoutAstro>
