@@ -1,8 +1,10 @@
 ---
 import MainLayoutAstro from "../layouts/main.layout.astro"
 
-import * as index from "../content/articles/main.md"
-const { title } = index.frontmatter
+import * as main from "../content/pages/articles.md"
+const { title } = main.frontmatter
+
+const articlePosts = await Astro.glob("./posts/*.md")
 ---
 <MainLayoutAstro>
     <section id="home-articles" class="section section-articles-hero">
@@ -20,104 +22,29 @@ const { title } = index.frontmatter
       >
         <div class="wrapper section__wrapper | mx-auto p-4 flow">
           <div class="cards-grid">
-            <div class="card">
-                <img
-                  src={`/placeholders/project.png`}
-                  alt="Project Screenshot"
-                  class="card__img"
-                />
-                <div class="card__overlay | flow">
-                  <header class="card__overlay__header">
-                    <h3 class="card__overlay__heading">
-                      <a href="#">Lorem Ipsum</a>
-                    </h3>
-                  </header>
-                </div>
-            </div><!-- ./card -->
-            <div class="card">
-                <img
-                  src={`/placeholders/project.png`}
-                  alt="Project Screenshot"
-                  class="card__img"
-                />
-                <div class="card__overlay | flow">
-                  <header class="card__overlay__header">
-                    <h3 class="card__overlay__heading">
-                      <a href="#">Lorem Ipsum</a>
-                    </h3>
-                  </header>
-                </div>
-            </div><!-- ./card -->
-            <div class="card">
-                <img
-                  src={`/placeholders/project.png`}
-                  alt="Project Screenshot"
-                  class="card__img"
-                />
-                <div class="card__overlay | flow">
-                  <header class="card__overlay__header">
-                    <h3 class="card__overlay__heading">
-                      <a href="#">Lorem Ipsum</a>
-                    </h3>
-                  </header>
-                </div>
-            </div><!-- ./card -->
-            <div class="card">
-                <img
-                  src={`/placeholders/project.png`}
-                  alt="Project Screenshot"
-                  class="card__img"
-                />
-                <div class="card__overlay | flow">
-                  <header class="card__overlay__header">
-                    <h3 class="card__overlay__heading">
-                      <a href="#">Lorem Ipsum</a>
-                    </h3>
-                  </header>
-                </div>
-            </div><!-- ./card -->
-            <div class="card">
-                <img
-                  src={`/placeholders/project.png`}
-                  alt="Project Screenshot"
-                  class="card__img"
-                />
-                <div class="card__overlay | flow">
-                  <header class="card__overlay__header">
-                    <h3 class="card__overlay__heading">
-                      <a href="#">Lorem Ipsum</a>
-                    </h3>
-                  </header>
-                </div>
-            </div><!-- ./card -->
-            <div class="card">
-                <img
-                  src={`/placeholders/project.png`}
-                  alt="Project Screenshot"
-                  class="card__img"
-                />
-                <div class="card__overlay | flow">
-                  <header class="card__overlay__header">
-                    <h3 class="card__overlay__heading">
-                      <a href="#">Lorem Ipsum</a>
-                    </h3>
-                  </header>
-                </div>
-            </div><!-- ./card -->
-            <div class="card">
-                <img
-                  src={`/placeholders/project.png`}
-                  alt="Project Screenshot"
-                  class="card__img"
-                />
-                <div class="card__overlay | flow">
-                  <header class="card__overlay__header">
-                    <h3 class="card__overlay__heading">
-                      <a href="#">Lorem Ipsum</a>
-                    </h3>
-                  </header>
-                </div>
-            </div><!-- ./card -->
+            {articlePosts.map(({ url, frontmatter }: any) => {
+              const { title, images } = frontmatter
+              const image: any = images.length > 0 ? images[0] : null
+              return (
+                <>
+                  <div class="card">
+                    <img
+                      src={`/posts/${image.url}`}
+                      alt={image.alt}
+                      class="card__img"
+                    />
+                    <div class="card__overlay | flow">
+                      <header class="card__overlay__header">
+                        <h3 class="card__overlay__heading">
+                          <a href={url}>{title}</a>
+                        </h3>
+                      </header>
+                    </div>
+                  </div><!-- ./card -->
+                </>
+              )
+            })}
+            
           </div><!-- ./card-grid -->
         </div>
         <!-- ./wrapper -->

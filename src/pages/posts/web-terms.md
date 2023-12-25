@@ -1,19 +1,19 @@
 ---
-layout: "./../../layouts/article.layout.astro"
+layout: "./../../layouts/post.layout.astro"
 title: "Web Terms Akin to the Human Body"
 date: "2022-12-15"
 description: "Breaking down technical jargon with analogies. Understand web components like hardware, software, HTML, CSS, JavaScript, server-side code, and databases through relatable comparisons."
 keywords: "Tech Concepts, Web Anatomy, Hardware and Software, HTML Structure, CSS Styling, JavaScript Functionality, Server-side Code, Database Management"
 images:
   [
-    { url: "web-terms-1000.png", alt: "Web Terms Akin to the Human Body" },
-    { url: "web-terms-2000.png", alt: "Hardware akin to the body" },
-    { url: "web-terms-3000.png", alt: "Software akin to the soul" },
-    { url: "web-terms-4000.png", alt: "HTML is the skeleton of the web page" },
-    { url: "web-terms-5000.png", alt: "CSS is like makeup" },
-    { url: "web-terms-6000.png", alt: "JS is like the muscles" },
-    { url: "web-terms-7000.png", alt: "Server-side code is like the soul" },
-    { url: "web-terms-8000.png", alt: "Database is akin to memory" },
+    { url: "web-terms-0001.png", alt: "Web Terms Akin to the Human Body" },
+    { url: "web-terms-0002.png", alt: "Hardware akin to the body" },
+    { url: "web-terms-0003.png", alt: "Software akin to the soul" },
+    { url: "web-terms-0004.png", alt: "HTML is the skeleton of the web page" },
+    { url: "web-terms-0005.png", alt: "CSS is like makeup" },
+    { url: "web-terms-0006.png", alt: "JS is like the muscles" },
+    { url: "web-terms-0007.png", alt: "Server-side code is like the soul" },
+    { url: "web-terms-0008.png", alt: "Database is akin to memory" },
   ]
 ---
 

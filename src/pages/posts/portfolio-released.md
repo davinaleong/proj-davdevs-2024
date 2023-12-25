@@ -1,10 +1,14 @@
 ---
-layout: "./../../layouts/article.layout.astro"
+layout: "./../../layouts/post.layout.astro"
 title: "Dav/Devs 2024 Released!"
 date: "2022-12-20"
 description: "Explore my revamped portfolio with a striking design, dark mode toggle, and cookie policy popup. Technologies include HTML, SASS, TailwindCSS, TypeScript, and more."
 keywords: "Portfolio, Dark Mode, Cookie Policy, HTML, SASS, TypeScript, TailwindCSS"
-images: [{ url: "portfolio-released-1000.png", alt: "Dav/Devs 2024 Released!" }]
+images:
+  [
+    { url: "portfolio-0001.png", alt: "Dav/Devs 2024 released!" },
+    { url: "portfolio-0002.png", alt: "Dav/Devs 2024 techonologies" },
+  ]
 ---
 
 I’ve just released a new skin for my portfolio.

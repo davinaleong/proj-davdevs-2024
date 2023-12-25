@@ -1,10 +1,10 @@
 ---
-layout: "./../../layouts/article.layout.astro"
+layout: "./../../layouts/post.layout.astro"
 title: "Document Your Layers"
 date: "2022-12-23"
 description: "Struggling with z-index chaos? Learn to document z-indexes in CSS/SASS files using comments. Enhance code clarity and streamline layering effortlessly."
 keywords: "Z-Index Management, CSS Tips, SASS Tricks, Code Organization, Layering in CSS, Web Development, Code Clarity, Z-Index Best Practices"
-images: [{ url: "layers-1000.png", alt: "Document Your Layers" }]
+images: [{ url: "layers-0001.png", alt: "Document Your Layers" }]
 ---
 
 Here’s a tip for those with problems tracking all the z-indexes in their CSS files.
