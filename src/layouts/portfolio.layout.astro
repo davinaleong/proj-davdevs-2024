@@ -49,15 +49,16 @@ if (category) {
 
           <div class="cards-grid">
             {page.data.map((item: any) => {
-              const { title, category, image } = item.frontmatter
+              const { title, category, images } = item.frontmatter
               const { label, categoryClass }: any = categories.filter(({ slug }: any) => slug === category)[0]
+              const image = images.length > 0 ? images[0] : null
 
               return (
                 <>
                   <div class="card">
                     <img
-                      src={`/screenshots/${image}`}
-                      alt="Project Screenshot"
+                      src={`/screenshots/portfolio/${image.url}`}
+                      alt={image.alt}
                       class="card__img"
                     />
                     <div class="card__overlay | flow">
