@@ -1,5 +1,4 @@
 ---
-import { LinkInterface, ImageInterface } from "../lib/interfaces.lib"
 import MainLayoutAstro from "../layouts/main.layout.astro"
 
 import * as main from "./../content/portfolio/main.md"
@@ -11,63 +10,63 @@ const { title, subtitle, description, keywords, category, images, links, technol
 const { label, categoryClass } = categories.filter(({ slug }: any) => slug === category)[0]
 ---
 <MainLayoutAstro title={title} description={description} keywords={keywords}>
-    <section
-        id="project-hero"
-        class="section section-project section-project-hero"
+<section
+    id="project-hero"
+    class="section section-project section-project-hero"
+  >
+    <div class="wrapper section__wrapper | mx-auto p-4">
+      <h1
+        class="section-hero-home__heading | text-5xl font-bold text-neutral-50 uppercase"
       >
-        <div class="wrapper section__wrapper | mx-auto p-4">
-          <h1
-            class="section-hero-home__heading | text-5xl font-bold text-neutral-50 uppercase"
-          >
-            {title}
-          </h1>
+        {title}
+      </h1>
 
-          <p class="text-3xl font-bold text-neutral-50">{subtitle}</p>
-        </div>
-        <!-- ./wrapper -->
-      </section>
+      <p class="text-3xl font-bold text-neutral-50">{subtitle}</p>
+    </div>
+    <!-- ./wrapper -->
+  </section>
 
-      <section
-        id="project-content"
-        class="section section-project section-project-content"
-      >
-        <div class="wrapper section__wrapper mx-auto p-4 flow">
-          <nav class="filters">
-            <span class={`btn btn-skill ${categoryClass}`}>{label}</span>
-          </nav>
+  <section
+    id="project-content"
+    class="section section-project section-project-content"
+  >
+    <div class="wrapper section__wrapper mx-auto p-4 flow">
+      <nav class="filters">
+        <span class={`btn btn-skill ${categoryClass}`}>{label}</span>
+      </nav>
 
-          <div class="project-content">
-            <div class="project-content__body">
-              <div class="project-content__body__images">
-                {images.map(({ url, alt }: ImageInterface) => <img
-                  src={`/screenshots/${url}`}
-                  alt={`${alt}`}
-                />)}
-              </div>
-              
-              <div class="project-content__body__btn">
-                {links.map(({ label, url }: LinkInterface) => <a href={url} class="btn btn-sm" target="_blank">{label}</a>)}
-              </div>
-            </div>
-            <div class="project-content__toolkit | flow" style="--_flow-spacer: 0.5em">
-              <h2 class="text-3xl font-bold">Toolkit</h2>
-
-              {technologies.map(({ label, items }: any) => {
-                return (
-                  <>
-                    <h3 class="text-2xl font-bold">{label}</h3>
-
-                    <p>{items.join(`, `)}</p>
-                  </>
-                )
-              })}
-            </div>
-            <div class="project-content__about | flow">
-              <h2 class="text-3xl font-bold">About</h2>
-
-              <slot />
-            </div>
+      <div class="project-content">
+        <div class="project-content__body">
+          <div class="project-content__body__images">
+            {images.map(({ url, alt }: Imagterface) => <img
+              src={`/screenshots/${url}`}
+              alt={`${alt}`}
+            />)}
+          </div>
+          
+          <div class="project-content__body__btn">
+            {links.map(({ label, url }) => <a href={url} class="btn btn-sm" target="_blank">{label}</a>)}
           </div>
         </div>
-      </section>
+        <div class="project-content__toolkit | flow" style="--_flow-spacer: 0.5em">
+          <h2 class="text-3xl font-bold">Toolkit</h2>
+
+          {technologies.map(({ label, items }: any) => {
+            return (
+              <>
+                <h3 class="text-2xl font-bold">{label}</h3>
+
+                <p>{items.join(`, `)}</p>
+              </>
+            )
+          })}
+        </div>
+        <div class="project-content__about | flow">
+          <h2 class="text-3xl font-bold">About</h2>
+
+          <slot />
+        </div>
+      </div>
+    </div>
+  </section>
 </MainLayoutAstro>

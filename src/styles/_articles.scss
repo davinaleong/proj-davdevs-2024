@@ -21,6 +21,18 @@
   }
 }
 
+.imgs-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > img {
+    flex-grow: 1;
+    width: 33%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+}
+
 .theme-dark,
 [data-theme="dark"] {
   .section-articles {
