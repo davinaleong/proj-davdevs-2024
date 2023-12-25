@@ -6,11 +6,18 @@ date: "2022-01-24"
 description: "A project to improve my CSS while following a tutorial."
 keywords: "Davina, Leong, Davina Leong, HTML, CSS, buttons, animation, css animation, flex, flexbox"
 category: "css"
-images: [{ url: "css-button-hover-animations.png", alt: "CSS Button Animations" }]
+images:
+  [{ url: "css-button-hover-animations.png", alt: "CSS Button Animations" }]
 links:
   [
-    { label: "See Demo", url: "https://davinaleong.github.io/proj-button-animations/ },
-    { label: "See Repo", url: "https://github.com/davinaleong/proj-button-animations" },
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-button-animations/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-button-animations",
+    },
   ]
 featured: false
 technologies:
