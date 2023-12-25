@@ -33,6 +33,7 @@
   padding-inline-end: var(--_btn-spacer-inline);
   border-radius: theme("borderRadius.sm");
   box-shadow: theme("boxShadow.md");
+  cursor: pointer;
 
   &:hover {
     color: var(--_btn-hover-clr);
