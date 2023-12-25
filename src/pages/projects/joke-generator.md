@@ -9,8 +9,14 @@ category: "javascript"
 images: [{ url: "joke-generator.png", alt: "Joke of the Day" }]
 links:
   [
-    { label: "See Demo", url: ""https://davinaleong.github.io/proj-joke-of-the-day/" },
-    { label: "See Repo", url: "https://github.com/davinaleong/proj-joke-of-the-day" },
+    {
+      label: "See Demo",
+      url: "https://davinaleong.github.io/proj-joke-of-the-day/",
+    },
+    {
+      label: "See Repo",
+      url: "https://github.com/davinaleong/proj-joke-of-the-day",
+    },
   ]
 featured: false
 technologies:
