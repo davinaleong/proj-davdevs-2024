@@ -37,7 +37,7 @@
 }
 
 .post__content {
-  --_post-content: theme("colors.neutral.50");
+  --_post-content: theme("colors.neutral.200");
   --_post-spacer: theme("padding.4");
 
   background-color: var(--_post-content);
@@ -61,6 +61,10 @@
     &-content {
       --_section-bg-img: url("/src/assets/images/footer-mobile-dark.svg");
     }
+  }
+
+  .post__content {
+    --_post-content: theme("colors.neutral.800");
   }
 }
 
@@ -86,6 +90,10 @@
         --_section-bg-img: url("/src/assets/images/footer-desktop-dark.svg");
       }
     }
+
+    .post__content {
+      --_post-content: theme("colors.neutral.800");
+    }
   }
 }
 
@@ -100,6 +108,10 @@
     &-content {
       --_section-bg-img: url("/src/assets/images/footer-mobile-dark.svg");
     }
+  }
+
+  .post__content {
+    --_post-content: theme("colors.neutral.800");
   }
 
   @container container-q-primary-main (width > theme("screens.sm")) {

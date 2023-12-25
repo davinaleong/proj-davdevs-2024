@@ -23,7 +23,7 @@ const { title, description, keywords, images } = frontmatter
         {images.map(({ url, alt }: any) => <img src={`/posts/${url}`} alt={alt} />)}
       </div>
 
-      <div class="post__content | mt-4">
+      <div class="post__content | flow mt-4">
         <slot />
       </div>
     </div>
