@@ -3,8 +3,9 @@ import { Image } from 'astro:assets'
 import logo from "../assets/images/logo-white-svg.svg"
 
 const homePath: string = `/`; //currentPath === `/` ? '/' : '../'
-const resumePath: string = `/resume`
 const portfolioPath: string = `/portfolio/1`
+const articlesPath: string = `/articles`
+const resumePath: string = `/resume`
 const contactPath: string = `/contact`
 const funnyPath: string = `/funny`
 ---
@@ -30,6 +31,9 @@ const funnyPath: string = `/funny`
                         </li>
                         <li class="primary-header__li">
                             <a href="https://davinaleong.github.io/proj-dav-fem/" class="primary-header__link" title="Frontend Mentor Demos">FEM  Demos</a>
+                        </li>
+                        <li class="primary-header__li">
+                            <a href={articlesPath} class="primary-header__link">Articles</a>
                         </li>
                     </ul>
                 </li>
