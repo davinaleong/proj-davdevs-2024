@@ -84,6 +84,11 @@ export default {
           light: "hsl(0, 0%, 22%)",
           dark: "hsl(0, 0%, 2%)",
         },
+        nextjs: {
+          base: "hsl(0, 0%, 12%)",
+          light: "hsl(0, 0%, 22%)",
+          dark: "hsl(0, 0%, 2%)",
+        },
         youtube: {
           base: "hsl(0, 100%, 50%)",
           light: "hsl(0, 100%, 60%)",

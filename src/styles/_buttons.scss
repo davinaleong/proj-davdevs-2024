@@ -142,6 +142,15 @@
       --_btn-hover-border-clr: theme("colors.neutral.700");
     }
 
+    &-nextjs {
+      --_btn-clr: theme("colors.neutral.50");
+      --_btn-bg-clr: theme("colors.nextjs.base");
+      --_btn-border-clr: theme("colors.nextjs.base");
+      --_btn-hover-clr: theme("colors.neutral.50");
+      --_btn-hover-bg-clr: theme("colors.nextjs.light");
+      --_btn-hover-border-clr: theme("colors.nextjs.light");
+    }
+
     &-netlify {
       --_btn-clr: theme("colors.neutral.50");
       --_btn-bg-clr: theme("colors.netlify.base");

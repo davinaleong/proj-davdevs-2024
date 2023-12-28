@@ -72,5 +72,12 @@ categories:
       id: "react",
       categoryClass: "btn-skill-react",
     },
+    {
+      label: "NextJS",
+      draft: 0,
+      slug: "nextjs",
+      id: "nextjs",
+      categoryClass: "btn-skill-nextjs",
+    },
   ]
 ---
