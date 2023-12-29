@@ -17,6 +17,49 @@
   &-content {
     --_section-bg-img: url("/src/assets/images/footer-mobile.svg");
     --_section-bg-position: bottom center;
+
+    h1 {
+      font-size: theme("fontSize.5xl");
+      font-weight: theme("fontWeight.semibold");
+    }
+
+    h2 {
+      font-size: theme("fontSize.4xl");
+      font-weight: theme("fontWeight.semibold");
+    }
+
+    h3 {
+      font-size: theme("fontSize.3xl");
+      font-weight: theme("fontWeight.semibold");
+    }
+
+    h4 {
+      font-size: theme("fontSize.2xl");
+      font-weight: theme("fontWeight.semibold");
+    }
+
+    h5 {
+      font-size: theme("fontSize.xl");
+      font-weight: theme("fontWeight.semibold");
+    }
+
+    h6 {
+      font-size: theme("fontSize.lg");
+      font-weight: theme("fontWeight.semibold");
+    }
+
+    blockquote {
+      --_blockquote-spacer: theme("padding.3");
+
+      background-color: theme("colors.neutral.300");
+      padding: theme("padding.2");
+      border-radius: theme("borderRadius.sm");
+      box-shadow: theme("boxShadow.md");
+
+      & > * + * {
+        margin-block-start: var(--_blockquote-spacer);
+      }
+    }
   }
 }
 
@@ -59,6 +102,10 @@
 
     &-content {
       --_section-bg-img: url("/src/assets/images/footer-mobile-dark.svg");
+
+      blockquote {
+        background-color: theme("colors.neutral.700");
+      }
     }
   }
 
@@ -87,6 +134,10 @@
 
       &-content {
         --_section-bg-img: url("/src/assets/images/footer-desktop-dark.svg");
+
+        blockquote {
+          background-color: theme("colors.neutral.700");
+        }
       }
     }
 
@@ -106,6 +157,10 @@
 
     &-content {
       --_section-bg-img: url("/src/assets/images/footer-mobile-dark.svg");
+
+      blockquote {
+        background-color: theme("colors.neutral.700");
+      }
     }
   }
 
