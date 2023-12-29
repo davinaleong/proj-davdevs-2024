@@ -5,9 +5,9 @@ const { frontmatter } = Astro.props
 const { title, description, keywords, images } = frontmatter
 ---
 <MainLayoutAstro title={title} description={description} keywords={keywords}>
-  <section id="home-post" class="section section-post-hero">
+  <section id="home-post" class="section section-half section-post section-post-hero">
     <div class="wrapper section__wrapper | flow mx-auto p-4">
-      <h1 class="section-article-home__heading | text-6xl font-bold text-neutral-50 text-center uppercase">
+      <h1 class="section-article-home__heading | text-5xl font-bold text-neutral-50 text-center uppercase">
         {title}
       </h1>
     </div>
