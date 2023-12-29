@@ -1,14 +1,9 @@
 /// Cards
 
 .cards-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: theme("gap.4");
-  justify-content: center;
-
-  > * {
-    flex: 1 0 50%;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: theme("gap.4");
 }
 
 .card {
@@ -74,14 +69,6 @@
 [data-theme="dark"] {
   .card {
     --_card-bg-clr: theme("colors.neutral.900");
-  }
-}
-
-@container container-q-primary-main (width > theme("screens.md")) {
-  .cards-grid {
-    > * {
-      flex: 1 0 30%;
-    }
   }
 }
 
