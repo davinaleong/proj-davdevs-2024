@@ -7,7 +7,7 @@ keywords: "passwords, security, tech tips, password strategy, online security, p
 images:
   [
     {
-      url: "creative-passwords-0001.png",
+      url: "creative-passwords-0001.jpg",
       alt: "Getting Creative with Passwords",
     },
   ]
