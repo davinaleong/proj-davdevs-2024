@@ -13,7 +13,7 @@ images:
   ]
 ---
 
-We’ve all been there before—we log into an app or website, and it asks for our password. We click on the “Forgot Password” link, which prompts us for a new password.
+We’ve all been there before—we log into an app or website, and it asks for our password. When we forget it, we click on the “Forgot Password” link, which prompts us for a new password.
 
 You type in your old password. Error! You cannot use the same password. You think hard and come up with a new one. Error! It must contain letters and numbers. Error! Need capital letters. Error again! You need special characters—what are “special characters”?!
 
