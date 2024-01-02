@@ -1,7 +1,7 @@
 ---
 layout: "./../../layouts/post.layout.astro"
 title: "Delving into AI"
-date: "2022-12-29"
+date: "2023-12-29"
 description: "Explore my AI journey, coding solutions, and insights into tools like ChatGPT, Grammarly, Bard, GitHub Copilot, and Adobe Firefly. Discover how AI enhances productivity and the nuances of each tool. Dive into the world of creativity and efficiency with AI, demystifying its role in my experiences and experiments."
 keywords: "AI, Coding, Productivity, ChatGPT, Grammarly, Bard, GitHub Copilot, Adobe Firefly, Tinkering, Creative Writing, Tech Tools, Insights"
 images: [{ url: "ai-0001.png", alt: "Delving into AI" }]

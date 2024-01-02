@@ -1,7 +1,7 @@
 ---
 layout: "./../../layouts/post.layout.astro"
 title: "Getting Creative with Passwords"
-date: "2022-12-29"
+date: "2023-12-29"
 description: "Navigate the password maze effortlessly. Transform frustration into strategy with creative tips for crafting secure, memorable passwords. Tech solutions for everyone."
 keywords: "passwords, security, tech tips, password strategy, online security, password management, strong passwords, tech solutions, cybersecurity, password game"
 images:

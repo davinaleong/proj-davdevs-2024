@@ -1,7 +1,7 @@
 ---
 layout: "./../../layouts/post.layout.astro"
 title: "Web Terms Akin to the Human Body"
-date: "2022-12-15"
+date: "2023-12-15"
 description: "Breaking down technical jargon with analogies. Understand web components like hardware, software, HTML, CSS, JavaScript, server-side code, and databases through relatable comparisons."
 keywords: "Tech Concepts, Web Anatomy, Hardware and Software, HTML Structure, CSS Styling, JavaScript Functionality, Server-side Code, Database Management"
 images:

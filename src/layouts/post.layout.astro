@@ -1,8 +1,12 @@
 ---
+import dayjs from "dayjs"
 import MainLayoutAstro from "./main.layout.astro"
 
 const { frontmatter } = Astro.props
-const { title, description, keywords, images } = frontmatter
+const { title, description, keywords, images, date } = frontmatter
+const { DATE_FORMAT } = import.meta.env
+
+const formattedDate = dayjs(date).format(DATE_FORMAT)
 ---
 <MainLayoutAstro title={title} description={description} keywords={keywords}>
   <section id="home-post" class="section section-half section-post section-post-hero">
@@ -10,6 +14,10 @@ const { title, description, keywords, images } = frontmatter
       <h1 class="section-article-home__heading | text-5xl font-bold text-neutral-50 text-center uppercase">
         {title}
       </h1>
+
+      <p class="text-xl">
+        <time datetime={date}>{formattedDate}</time>
+      </p>
     </div>
     <!-- ./wrapper -->
   </section>

@@ -1,4 +1,5 @@
 ---
+import dayjs from "dayjs"
 import MainLayoutAstro from "../layouts/main.layout.astro"
 
 import * as main from "./../content/portfolio/main.md"
@@ -6,8 +7,11 @@ import * as main from "./../content/portfolio/main.md"
 const { categories } = main.frontmatter
 
 const { frontmatter } = Astro.props
-const { title, subtitle, description, keywords, category, images, links, technologies } = frontmatter
+const { title, subtitle, description, keywords, category, images, links, technologies, date } = frontmatter
 const { label, categoryClass } = categories.filter(({ slug }: any) => slug === category)[0]
+const { DATE_FORMAT } = import.meta.env
+
+const formattedDate = dayjs(date).format(DATE_FORMAT)
 ---
 <MainLayoutAstro title={title} description={description} keywords={keywords}>
 <section
@@ -22,6 +26,10 @@ const { label, categoryClass } = categories.filter(({ slug }: any) => slug === c
       </h1>
 
       <p class="text-3xl font-bold text-neutral-50">{subtitle}</p>
+
+      <p class="text-xl">
+        <time datetime={date}>{formattedDate}</time>
+      </p>
     </div>
     <!-- ./wrapper -->
   </section>

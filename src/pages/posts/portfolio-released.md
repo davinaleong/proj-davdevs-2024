@@ -1,7 +1,7 @@
 ---
 layout: "./../../layouts/post.layout.astro"
 title: "Dav/Devs 2024 Released!"
-date: "2022-12-20"
+date: "2023-12-20"
 description: "Explore my revamped portfolio with a striking design, dark mode toggle, and cookie policy popup. Technologies include HTML, SASS, TailwindCSS, TypeScript, and more."
 keywords: "Portfolio, Dark Mode, Cookie Policy, HTML, SASS, TypeScript, TailwindCSS"
 images:
