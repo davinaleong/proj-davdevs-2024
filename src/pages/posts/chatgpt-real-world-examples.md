@@ -7,7 +7,7 @@ keywords: "ChatGPT, applications, jokes, code snippets, translations, explanatio
 images:
   [
     {
-      url: "chatgpt-real-world-examples-0001.jpg",
+      url: "chatgpt-real-world-examples-0001.png",
       alt: "Unleashing ChatGPT: Practical Applications",
     },
   ]
