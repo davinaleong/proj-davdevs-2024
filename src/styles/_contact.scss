@@ -27,7 +27,7 @@
 .form {
   &-contact {
     display: grid;
-    grid-template-rows: repeat(5, min-content);
+    grid-template-rows: repeat(6, min-content);
     gap: theme("gap.4");
   }
 
@@ -163,20 +163,25 @@
   .form-contact {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, min-content);
+    grid-template-rows: repeat(6, min-content);
 
     .form__alert {
       grid-column: 1 / 4;
       grid-row: 1;
     }
 
-    .form__field-message {
+    .form__field-subject {
       grid-column: 1 / 4;
       grid-row: 3;
     }
 
-    .form__button {
+    .form__field-message {
+      grid-column: 1 / 4;
       grid-row: 4;
+    }
+
+    .form__button {
+      grid-row: 5;
 
       &-submit {
         grid-column: 1;

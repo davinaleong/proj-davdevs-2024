@@ -4,13 +4,13 @@ import * as contact from "../content/contact/main.md"
 // const { title, action, reachOut } = contact.frontmatter
 const { title, reachOut } = contact.frontmatter
 
-// const { NODE_ENV, API_URL, PUBLIC_APP_SLUG } = import.meta.env
-const { NODE_ENV } = import.meta.env
+const { NODE_ENV, API_URL, PUBLIC_APP_SLUG } = import.meta.env
+// const { NODE_ENV } = import.meta.env
 // const thisAction = `${API_URL}${action}`
 
-// const response = await fetch(`${API_URL}misc/messageTypes/${PUBLIC_APP_SLUG}/`)
-// const data = await response.json()
-// const { messageTypes } = data
+const response = await fetch(`${API_URL}misc/messageTypes/${PUBLIC_APP_SLUG}/`)
+const data = await response.json()
+const { messageTypes } = data
 ---
 <MainLayoutAstro title={title}>
   <section
@@ -37,8 +37,7 @@ const { NODE_ENV } = import.meta.env
       <p>Meanwhile, you can reach out to me on <a href={reachOut} target="_blank">LinkedIn</a> 😄.</p>
     </div>
 
-    <!-- <form
-      action={thisAction}
+    <form
       method="post"
       class="form form-contact"
       data-element="contact-form"
@@ -55,7 +54,7 @@ const { NODE_ENV } = import.meta.env
         id="input-first_name"
         class="form__field"
         placeholder="Name"
-        
+        required
       />
       <input
         type="text"
@@ -70,13 +69,21 @@ const { NODE_ENV } = import.meta.env
         id="input-email"
         class="form__field"
         placeholder="Email"
-        
+        required
+      />
+      <input
+        type="tel"
+        name="phone_number"
+        id="input-phone_number"
+        class="form__field"
+        placeholder="Phone Number"
+        required
       />
       <select
         name="subject"
         id="input-subject"
-        class="form__field"
-        
+        class="form__field form__field-subject"
+        required
       >
         <option value="">Subject</option>
         { messageTypes.data.map((messageType: any) => (
@@ -91,7 +98,7 @@ const { NODE_ENV } = import.meta.env
         cols="30"
         rows="10"
         minlength="5"
-        
+        required
       ></textarea>
       <button class="btn btn-blue form__button form__button-submit" type="submit" data-element="btn-submit">
         <i class="fa-light fa-sharp fa-paper-plane"></i> Send
@@ -99,7 +106,7 @@ const { NODE_ENV } = import.meta.env
       <button class="btn btn-neutral form__button form__button-reset" type="reset" data-element="btn-reset">
         <i class="fa-light fa-sharp fa-rotate-left"></i> Reset
       </button>
-    </form> -->
+    </form>
 
     {NODE_ENV === `development` && <div class="flex gap-4" data-element="test">
       <button class="btn btn-neutral" type="button" data-element="btn-fill-form">
