@@ -49,6 +49,8 @@ const VALIDATE_MIN_LENGTH = 5
 const VALIDATE_MIN_LENGTH_NAME = 1
 const VALIDATE_EMAIL = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
+const API_URL = `https://davinas-cms.herokuapp.com/api/`
+
 /// Functions
 function main() {
   logFunction(`main`)
@@ -60,8 +62,8 @@ function main() {
   toggleCookieDialog(cookie)
   toggleSkillDialogs()
   triggerPrint()
-  contactForm()
-  fillForm()
+  contactFormHandler()
+  fillFormHandler()
 }
 
 /// Functions - Elements
@@ -231,53 +233,88 @@ function triggerPrint() {
   })
 }
 
-function contactForm() {
-  logFunction(`contactForm`)
+async function contactFormHandler() {
+  logFunction(`contactFormHandler`)
 
-  const contactFormEl = getElement(`contact-form`)
-  if (!contactFormEl) return
+  const formEl = getElement(`contact-form`)
+  if (!formEl) return
 
-  disableForm(contactFormEl, [false])
-  contactFormEl.reset()
+  const formAlertEl = getElement(`form-alert`, formEl)
+  if (!formAlertEl) return
+  formAlertEl.removeAttribute(DATA_ACTIVE_ATTR)
 
-  contactFormEl.addEventListener(`submit`, function (event) {
+  formEl.addEventListener(`submit`, async function (event) {
     event.preventDefault()
-    contactFormHandler(contactFormEl, event)
+
+    const formData = new FormData(formEl)
+    if (formData.get("last_name")) return
+
+    const body = {
+      first_name: formData.get(`first_name`),
+      email: formData.get(`email`),
+      phone_number: formData.get(`phone_number`),
+      subject: formData.get(`subject`),
+      message: formData.get(`message`),
+    }
+
+    try {
+      const response = await fetch(`${API_URL}misc/messages/davdevs`, {
+        method: `POST`,
+        headers: {
+          "Content-Type": `application/json`,
+          Accept: `application/json`,
+        },
+        body: JSON.stringify(body),
+      })
+
+      const { status, message } = await response.json()
+      if (status === `SUCCESS`) {
+        formAlertEl.classList.add(`form__alert-success`)
+      } else {
+        formAlertEl.classList.add(`form__alert-danger`)
+      }
+      formAlertEl.innerHTML = `<p>${message}</p>`
+      formAlertEl.setAttribute(DATA_ACTIVE_ATTR, true)
+
+      formEl.reset()
+    } catch (error) {
+      console.error(`subscribeFormHandler error`, error)
+    }
   })
 }
 
-async function contactFormHandler(contactFormEl, event) {
-  logFunction(`contactFormHandler`)
+// async function contactFormHandler(contactFormEl, event) {
+//   logFunction(`contactFormHandler`)
 
-  const form = event.currentTarget
-  const url = form.action
+//   const form = event.currentTarget
+//   const url = form.action
 
-  try {
-    const formData = new FormData(form)
-    const responseData = await postFormDataAsJson(url, formData)
-    const { message, status, errors } = responseData
+//   try {
+//     const formData = new FormData(form)
+//     const responseData = await postFormDataAsJson(url, formData)
+//     const { message, status, errors } = responseData
 
-    toggleFormAlert(contactFormEl, [
-      true,
-      ``,
-      `Oops 😮!`,
-      `form__alert-danger`,
-      errors,
-    ])
+//     toggleFormAlert(contactFormEl, [
+//       true,
+//       ``,
+//       `Oops 😮!`,
+//       `form__alert-danger`,
+//       errors,
+//     ])
 
-    if (status && status === STATUS_SUCCESS) {
-      toggleFormAlert(contactFormEl, [
-        true,
-        message,
-        `Done 😁.`,
-        `form__alert-danger`,
-        null,
-      ])
-    }
-  } catch (error) {
-    console.error(error)
-  }
-}
+//     if (status && status === STATUS_SUCCESS) {
+//       toggleFormAlert(contactFormEl, [
+//         true,
+//         message,
+//         `Done 😁.`,
+//         `form__alert-danger`,
+//         null,
+//       ])
+//     }
+//   } catch (error) {
+//     console.error(error)
+//   }
+// }
 
 function disableForm(formEl, params = []) {
   logFunction(`disableForm`, { params })
@@ -360,8 +397,8 @@ function toggleFormAlert(formEl, params = []) {
   formAlertEl.setAttribute(DATA_ACTIVE_ATTR, String(true))
 }
 
-function fillForm() {
-  logFunction(`fillForm`)
+function fillFormHandler() {
+  logFunction(`fillFormHandler`)
 
   const contactFormEl = getElement(`contact-form`)
   const btnFillFormEl = getElement(`btn-fill-form`)
@@ -377,6 +414,9 @@ function fillForm() {
       `input[name="first_name"]`
     )
     const emailInputEl = contactFormEl.querySelector(`input[name="email"]`)
+    const phoneNumberInputEl = contactFormEl.querySelector(
+      `input[name="phone_number"]`
+    )
     const subjectInputEl = contactFormEl.querySelector(`select[name="subject"]`)
     const messageInputEl = contactFormEl.querySelector(
       `textarea[name="message"]`
@@ -385,6 +425,7 @@ function fillForm() {
     if (
       !firstNameInputEl ||
       !emailInputEl ||
+      !phoneNumberInputEl ||
       !subjectInputEl ||
       !messageInputEl
     )
@@ -392,6 +433,7 @@ function fillForm() {
 
     firstNameInputEl.value = `Jane Doe`
     emailInputEl.value = `janedoe@example.com`
+    phoneNumberInputEl.value = `+6591234567`
     subjectInputEl
       .querySelector(`option:nth-of-type(2)`)
       .setAttribute(SELECTED_ATTR, true)
