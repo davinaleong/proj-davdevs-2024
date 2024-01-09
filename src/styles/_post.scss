@@ -60,6 +60,16 @@
         margin-block-start: var(--_blockquote-spacer);
       }
     }
+
+    ul {
+      list-style-type: disc;
+      margin-inline-start: theme("padding.4");
+    }
+
+    ol {
+      list-style-type: decimal;
+      margin-inline-start: theme("padding.4");
+    }
   }
 }
 
