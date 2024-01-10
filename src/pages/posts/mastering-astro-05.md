@@ -1,14 +1,14 @@
 ---
 layout: "./../../layouts/post.layout.astro"
-title: "Mastering Astro #5: Beautifying the Listing Page"
+title: "Mastering Astro #5: Beautifying Body, Header & Footer"
 date: "2024-10-01 17:00:00"
-description: "Elevate your Astro project's aesthetics with this styling tutorial. Dive into spacing utilities and color setup using CSS custom properties. Follow the step-by-step guide to enhance your project's visual appeal effortlessly."
-keywords: "Mastering Astro, Astro Tutorial, Styling Essentials, CSS Setup, Spacing Utilities, Color Setup, CSS Custom Properties, Web Development, Tutorial Series, Visual Appeal"
+description: "Dive into the fun part of your Astro project by beautifying the listing page. Create a grid layout for mobile and desktop views, and follow a step-by-step guide to code the body, header, and footer styles. Learn how to enhance your layout and make code reusable for a more efficient development process."
+keywords: "Mastering Astro, Astro Tutorial, Web Development, Styling Essentials, CSS, Header Styling, Footer Styling, Responsive Design, Grid Layout"
 images:
   [
     {
       url: "mastering-astro-0005.png",
-      alt: "Mastering Astro #5: Beautifying the Listing Page",
+      alt: "Mastering Astro #5: Beautifying Body, Header & Footer",
     },
   ]
 ---
@@ -45,7 +45,7 @@ body {
   font-size: var(--step-0);
   line-height: 1.5;
   color: black;
-  background-color: var(--clr-yellow);
+  background-color: var(--clr-secondary);
 }
 ```
 
@@ -53,7 +53,7 @@ Let's also make the links look nicer.
 
 ```css
 a {
-  color: var(--clr-green);
+  color: var(--clr-primary);
   text-decoration: none;
 }
 
@@ -132,40 +132,94 @@ Our strategy for tackling this is header, footer, main, and card.
 
 ### 1. Header
 
-We'll use Flexbox to make the layout of our header. This allows us to put the title and home link on the same line.
+We'll use Flexbox to make the layout of our header.
+
+Notice how we're using the CSS properties we declared earlier? The allows us to reuse our code. And if we want to change the theme, we just have to modify the custom properties in the `root` block.
 
 ```css
 .primary-header {
   padding: var(--space-s);
   display: flex;
   align-items: center;
+  gap: var(--space-s);
   justify-content: space-between;
-  background-color: var(--clr-orange);
+  background-color: var(--clr-accent-2);
 }
 
 .primary-header__heading {
   font-size: var(--step-3);
   font-weight: 700;
-  color: var(--clr-green);
+  color: var(--clr-primary);
 }
 ```
 
+Go to your web browser. You should see the heading and "Home" link side by side.
+
 #### Advanced: Keep Header at the Top of the Page (Optional)
 
-Update the code as such
+If you are up for the challenge, let's try to make the header stick to the top.
+
+Update the code as such:
 
 ```css
 body {
-  ...
+  /* ... truncated code */
   position: relative;
 }
 
-...
+/* ... truncated code */
 
 .primary-header {
-  ...
+  /* ... truncated code */
   position: sticky;
   top: 0;
   z-index: 1;
 }
 ```
+
+Go to your web browser. You should see the header staying at the top when you scroll down.
+
+#### Advanced: Make Code Reusable (Optional)
+
+Notice that we're using the same CSS property for the padding and gap for the `.primary-header` block.
+
+Let's make it so we don't repeat ourself.
+
+```css
+.primary-header {
+  --_primary-header-space: var(--space-s);
+
+  padding: var(--_primary-header-space);
+  display: flex;
+  align-items: center;
+  gap: var(--_primary-header-space);
+  justify-content: space-between;
+  background-color: var(--clr-accent-2);
+  position: sticky;
+  top: 0;
+}
+```
+
+This doesn't do anything visually, but improves our code style.
+
+### 2. Footer
+
+Next, let's style the footer.
+
+These are my styles:
+
+```css
+.primary-footer {
+  padding: var(--space-s);
+}
+
+.primary-footer__content {
+  text-align: center;
+  font-size: var(--step--1);
+  font-style: italic;
+}
+```
+
+Go to your browser to see its effect.
+
+This concludes this tutorial. We will style the main section in the next tutorial.

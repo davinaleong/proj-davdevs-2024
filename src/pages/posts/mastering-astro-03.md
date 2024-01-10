@@ -131,7 +131,9 @@ Replace the `body` with the following code. Change `apple-pie-xxxx.jpg` to your 
   </a>
 </main>
 
-<footer>
-  <p>My Favourite Food &copy; Davina Leong, 2024</p>
+<footer class="primary-footer">
+  <p class="primary-footer__content">
+    My Favourite Food &copy; Davina Leong, 2024
+  </p>
 </footer>
 ```

@@ -100,10 +100,10 @@ Click on the `rgb(xxx, xxx, xxx)` to copy the colour code. And paste it into the
   --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
   --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
 
-  --clr-yellow: rgb(250, 239, 155);
-  --clr-orange: rgb(246, 215, 118);
-  --clr-teal: rgb(109, 164, 170);
-  --clr-green: rgb(100, 125, 135);
+  --clr-primary: rgb(100, 125, 135);
+  --clr-secondary: rgb(250, 239, 155);
+  --clr-accent-1: rgb(109, 164, 170);
+  --clr-accent-2: rgb(246, 215, 118);
 }
 ```
 
@@ -149,10 +149,10 @@ Your code should look like this:
   --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
   --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
 
-  --clr-yellow: hsl(53, 90%, 79%);
-  --clr-orange: hsl(45, 88%, 71%);
-  --clr-teal: hsl(186, 26%, 55%);
-  --clr-green: hsl(197, 15%, 46%);
+  --clr-primary: hsl(197, 15%, 46%);
+  --clr-secondary: hsl(53, 90%, 79%);
+  --clr-accent-1: hsl(186, 26%, 55%);
+  --clr-accent-2: hsl(45, 88%, 71%);
 }
 ```
 
@@ -165,7 +165,7 @@ Naming convention:
 - So 9x% - 100, 8x% - 200, etc.
 - So 100 is the lightest, and 1000 is the darkest tint.
 
-Using the yellow as an example, your code should look like this:
+Using the primary colour as an example, your code should look like this:
 
 ```css
 :root {
@@ -188,20 +188,20 @@ Using the yellow as an example, your code should look like this:
   --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
   --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
 
-  --clr-yellow-100: hsl(53, 90%, 99%);
-  --clr-yellow-200: hsl(53, 90%, 89%);
-  --clr-yellow-300: hsl(53, 90%, 79%);
-  --clr-yellow-400: hsl(53, 90%, 69%);
-  --clr-yellow-500: hsl(53, 90%, 59%);
-  --clr-yellow-600: hsl(53, 90%, 49%);
-  --clr-yellow-700: hsl(53, 90%, 39%);
-  --clr-yellow-800: hsl(53, 90%, 29%);
-  --clr-yellow-900: hsl(53, 90%, 19%);
-  --clr-yellow-1000: hsl(53, 90%, 9%);
+  --clr-primary-100: hsl(197, 15%, 96%);
+  --clr-primary-200: hsl(197, 15%, 86%);
+  --clr-primary-300: hsl(197, 15%, 76%);
+  --clr-primary-400: hsl(197, 15%, 66%);
+  --clr-primary-500: hsl(197, 15%, 56%);
+  --clr-primary-600: hsl(197, 15%, 46%);
+  --clr-primary-700: hsl(197, 15%, 36%);
+  --clr-primary-800: hsl(197, 15%, 26%);
+  --clr-primary-900: hsl(197, 15%, 16%);
+  --clr-primary-1000: hsl(197, 15%, 6%);
 
-  --clr-orange: hsl(45, 88%, 71%);
-  --clr-teal: hsl(186, 26%, 55%);
-  --clr-green: hsl(197, 15%, 46%);
+  --clr-secondary: hsl(53, 90%, 79%);
+  --clr-accent-1: hsl(186, 26%, 55%);
+  --clr-accent-2: hsl(45, 88%, 71%);
 }
 ```
 
