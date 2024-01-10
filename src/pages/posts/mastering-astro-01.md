@@ -1,13 +1,13 @@
 ---
 layout: "./../../layouts/post.layout.astro"
 title: "Mastering Astro #1: Project Setup"
-date: "2024-10-01"
+date: "2024-01-10 11:00:00"
 description: "Delve into an in-depth tutorial for experienced developers to navigate Astro, exploring optimal setups, command-line workflows, and project structuring. Elevate your web development skills with Astro's powerful capabilities."
 keywords: "Astro, Web Development, Advanced Tutorial, VS Code, JavaScript, Project Setup, Command-line Workflow, NPM Dependencies, Git Repository, Markdown"
 images:
   [
     {
-      url: "mastering-astro-01-0001.png",
+      url: "mastering-astro-0001.png",
       alt: "Mastering Astro #1: Project Setup",
     },
   ]
