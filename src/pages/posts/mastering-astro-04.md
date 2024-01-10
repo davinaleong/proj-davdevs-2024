@@ -2,8 +2,8 @@
 layout: "./../../layouts/post.layout.astro"
 title: "Mastering Astro #4: Styles Setup"
 date: "2024-10-01 16:10:00"
-description: "Delve into an in-depth tutorial for experienced developers to navigate Astro, exploring optimal setups, command-line workflows, and project structuring. Elevate your web development skills with Astro's powerful capabilities."
-keywords: "Astro, Web Development, Advanced Tutorial, VS Code, JavaScript, Buidling the Template, Command-line Workflow, NPM Dependencies, Git Repository, Markdown"
+description: "Elevate your Astro project's aesthetics with this styling tutorial. Dive into spacing utilities and color setup using CSS custom properties. Follow the step-by-step guide to enhance your project's visual appeal effortlessly."
+keywords: "Mastering Astro, Astro Tutorial, Styling Essentials, CSS Setup, Spacing Utilities, Color Setup, CSS Custom Properties, Web Development, Tutorial Series, Visual Appeal"
 images:
   [{ url: "mastering-astro-0004.png", alt: "Mastering Astro #4: Styles Setup" }]
 ---
@@ -120,11 +120,11 @@ This concludes the boring part. In the following tutorial, we'll have some fun s
 
 #### D: Bonus (Optional)
 
-Here's a bonus task for those up for the challenge. Let's create tints so that we have variations of the colors.
+Here's a bonus task for those up for the challenge. Let's create tints so that we have variations of the colours.
 
-In your **VS Code**, hover on the swatch until a colour dialog appears.
+Hover on the swatch in your **VS Code** until a colour dialogue appears.
 
-Click on the `rgb(xxx, xxx, xxx)` until it changes to `hsl(xxx, xxx, xxx)`. This converts the color to `HSL` format. Do the same for the other 3 colors.
+Click on the `rgb(xxx, xxx, xxx)` until it changes to `hsl(xxx, xxx, xxx)`. This converts the color to `HSL` format. Do the same for the other 3 colours.
 
 Your code should look like this:
 
@@ -165,7 +165,7 @@ Naming convention:
 - So 9x% - 100, 8x% - 200, etc.
 - So 100 is the lightest, and 1000 is the darkest tint.
 
-Using my yellow as an example, your code should look like this:
+Using the yellow as an example, your code should look like this:
 
 ```css
 :root {

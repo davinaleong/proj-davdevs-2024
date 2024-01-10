@@ -3,7 +3,7 @@ layout: "./../../layouts/post.layout.astro"
 title: "Mastering Astro #3: Details Page"
 date: "2024-01-10 16:00:00"
 description: "Excerpt: Dive into coding with this tutorial series! Learn to create an HTML template for a food blog using Astro. Follow steps in VS Code, adjust folder structure, and enhance your site with CSS in upcoming tutorials."
-keywords: "Coding, Tutorial, Astro, HTML, CSS, VS Code, Web Development, Food Blog, Images, Folder Structure, Pexels, Unsplash"
+keywords: "Mastering Astro, Astro Tutorial, Astro, HTML, CSS, VS Code, Web Development, Food Blog, Images, Folder Structure, Pexels, Unsplash"
 images:
   [{ url: "mastering-astro-0003.png", alt: "Mastering Astro #3: Details Page" }]
 ---

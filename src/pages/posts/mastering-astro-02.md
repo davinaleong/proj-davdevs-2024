@@ -3,7 +3,7 @@ layout: "./../../layouts/post.layout.astro"
 title: "Mastering Astro #2: Folder Structure"
 date: "2024-01-10 13:30:00"
 description: "Dive into part 2 of the Astro tutorial, focusing on organizing your project with an optimized folder structure. Follow the guide to create essential folders like assets, components, layouts, lib, pages, and styles for efficient development."
-keywords: "Astro, Project Structure, Folder Setup, Web Development, HTML, CSS, JavaScript, Astro Tutorial, Coding Organization"
+keywords: "Mastering Astro, Astro Tutorial, Astro, Project Structure, Folder Setup, Web Development, HTML, CSS, JavaScript, Astro Tutorial, Coding Organization"
 images:
   [
     {
