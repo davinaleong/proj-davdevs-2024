@@ -49,8 +49,8 @@ Replace the `body` with the following code. Change `apple-pie-xxxx.jpg` to your 
   <a href="/">Home</a>
 </header>
 
-<div>
-  <div>
+<main>
+  <a>
     <div>
       <img src="/src/assets/images/apple-pie-0001.jpg" alt="" srcset="" />
       <img src="/src/assets/images/apple-pie-0002.jpg" alt="" srcset="" />
@@ -58,13 +58,15 @@ Replace the `body` with the following code. Change `apple-pie-xxxx.jpg` to your 
       <img src="/src/assets/images/apple-pie-0004.jpg" alt="" srcset="" />
     </div>
 
-    <h2>Post Title</h2>
+    <div>
+      <h2 class="card__heading">Post Title</h2>
 
-    <p>Rating: 5</p>
-    <p>Location: Bedok, Singapore</p>
-  </div>
+      <p>Rating: 5</p>
+      <p>Location: Bedok, Singapore</p>
+    </div>
+  </a>
 
-  <div>
+  <a>
     <div>
       <img src="/src/assets/images/apple-pie-0001.jpg" alt="" srcset="" />
       <img src="/src/assets/images/apple-pie-0002.jpg" alt="" srcset="" />
@@ -72,13 +74,15 @@ Replace the `body` with the following code. Change `apple-pie-xxxx.jpg` to your 
       <img src="/src/assets/images/apple-pie-0004.jpg" alt="" srcset="" />
     </div>
 
-    <h2>Post Title</h2>
+    <div>
+      <h2 class="card__heading">Post Title</h2>
 
-    <p>Rating: 5</p>
-    <p>Location: Bedok, Singapore</p>
-  </div>
+      <p>Rating: 5</p>
+      <p>Location: Bedok, Singapore</p>
+    </div>
+  </a>
 
-  <div>
+  <a>
     <div>
       <img src="/src/assets/images/apple-pie-0001.jpg" alt="" srcset="" />
       <img src="/src/assets/images/apple-pie-0002.jpg" alt="" srcset="" />
@@ -86,12 +90,46 @@ Replace the `body` with the following code. Change `apple-pie-xxxx.jpg` to your 
       <img src="/src/assets/images/apple-pie-0004.jpg" alt="" srcset="" />
     </div>
 
-    <h2>Post Title</h2>
+    <div>
+      <h2 class="card__heading">Post Title</h2>
 
-    <p>Rating: 5</p>
-    <p>Location: Bedok, Singapore</p>
-  </div>
-</div>
+      <p>Rating: 5</p>
+      <p>Location: Bedok, Singapore</p>
+    </div>
+  </a>
+
+  <a>
+    <div>
+      <img src="/src/assets/images/apple-pie-0001.jpg" alt="" srcset="" />
+      <img src="/src/assets/images/apple-pie-0002.jpg" alt="" srcset="" />
+      <img src="/src/assets/images/apple-pie-0003.jpg" alt="" srcset="" />
+      <img src="/src/assets/images/apple-pie-0004.jpg" alt="" srcset="" />
+    </div>
+
+    <div>
+      <h2 class="card__heading">Post Title</h2>
+
+      <p>Rating: 5</p>
+      <p>Location: Bedok, Singapore</p>
+    </div>
+  </a>
+
+  <a>
+    <div>
+      <img src="/src/assets/images/apple-pie-0001.jpg" alt="" srcset="" />
+      <img src="/src/assets/images/apple-pie-0002.jpg" alt="" srcset="" />
+      <img src="/src/assets/images/apple-pie-0003.jpg" alt="" srcset="" />
+      <img src="/src/assets/images/apple-pie-0004.jpg" alt="" srcset="" />
+    </div>
+
+    <div>
+      <h2 class="card__heading">Post Title</h2>
+
+      <p>Rating: 5</p>
+      <p>Location: Bedok, Singapore</p>
+    </div>
+  </a>
+</main>
 
 <footer>
   <p>My Favourite Food &copy; Davina Leong, 2024</p>
