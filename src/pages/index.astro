@@ -3,7 +3,7 @@ import MainLayoutAstro from "../layouts/main.layout.astro"
 
 import * as index from "../content/index/main.md"
 import * as portfolio from "../content/portfolio/main.md"
-import { sortPostsDesc } from "../lib/helpers.lib"
+import { sortByDateDesc } from "../lib/helpers.lib"
 import type { ImageInterface } from "../lib/interfaces.lib"
 const { title, subtitle, slogan, skills, featured, talks, social } = index.frontmatter
 const { categories } = portfolio.frontmatter
@@ -11,7 +11,7 @@ const { categories } = portfolio.frontmatter
 const skillPosts = await Astro.glob("../content/skills/*.md")
 
 const projectPosts = await Astro.glob("./projects/*.md")
-const featuredPosts = sortPostsDesc(projectPosts.filter(({ frontmatter }: any) => frontmatter.featured), "date")
+const featuredPosts = projectPosts.filter(({ frontmatter }: any) => frontmatter.featured).sort((a: any, b: any) => sortByDateDesc(a, b))
 const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATURED_COUNT)
 ---
 

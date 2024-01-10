@@ -1,11 +1,10 @@
 ---
 import PortfolioLayoutAstro from "../../layouts/portfolio.layout.astro";
-import { sortPostsDesc } from "../../lib/helpers.lib"
+import { sortByDateDesc } from "../../lib/helpers.lib"
 
 export async function getStaticPaths({ paginate }: any) {
-  const projectPages = await Astro.glob("./../projects/*.md")
-  // console.log(`projectPages`, projectPages)
-  const projects = sortPostsDesc(projectPages.filter((post) => !post.frontmatter.draft), "date")
+  const projects: any = await Astro.glob("./../projects/*.md")
+  projects.sort((a: any, b: any) => sortByDateDesc(a, b  ))
   return paginate(projects, { pageSize: import.meta.env.PER_PAGE })
 }
 

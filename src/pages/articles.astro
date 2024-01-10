@@ -1,10 +1,13 @@
 ---
+import dayjs from "dayjs"
 import MainLayoutAstro from "../layouts/main.layout.astro"
+import { sortByDateDesc } from "../lib/helpers.lib"
 
 import * as main from "../content/pages/articles.md"
 const { title } = main.frontmatter
 
 const articlePosts = await Astro.glob("./posts/*.md")
+articlePosts.sort((a: any, b: any) => sortByDateDesc(a, b))
 ---
 <MainLayoutAstro>
     <section id="home-articles" class="section section-half section-articles-hero">
