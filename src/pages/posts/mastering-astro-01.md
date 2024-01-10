@@ -7,7 +7,7 @@ keywords: "Astro, Web Development, Advanced Tutorial, VS Code, JavaScript, Proje
 images:
   [
     {
-      url: "mastering-astro-0001.png",
+      url: "mastering-astro-01-0001.png",
       alt: "Mastering Astro #1: Project Setup",
     },
   ]
