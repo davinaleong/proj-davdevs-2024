@@ -27,7 +27,6 @@ technologies:
     },
     { label: "Highlights", items: ["CSS Grid", "Flex"] },
   ]
-draft: 0
 ---
 
 This project is the first part of a 2-part project I'm in the midst of building. The second part is to build this project in `ReactJS`.

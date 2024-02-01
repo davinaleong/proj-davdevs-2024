@@ -27,7 +27,6 @@ technologies:
     },
     { label: "Highlights", items: ["CSS Grid", "Flex"] },
   ]
-draft: 0
 ---
 
 This [video](https://www.youtube.com/watch?v=qNiUlml9MDk) by Traversy Media on creating a QR Code Generator inspired me to create my own version. _Note:_ I did not follow the tutorial.

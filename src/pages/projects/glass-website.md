@@ -25,7 +25,6 @@ technologies:
     { label: "Deployment", items: ["GitHub Pages"] },
     { label: "Highlights", items: ["Backdrop Filter"] },
   ]
-draft: 0
 ---
 
 This demo was me following [this tutorial](https://www.youtube.com/watch?v=O7WbVj5apxU) by [developedbyed](https://www.youtube.com/@developedbyed).

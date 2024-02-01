@@ -34,7 +34,6 @@ technologies:
         ],
     },
   ]
-draft: 0
 ---
 
 This is a tool I created for my church group. The tool shuffles the labels. There are 2 forms. The first just shuffles the labels. The second splits labels by a number specified by the user. The user can also toggle shuffling of labels too.

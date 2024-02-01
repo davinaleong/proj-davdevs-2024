@@ -34,7 +34,6 @@ technologies:
     { label: "Deployment", items: ["GitHub Pages"] },
     { label: "Highlights", items: ["Dialog Element"] },
   ]
-draft: 0
 ---
 
 Here are some examples I've put together to showcase the usage of the `has()` pseudo class. You can view the code in the [repo](https://github.com/davinaleong/proj-exploring-new-pseudo-classes).

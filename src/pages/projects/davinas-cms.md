@@ -16,7 +16,6 @@ technologies:
     { label: "Deployment", items: ["Heroku"] },
     { label: "Highlights", items: ["Markdown Editor"] },
   ]
-draft: 0
 ---
 
 This project was built in [Laravel](https://laravel.com/). It includes a [Markdown Editor](https://ui.toast.com/tui-editor) for me to style my blog content like adding headings and links. The [Architect UI](https://dashboardpack.com/live-demo-preview/?livedemo=290) is used for the dashboard UI.

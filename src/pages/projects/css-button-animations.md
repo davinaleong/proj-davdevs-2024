@@ -26,7 +26,6 @@ technologies:
     { label: "Deployment", items: ["GitHub Pages"] },
     { label: "Highlights", items: ["CSS Animations"] },
   ]
-draft: 0
 ---
 
 I wanted to sharpen my `CSS` skills. While I know `CSS` code, I'm not very good with animations. I followed along this [tutorial](https://www.youtube.com/watch?v=cH0TC9gWiAg) by [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) to create these button animations.

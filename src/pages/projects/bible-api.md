@@ -19,7 +19,6 @@ technologies:
     { label: "Deployment", items: ["Linode", "Laravel Forge"] },
     { label: "Highlights", items: ["PHPUnit (Testing)"] },
   ]
-draft: 0
 ---
 
 In my pursuit of skill enhancement, I developed a Bible API project using PHP and [Laravel](https://laravel.com/). The project, hosted on Linode, comprises two integral parts: a Content Management System (CMS) and the API. The CMS facilitates database updates for users, while the API efficiently retrieves stored data. Choosing the Bible as the thematic core allowed me to align the project with a familiar structure.

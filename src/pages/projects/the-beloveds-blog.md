@@ -34,7 +34,6 @@ technologies:
     { label: "Deployment", items: ["Netlify"] },
     { label: "Highlights", items: ["React Markdown"] },
   ]
-draft: 0
 ---
 
 This blog is built in [GatsbyJS](https://www.gatsbyjs.com/) which is based off [ReactJS](https://reactjs.org/). I decicded to use this project to get my feet wet in [TypeScript](https://www.typescriptlang.org/). It also uses [SASS](https://sass-lang.com/) as for the styles. The layout features [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) in its design. It is used in the post listing section on the landing and archive pages. It is also used to organise the pagination on the archive page.

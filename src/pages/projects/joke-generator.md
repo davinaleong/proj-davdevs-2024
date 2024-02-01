@@ -25,7 +25,6 @@ technologies:
     { label: "Deployment", items: ["Heroku"] },
     { label: "Highlights", items: ["No jQuery"] },
   ]
-draft: 0
 ---
 
 The idea for this project came about when I was figuring out how to showcase all the original jokes and riddles I came up with. Currently, I store them Google Docs. But I wanted to create a generator which shows a random joke. It will also have a button for users to view another joke without refreshing the screen.

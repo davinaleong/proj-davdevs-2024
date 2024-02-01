@@ -25,7 +25,6 @@ technologies:
     { label: "Deployment", items: ["GitHub Pages"] },
     { label: "Highlights", items: ["CSS Animations"] },
   ]
-draft: 0
 ---
 
 I came across this [Cut Corners tutorial](https://www.youtube.com/watch?v=aW6qEAQSctY) by [Kevin Powell](https://www.youtube.com/kepowob), and decided to try it out. I had some free time and wanted to sharpen my `CSS` skills.

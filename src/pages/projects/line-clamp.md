@@ -25,7 +25,6 @@ technologies:
     { label: "Deployment", items: ["GitHub Pages"] },
     { label: "Highlights", items: ["Webkit"] },
   ]
-draft: 0
 ---
 
 This project was inspired by [this video](https://www.youtube.com/watch?v=b6iVByCOx8A) by Kevin Powell.
