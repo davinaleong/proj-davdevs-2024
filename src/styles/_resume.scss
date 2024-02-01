@@ -110,6 +110,7 @@
 @media print {
   .section-resume {
     --_section-bg-clr: theme("colors.white");
+    color: theme("colors.black");
 
     &-hero {
       display: none;

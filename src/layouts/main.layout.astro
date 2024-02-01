@@ -9,8 +9,7 @@ import CookieDialogComponentAstro from "../components/cookie-dialog.component.as
 
 const { API_URL, PUBLIC_APP_SLUG } = import.meta.env
 
-const response = await fetch(`${API_URL}misc/apps/${PUBLIC_APP_SLUG
-}`)
+const response = await fetch(`${API_URL}misc/apps/${PUBLIC_APP_SLUG}`)
 const data = await response.json()
 const { meta_title, meta_description, meta_author, meta_keywords } = data.apps[0]
 
