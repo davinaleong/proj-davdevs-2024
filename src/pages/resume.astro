@@ -5,7 +5,7 @@ import MainLayoutAstro from "../layouts/main.layout.astro"
 import { sortPostsDesc } from "../lib/helpers.lib"
 
 import * as resume from "../content/resume/main.md"
-const { title, overview, skills, talks, hobbies } = resume.frontmatter
+const { title, description, keywords, overview, skills, talks, hobbies } = resume.frontmatter
 
 const experiencePosts = await Astro.glob('./../content/resume/experience/*.md')
 const experiences = sortPostsDesc(experiencePosts.filter(post => !post.frontmatter.draft), "start")
@@ -17,7 +17,7 @@ const certificatesPosts = await Astro.glob('./../content/resume/certificates/*.m
 const certificates = sortPostsDesc(certificatesPosts.filter(post => !post.frontmatter.draft), "start")
 ---
 
-<MainLayoutAstro title={title}>
+<MainLayoutAstro title={title} description={description} keywords={keywords}>
     <section
         id="resume-hero"
         class="section section-half section-resume section-resume-hero"

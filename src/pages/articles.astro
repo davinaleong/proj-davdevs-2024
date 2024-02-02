@@ -3,13 +3,13 @@ import dayjs from "dayjs"
 import MainLayoutAstro from "../layouts/main.layout.astro"
 import { sortByDateDesc } from "../lib/helpers.lib"
 
-import * as main from "../content/pages/articles.md"
-const { title } = main.frontmatter
+import * as main from "../content/articles/main.md"
+const { title, description, keywords } = main.frontmatter
 
 const articlePosts = await Astro.glob("./posts/*.md")
 articlePosts.sort((a: any, b: any) => sortByDateDesc(a, b))
 ---
-<MainLayoutAstro>
+<MainLayoutAstro description={description} keywords={keywords}>
     <section id="home-articles" class="section section-half section-articles-hero">
         <div class="wrapper section__wrapper | flow mx-auto p-4">
           <h1 class="section-article-home__heading | text-5xl font-bold text-neutral-50 uppercase">

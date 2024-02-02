@@ -1,9 +1,9 @@
 ---
 import MainLayoutAstro from "../layouts/main.layout.astro"
 import * as privacyPolicy from "../content/privacy-policy/main.md"
-const { title } = privacyPolicy.frontmatter
+const { title, description, keywords } = privacyPolicy.frontmatter
 ---
-<MainLayoutAstro title={title}>
+<MainLayoutAstro title={title} description={description} keywords={keywords}>
     <section
         id="privacy-hero"
         class="section section-half section-privacy section-privacy-hero"

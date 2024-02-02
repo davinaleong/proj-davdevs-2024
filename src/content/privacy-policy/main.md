@@ -1,5 +1,7 @@
 ---
 title: "Privacy Policy"
+description: "Review Dav/Devs' Privacy Policy for a transparent understanding of how your data is handled on our portfolio website. Your privacy matters, and we prioritize the security and responsible use of your information."
+keywords: "Privacy Policy, Data Collection, Information Usage, Cookie Usage, Communication, Marketing, Security Measures, Third-Party Services, Contact Information, Dav/Devs Portfolio Website."
 ---
 
 ## Privacy Policy for Dav/Devs Portfolio Website

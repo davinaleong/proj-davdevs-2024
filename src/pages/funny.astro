@@ -4,13 +4,13 @@ import { getEntries } from "../lib/contentful.lib"
 import { getRandomInt } from "../lib/helpers.lib"
 import MainLayoutAstro from "../layouts/main.layout.astro"
 import * as funny from "../content/funny/main.md"
-const { title } = funny.frontmatter
+const { title, description, keywords } = funny.frontmatter
 
 const entries = await getEntries()
 const randomIndex: number = getRandomInt(0, entries.length - 1)
 const { fields } = entries[randomIndex]
 ---
-<MainLayoutAstro title={title}>
+<MainLayoutAstro title={title} description={description} keywords={keywords}>
     <section
         id="funny-hero"
         class="section section-half section-funny section-funny-hero"

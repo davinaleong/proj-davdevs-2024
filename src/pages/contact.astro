@@ -1,7 +1,7 @@
 ---
 import MainLayoutAstro from "../layouts/main.layout.astro"
 import * as contact from "../content/contact/main.md"
-const { title } = contact.frontmatter
+const { title, description, keywords, } = contact.frontmatter
 
 const { NODE_ENV, API_URL, PUBLIC_APP_SLUG } = import.meta.env
 
@@ -9,7 +9,7 @@ const response = await fetch(`${API_URL}misc/messageTypes/${PUBLIC_APP_SLUG}/`)
 const data = await response.json()
 const { messageTypes } = data
 ---
-<MainLayoutAstro title={title}>
+<MainLayoutAstro title={title} description={description} keywords={keywords}>
   <section
   id="contact-hero"
   class="section section-half section-contact section-contact-hero"

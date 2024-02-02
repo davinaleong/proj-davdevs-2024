@@ -1,5 +1,7 @@
 ---
 title: "Resume"
+description: "Davina Leong's comprehensive resume showcasing 8 years of full-stack web development expertise. Explore skills in Laravel, React, and REST API, along with a proven track record of impactful projects."
+keywords: "Davina Leong, Full-Stack Web Developer, Laravel, React, REST API, HTML5, CSS3, JavaScript, TypeScript, AWS, Heroku, Netlify, XD, Photoshop, Illustrator, Experience, Education, Certificates, Talks, Hobbies."
 
 overview:
   {

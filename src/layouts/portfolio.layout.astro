@@ -3,7 +3,7 @@ import MainLayoutAstro from "./main.layout.astro"
 import PaginationComponentAstro from "../components/pagination.component.astro"
 
 import * as portfolio from "../content/portfolio/main.md"
-const { title, categories } = portfolio.frontmatter
+const { title, description, keywords, categories } = portfolio.frontmatter
 
 const {
   page,
@@ -19,7 +19,7 @@ if (category) {
   paginationRoute += `categories/${category}/`
 }
 ---
-<MainLayoutAstro title={title}>
+<MainLayoutAstro title={title} description={description} keywords={keywords}>
   <section
     id="portfolio-hero"
     class="section section-half section-portfolio section-portfolio-hero"

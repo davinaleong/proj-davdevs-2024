@@ -1,5 +1,7 @@
 ---
 title: "Portfolio"
+description: "Explore Davina Leong's diverse web development portfolio, featuring projects in HTML, CSS, SASS, Bootstrap, JavaScript, PHP, Laravel, SQL, Astro SSG, React, and NextJS. Witness a showcase of modern, high-quality web projects."
+keywords: "Web Development Portfolio, HTML Projects, CSS Showcase, SASS Projects, Bootstrap Examples, JavaScript Portfolios, PHP Web Apps, Laravel Projects, SQL Demonstrations, Astro SSG Showcases, React Web Development, NextJS Projects."
 categories:
   [
     {
