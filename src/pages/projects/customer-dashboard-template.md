@@ -20,7 +20,6 @@ technologies:
     { label: "Frontend", items: ["Bootstrap", "Admin LTE"] },
     { label: "Deployment", items: ["AWS S3"] },
   ]
-draft: 0
 ---
 
 I was tasked to develop a dashboard for clients at [LIV3LY](https://liv3ly.com/).

@@ -22,7 +22,6 @@ technologies:
     { label: "Backend", items: ["Contentful"] },
     { label: "Deployment", items: ["Netlify"] },
   ]
-draft: 0
 ---
 
 This riddles catalogue extends from my general one, [Laugh and be Blessed](https://laugh-and-be-blessed-next.vercel.app/). This catalogue contains riddles about the train station names in Singapore. Mass Rapid Riddles is a play on the name of Singapore's subway system, Mass Rapid Transit.

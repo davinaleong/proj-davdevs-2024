@@ -28,7 +28,6 @@ technologies:
     { label: "Deployment", items: ["GitHub Pages"] },
     { label: "Highlights", items: ["Dialog Element"] },
   ]
-draft: 0
 ---
 
 Here is a demo I built featuring the [dialog element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog). I found out about this new element from Kevin Powell's video [dialog = the easiest way to make a popup modal](https://www.youtube.com/watch?v=TAB_v6yBXIE&t=0s).

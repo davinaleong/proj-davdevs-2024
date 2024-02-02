@@ -16,7 +16,6 @@ technologies:
     { label: "Deployment", items: ["Heroku"] },
     { label: "Storage", items: ["AWS S3"] },
   ]
-draft: 0
 ---
 
 I had an idea of a countdown timer creator that would allow users to personalize the design of the timers.

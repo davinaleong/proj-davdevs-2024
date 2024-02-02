@@ -25,7 +25,6 @@ technologies:
     { label: "Deployment", items: ["GitHub Pages"] },
     { label: "Highlights", items: ["CSS Adjacent Sibling Selector"] },
   ]
-draft: 0
 ---
 
 Here is my solution/demo to the password visibility toggle found on many websites. This is a pure JavaScript solution. As per the pattern I learned from Kevin Powell, I've used `data-` attributes as my selectors like the form or password toggle buttons. I've now streamlined to use a custom `data-element` attribute and the value as the label of the element--e.g. `data-element=\"form-example\"`. Then I access it in `CSS` like this: `[data-element=form-example]` or in `JS` like this: `document.querySelector(\"[data-element=form-example]\")`.

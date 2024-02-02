@@ -22,7 +22,6 @@ technologies:
     { label: "Backend", items: ["NextJS", "Contentful"] },
     { label: "Deployment", items: ["Vercel"] },
   ]
-draft: 0
 ---
 
 I created this catalogue to store all my original jokes, puns, and riddles. I went with a colourful design to keep the design simple. Click on the card to see the content.

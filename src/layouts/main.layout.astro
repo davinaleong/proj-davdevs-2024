@@ -7,14 +7,10 @@ import PrimaryFooterComponentAstro from "../components/primary-footer.component.
 import SkillDialogsComponentAstro from "../components/skill-dialogs.component.astro"
 import CookieDialogComponentAstro from "../components/cookie-dialog.component.astro"
 
-const { API_URL, PUBLIC_APP_SLUG } = import.meta.env
+const { PUBLIC_APP_NAME, AUTHOR } = import.meta.env
 
-const response = await fetch(`${API_URL}misc/apps/${PUBLIC_APP_SLUG}`)
-const data = await response.json()
-const { meta_title, meta_description, meta_author, meta_keywords } = data.apps[0]
-
-const { title = ``, description = meta_description, keywords = meta_keywords } = Astro.props
-const theTitle: string = title === `` ? meta_title : `${meta_title} - ${title}`
+const { title = ``, description = '', keywords = '' } = Astro.props
+const theTitle: string = title === `` ? PUBLIC_APP_NAME : `${PUBLIC_APP_NAME} - ${title}`
 
 const currentPath: string = Astro.url.pathname
 const home: boolean = currentPath === `/`
@@ -24,7 +20,7 @@ const home: boolean = currentPath === `/`
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-    <meta name="author" content={meta_author}/>
+    <meta name="author" content={AUTHOR}/>
     <meta name="description" content={description}/>
     <meta name="keywords" content={keywords}/>
 

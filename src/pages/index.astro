@@ -5,7 +5,7 @@ import * as index from "../content/index/main.md"
 import * as portfolio from "../content/portfolio/main.md"
 import { sortByDateDesc } from "../lib/helpers.lib"
 import type { ImageInterface } from "../lib/interfaces.lib"
-const { title, subtitle, slogan, skills, featured, talks, social } = index.frontmatter
+const { title, description, keywords, subtitle, slogan, skills, featured, talks, social } = index.frontmatter
 const { categories } = portfolio.frontmatter
 
 const skillPosts = await Astro.glob("../content/skills/*.md")
@@ -15,7 +15,7 @@ const featuredPosts = projectPosts.filter(({ frontmatter }: any) => frontmatter.
 const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATURED_COUNT)
 ---
 
-<MainLayoutAstro>
+<MainLayoutAstro description={description} keywords={keywords}>
 	<section id="home-hero" class="section section-home-hero">
     <div class="wrapper section__wrapper mx-auto p-4 | flow">
       <h1

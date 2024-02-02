@@ -35,7 +35,6 @@ technologies:
     { label: "Highlights", items: ["CSS Grid", "Flex", "Markdown"] },
     { label: "Mockups", items: ["Affinity Designer"] },
   ]
-draft: 0
 ---
 
 This project is [this website](https://davina-devs.com/) you're looking at right now.

@@ -26,7 +26,6 @@ technologies:
       items: ["HTML", "CSS", "Bootstrap 4", "SASS", "Font Awesome 5"],
     },
   ]
-draft: 0
 ---
 
 This template is part one of a two-part demo for a CraftCMS talk at a local PHP meetup. It's Bootstrap 4-based with Font Awesome 5 icons. For code readability and reusability, I opted for SASS. Note: no bundled SASS compiler; consider the Live Sass Compiler VS Code extension.

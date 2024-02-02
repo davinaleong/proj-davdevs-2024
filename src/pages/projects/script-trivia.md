@@ -21,7 +21,6 @@ technologies:
     { label: "Frontend", items: ["ReactJS", "Webpack", "SASS", "Typescript"] },
     { label: "Deployment", items: ["Netlify"] },
   ]
-draft: 0
 ---
 
 I developed this project to support my passion for opening the minds of non-IT professionals to the world of IT--namely coding. In this age of technology, it is essential to understand the apps they use. It is NOT the aim of this app to convert people into programmers.

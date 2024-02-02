@@ -34,7 +34,6 @@ technologies:
     { label: "Deployment", items: ["Netlify"] },
     { label: "Highlights", items: ["CSS Grid", "Flex"] },
   ]
-draft: 0
 ---
 
 This project is built using `ReactJS`.

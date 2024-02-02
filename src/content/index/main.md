@@ -1,5 +1,7 @@
 ---
 title: "Dav/Devs"
+description: "Dav/Devs – Unveiling the portfolio of a passionate full-stack web developer. Explore my diverse skill set, featured projects, knowledge sharing, and connect on social media for collaboration and insights."
+keywords: "Dav/Devs, Full-Stack Web Developer, Modern Websites, Astro, Bootstrap, Contentful, CSS, FontAwesome, Heroku, HTML, JavaScript, Laravel, Netlify, NextJS, PHP, React, SASS, SQL, TailwindCSS, TypeScript"
 subtitle: "Full-stack Web Developer"
 slogan: "Building modern high-quality websites!"
 

@@ -22,7 +22,6 @@ technologies:
     { label: "Deployment", items: ["GitHub Pages"] },
     { label: "Highlights", items: ["CSS Grid"] },
   ]
-draft: 0
 ---
 
 Here is a microsite containing links to the projects I built for the [Frontend Mentor](https://www.frontendmentor.io/) challenges. The repo for the microsite can be found [here](https://github.com/davinaleong/proj-dav-fem).

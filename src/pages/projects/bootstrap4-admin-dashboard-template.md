@@ -40,7 +40,6 @@ technologies:
         ],
     },
   ]
-draft: 0
 ---
 
 Built on **Bootstrap 4**, this template prioritizes simplicity and minimal setup for immediate usability. Unlike many admin dashboard templates, this one is engineered to be straightforward and easy to use.
