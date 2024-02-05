@@ -1,0 +1,85 @@
+<form method="post" class="form form-contact" data-element="contact-form">
+  <div class="form__alert | flow" data-element="form-alert">
+    <h3 class="form__alert__header | text-2xl font-bold">Lorem Ipsum</h3>
+
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore,
+      repellendus.
+    </p>
+  </div>
+
+  <input
+    type="text"
+    name="first_name"
+    id="input-first_name"
+    class="form__field"
+    placeholder="Name"
+    required
+  />
+  <input
+    type="text"
+    name="last_name"
+    id="input-last_name"
+    class="form__field form__field-hidden"
+    placeholder="Last Name"
+  />
+  <input
+    type="email"
+    name="email"
+    id="input-email"
+    class="form__field"
+    placeholder="Email"
+    required
+  />
+  <input
+    type="tel"
+    name="phone_number"
+    id="input-phone_number"
+    class="form__field"
+    placeholder="Phone Number"
+    required
+  />
+  <select
+    name="subject"
+    id="input-subject"
+    class="form__field form__field-subject"
+    required
+  >
+    <option value="">Subject</option>
+    { messageTypes.data.map((messageType: any) => (
+    <option value="{messageType.id}">{messageType.title}</option>
+    )) }
+  </select>
+  <textarea
+    name="message"
+    id="input-message"
+    class="form__field form__field-message"
+    placeholder="Message"
+    cols="30"
+    rows="10"
+    minlength="5"
+    required
+  ></textarea>
+  <button
+    class="btn btn-blue form__button form__button-submit"
+    type="submit"
+    data-element="btn-submit"
+  >
+    <i class="fa-light fa-sharp fa-paper-plane"></i> Send
+  </button>
+  <button
+    class="btn btn-neutral form__button form__button-reset"
+    type="reset"
+    data-element="btn-reset"
+  >
+    <i class="fa-light fa-sharp fa-rotate-left"></i> Reset
+  </button>
+</form>
+
+{NODE_ENV === `development` &&
+<div class="flex gap-4" data-element="test">
+  <button class="btn btn-neutral" type="button" data-element="btn-fill-form">
+    <i class="fa-light fa-sharp fa-pen"></i> Fill Form
+  </button>
+</div>
+}<!-- ./flex -->
