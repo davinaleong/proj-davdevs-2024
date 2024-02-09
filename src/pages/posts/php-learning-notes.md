@@ -1,7 +1,7 @@
 ---
 layout: "./../../layouts/post.layout.astro"
 title: "PHP Learning Notes"
-date: "2024-02-10"
+date: "2024-02-10 00:30:00"
 description: 'Explore essential links, insightful reads, and comprehensive code snippets on the "1. Important Links" page. From core developer resources to in-depth articles on PHP, this page is a treasure trove for both beginners and seasoned developers. Dive into topics like string manipulation, arrays, loops, and classes with practical examples.'
 keywords: "Important Links, PHP Developer Resources, PHP Documentation, W3 Schools PHP, Codecademy PHP, PHP Echo vs Print, Include External PHP, PHP Notes, True/False in PHP, PHP Environment Path for Windows, PHP Code Snippets, External PHP Inclusion, String Concatenation in PHP, PHP Variables, PHP Arrays, Deleting Array Element in PHP, Foreach Loop in PHP, PHP Random Character, PHP Array Length, Sorting Arrays in PHP, Associative Arrays in PHP, String Related Functions in PHP, PHP Classes, Checking Existence in PHP, Calling Constants in PHP, Static Methods in PHP, Capitalize First Letter in PHP."
 images: [{ url: "php-learning-notes-0001.png", alt: "PHP Learning Notes" }]
