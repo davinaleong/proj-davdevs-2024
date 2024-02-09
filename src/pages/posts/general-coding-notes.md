@@ -1,7 +1,7 @@
 ---
 layout: "./../../layouts/post.layout.astro"
 title: "General Coding Notes"
-date: "2024-02-10 06:29:00"
+date: "2024-02-10 07:00:00"
 description: 'Elevate your coding practices with comprehensive notes on coding conventions, styles, and essential techniques. Learn the art of meaningful variable and function naming, follow coding styles, create default file headers, and implement copyright statements. Explore platform-dependent compilation in Unity, handle "Not Implemented" scenarios, and master the ternary operator for concise code. Elevate your coding standards with practical examples and valuable insights.'
 keywords: "Coding Conventions, Code Styles, Variable Naming, Function Naming, Meaningful Names, Coding Techniques, File Headers, Copyright Statements, Platform-Dependent Compilation, Unity Coding, Not Implemented Exception, Ternary Operator, Code Organization, Coding Standards, Dav/Devs Coding Notes, Programming Best Practices."
 images: [{ url: "general-coding-notes-0001.png", alt: "General Coding Notes" }]
