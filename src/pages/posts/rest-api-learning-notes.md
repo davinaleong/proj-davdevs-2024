@@ -2,8 +2,8 @@
 layout: "./../../layouts/post.layout.astro"
 title: "REST API Learning Notes"
 date: "2024-02-10 06:29:00"
-description: "Master the art of Regular Expressions (Regex) with in-depth learning notes on Dav/Devs tech blog. Uncover essential links, explore date patterns, dive into number validations, and unravel word-based regex for precise text matching. Elevate your regex skills with practical examples and valuable insights."
-keywords: "Regex Learning, Regular Expressions, Regex Tutorial, Regex Debugger, Regex Patterns, Date Patterns in Regex, Number Validation in Regex, Hex Colour Regex, UUID Regex, Word-based Regex, Bible Verse Matching, Regex Examples, Regex Flowchart, Debuggex, Regex Mastery, Dav/Devs Tech Blog, Tech Learning Notes."
+description: "Dive into the intricacies of REST API Architecture with comprehensive learning notes on Dav/Devs tech blog. Explore HTTP verbs, status codes, and resource links for crafting efficient and RESTful APIs. Enhance your understanding of REST principles and best practices through practical examples and valuable insights."
+keywords: "REST API Learning, RESTful Architecture, HTTP Verbs, Status Codes, Resource Links, REST API Best Practices, API Design, RESTful Programming, REST API Tutorial, REST Quick Tips, Dav/Devs Tech Blog, API Learning Notes, RESTful Principles, API Development, HTTP Methods, REST API Status Codes."
 images:
   [{ url: "rest-api-learning-notes-0001.png", alt: "REST API Learning Notes" }]
 ---
