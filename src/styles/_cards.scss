@@ -17,23 +17,23 @@
   --_card-alt-spacer: theme("padding.6");
 
   box-shadow: theme("boxShadow.md");
+  border-radius: theme("borderRadius.sm");
+  overflow: hidden;
+  background-color: var(--_card-bg-clr);
 
   &__img {
     object-fit: cover;
     aspect-ratio: 16/9;
-    border-radius: theme("borderRadius.sm") theme("borderRadius.sm") 0 0;
   }
 
   &__body {
     --_card-body-spacer: theme("padding.2");
 
     color: var(--_card-clr);
-    background-color: var(--_card-bg-clr);
     padding-block-start: var(--_card-body-spacer);
     padding-block-end: var(--_card-body-spacer);
     padding-inline-start: var(--_card-body-spacer);
     padding-inline-end: var(--_card-body-spacer);
-    border-radius: 0 0 theme("borderRadius.sm") theme("borderRadius.sm");
 
     &__heading {
       color: var(--_card-heading-clr);
