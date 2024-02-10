@@ -1,7 +1,7 @@
 ---
 layout: "./../../layouts/post.layout.astro"
 title: "SASS Learning Notes"
-date: "2024-02-10 11:03:00"
+date: "2024-02-10 21:10:00"
 description: "Immerse yourself in the world of SASS with comprehensive learning notes, covering essential links, common examples, and practical snippets. Explore string interpolation, loops, and responsive background image techniques. Elevate your SASS skills with this guide, offering valuable insights and hands-on examples for efficient stylesheet development."
 keywords: "SASS Learning, SASS Tutorial, SASS Examples, SASS Documentation, SASS String Interpolation, SASS Loop, SASS Snippets, Responsive Background Image in SASS, SASS Variables, SASS Main Stylesheet, SASS Media Queries, SASS Styles, SASS Tips, SASS Tricks, Dav/Devs Tech Blog, Web Development, Frontend Development, CSS Preprocessors."
 images: [{ url: "sass-learning-notes-0001.png", alt: "SASS Learning Notes" }]
