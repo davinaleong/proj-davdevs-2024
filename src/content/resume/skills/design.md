@@ -3,4 +3,4 @@ title: "Design"
 sortOrder: 3
 ---
 
-Figma, PhotoShop, Illustrator
+UX Design, XD, Figma, PhotoShop, Illustrator
