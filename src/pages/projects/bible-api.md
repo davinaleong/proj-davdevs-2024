@@ -7,11 +7,7 @@ description: "Dive into the intricacies of my ongoing Bible API project, meticul
 keywords: "Bible API, PHP Development, Laravel Project, Linode Hosting, CMS, API Integration, Technical Project, Skill Enhancement, Domain Setup, HTTPS Implementation, Laravel Forge, PHPUnit Testing, Ongoing Development"
 category: "laravel"
 images: [{ url: "bible-api.png", alt: "Bible API" }]
-links:
-  [
-    { label: "See Demo", url: "http://45.33.120.254/" },
-    { label: "See Repo", url: "https://github.com/davinaleong/proj-bible-api" },
-  ]
+links: []
 featured: false
 technologies:
   [

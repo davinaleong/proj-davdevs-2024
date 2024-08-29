@@ -7,14 +7,7 @@ description: "A blog to glorify Jesus with my revelations and testimonies."
 keywords: "Davina, Leong, Davina Leong, CMS, HTML, CSS, buttons, animation, css animation, flex, flexbox, Laravel, PHP, projects"
 category: "react"
 images: [{ url: "the-beloveds-blog.png", alt: "The Beloved's Blog" }]
-links:
-  [
-    { label: "See Demo", url: "https://the-beloveds-blog.com/" },
-    {
-      label: "See Repo",
-      url: "https://github.com/davinaleong/proj-the-beloveds-blog-2023",
-    },
-  ]
+links: []
 featured: false
 technologies:
   [

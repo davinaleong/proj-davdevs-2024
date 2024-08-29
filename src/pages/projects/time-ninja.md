@@ -7,7 +7,7 @@ description: "Create and customize your own countdown timers."
 keywords: "timeninja, timer, countdown, laravel, css3, html5, javascript, js, php, mysql, scss"
 category: "laravel"
 images: [{ url: "time-ninja.png", alt: "TimeNinja" }]
-links: [{ label: "See Demo", url: "https://time-ninja.herokuapp.com/" }]
+links: []
 featured: true
 technologies:
   [

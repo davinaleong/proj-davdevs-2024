@@ -11,7 +11,7 @@ links:
   [
     {
       label: "See Demo",
-      url: "https://davinaleong.github.io/password-visibility/",
+      url: "https://davinaleong.github.io/proj-password-visibility/",
     },
     {
       label: "See Repo",

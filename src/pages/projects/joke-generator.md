@@ -7,17 +7,7 @@ description: "Show a random original joke or riddle by Davina Leong."
 keywords: "davina, davina leong, leong, joke, jokes, pun, puns, laugh, laughs, funny, laughter, html, html5, css, css3, js, javascript, riddle, riddles"
 category: "javascript"
 images: [{ url: "joke-generator.png", alt: "Joke of the Day" }]
-links:
-  [
-    {
-      label: "See Demo",
-      url: "https://davinaleong.github.io/proj-joke-of-the-day/",
-    },
-    {
-      label: "See Repo",
-      url: "https://github.com/davinaleong/proj-joke-of-the-day",
-    },
-  ]
+links: []
 featured: false
 technologies:
   [

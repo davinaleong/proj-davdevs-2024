@@ -9,10 +9,10 @@ category: "astro"
 images: [{ url: "mass-rapid-riddles.png", alt: "Mass Rapid Riddles" }]
 links:
   [
-    { label: "See Demo", url: "https://laugh-and-be-blessed-next.vercel.app/" },
+    { label: "See Demo", url: "https://mass-rapid-riddles.vercel.app/" },
     {
       label: "See Repo",
-      url: "https://github.com/davinaleong/proj-laugh-and-be-blessed-next",
+      url: "https://github.com/davinaleong/proj-mass-rapid-riddles",
     },
   ]
 featured: false
