@@ -27,15 +27,22 @@ articlePosts.sort((a: any, b: any) => sortByDateDesc(a, b))
           <div class="cards-grid">
             {articlePosts.map(({ url, frontmatter }: any) => {
               const { title, images } = frontmatter
-              const image: any = images.length > 0 ? images[0] : null
+              let imgEl = null
+              if (images && images.length > 0) {
+                const image: any = images.length > 0 ? images[0] : null
+                imgEl = (
+                  <img
+                    src={`/screenshots/posts/${image.url}`}
+                    alt={image.alt}
+                    class="card__img"
+                  />
+                )
+              }
+              
               return (
                 <>
                   <div class="card">
-                    <img
-                      src={`/screenshots/posts/${image.url}`}
-                      alt={image.alt}
-                      class="card__img"
-                    />
+                    {imgEl}
                     <div class="card__overlay | flow">
                       <header class="card__overlay__header">
                         <h3 class="card__overlay__heading">
