@@ -1,7 +1,7 @@
 ---
 layout: "./../../layouts/post.layout.astro"
 title: "Composing Long Messages on the Phone"
-date: "2024-06-18 21:10:00"
+date: "2024-06-20 00:00:00"
 description: "Learn a simple tech tip for composing long messages on your phone. Use your notes app to draft lengthy texts before copying them into WhatsApp or Telegram for an easier messaging experience."
 keywords: "composing long messages, tech tip, WhatsApp, Telegram, notes app, messaging apps, smartphone tips, text drafting, mobile messaging, copy and paste, phone messaging, message composition"
 images:
