@@ -1,7 +1,7 @@
 ---
 layout: "./../../layouts/post.layout.astro"
 title: "An App vs A Website"
-date: "2024-06-18 21:10:00"
+date: "2024-06-18 00:00:00"
 description: "Learn how to easily differentiate between an app and a website on your phone with this quick tip from Davina Leong. Discover the key signs that help you identify whether you're using an app or browsing a website."
 keywords: "app vs website, mobile tips, Davina Leong, tech tip, identify apps, identify websites, smartphone browsing, app store, play store, Safari, Google Chrome, web browser, mobile technology"
 images:
