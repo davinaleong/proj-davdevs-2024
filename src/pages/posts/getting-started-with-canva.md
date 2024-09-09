@@ -1,7 +1,7 @@
 ---
 layout: "./../../layouts/post.layout.astro"
 title: "Getting Started with Canva"
-date: "2024-06-18 00:00:00"
+date: "2024-06-24 00:00:00"
 description: "Learn how to start with Canva, a user-friendly app and website for creating stunning graphics. Whether you're using it on mobile or desktop, this guide walks you through the steps to craft beautiful designs, from greeting cards to social media posts."
 keywords: "Canva guide, getting started with Canva, Canva tutorial, how to use Canva, Canva for beginners, Canva mobile app, Canva desktop, graphic design with Canva, creating graphics online, Canva templates, Canva tips."
 images:
