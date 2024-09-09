@@ -99,6 +99,12 @@
   padding-inline-end: var(--_post-spacer);
   border-radius: theme("borderRadius.sm");
   box-shadow: theme("boxShadow.md");
+
+  img {
+    max-height: 60ch;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  }
 }
 
 .theme-dark,

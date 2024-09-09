@@ -45,6 +45,10 @@ a {
   }
 }
 
+img {
+  border-radius: theme("borderRadius.sm");
+}
+
 .flow {
   --_flow-spacer: var(--flow-spacer);
 
