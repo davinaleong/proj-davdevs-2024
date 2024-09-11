@@ -11,7 +11,6 @@ const currentPath: string = Astro.url.pathname
 const homePath: string = currentPath === `/` ? '/' : '../'
 const portfolioPath: string = currentPath === `/` ? 'portfolio/' : '../portfolio/'
 const articlesPath: string = currentPath === `/` ? 'articles/' : '../articles/'
-const resumePath: string = currentPath === `/` ? 'resume/' : '../resume/'
 const contactPath: string = currentPath === `/` ? 'contact/' : '../contact/'
 const funnyPath: string = currentPath === `/` ? 'funny/' : '../funny/'
 const privacyPolicyPath: string = currentPath === `/` ? 'privacy-policy/' : '../privacy-policy/'
@@ -35,7 +34,6 @@ const privacyPolicyPath: string = currentPath === `/` ? 'privacy-policy/' : '../
           <li><a href={`${portfolioPath}`}>Portfolio</a></li>
           <li><a href="https://davdevs-fem.netlify.app/" target="_blank" title="Frontend Mentor Demos">FEM Demos</a></li>
           <li><a href={`${articlesPath}`}>Articles</a></li>
-          <!-- <li><a href={`${resumePath}`}>Resume</a></li> -->
           <li><a href={`${contactPath}`}>Contact</a></li>
           <li><a href={`${funnyPath}`}>Funny</a></li>
           <li><a href={`${privacyPolicyPath}`}>Privacy Policy</a></li>
@@ -50,19 +48,6 @@ const privacyPolicyPath: string = currentPath === `/` ? 'privacy-policy/' : '../
           <li><a href={`${homePath}#home-social`}>Social</a></li>
         </ul>
       </div>
-      <!-- <div class="primary-footer__top__col | flow">
-        <h2 class="primary-footer__heading">Resume</h2>
-        <ul class="primary-footer__list">
-          <li><a href={`${resumePath}#resume-objective`}>Objective</a></li>
-          <li><a href={`${resumePath}#resume-skills`}>Skils</a></li>
-          <li><a href={`${resumePath}#resume-experience`}>Experience</a></li>
-          <li><a href={`${resumePath}#resume-education`}>Education</a></li>
-          <li><a href={`${resumePath}#resume-certificates`}>Certificates</a></li>
-          <li><a href={`${resumePath}#resume-talks`}>Talks</a></li>
-          <li><a href={`${resumePath}#resume-hobbies`}>Hobbies</a></li>
-          <li><a href={`${resumePath}#resume-testimonials`}>Testimonials</a></li>
-        </ul>
-      </div> -->
       <div class="primary-footer__top__col | flow">
         <h2 class="primary-footer__heading">Social</h2>
         <ul class="primary-footer__list">
