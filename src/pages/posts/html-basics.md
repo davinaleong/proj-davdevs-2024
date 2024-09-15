@@ -13,4 +13,19 @@ It is the skeleton of every webpage. It tells the web browser what a heading (`<
 
 There are more advanced tags like `<video>` to embed video content and `<canvas>` to allow graphics to be drawn on a webpage.
 
+Here's a sample html code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dav/Devs</title>
+  </head>
+  <body>
+    <h1>Welcome to Dav/Devs</h1>
+    <p>My personal portfolio website</p>
+  </body>
+</html>
+```
+
 If you’re interested in learning `HTML`, contact me on [LinkedIn](https://www.linkedin.com/in/davina-leong/), and I will teach you.
