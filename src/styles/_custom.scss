@@ -49,6 +49,10 @@ img {
   border-radius: theme("borderRadius.sm");
 }
 
+hr {
+  border-color: theme("colors.gray.500");
+}
+
 .flow {
   --_flow-spacer: var(--flow-spacer);
 

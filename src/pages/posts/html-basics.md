@@ -7,9 +7,11 @@ keywords: "HTML, HyperText Markup Language, HTML tags, web structure, webpage co
 images: [{ url: "html-basics-0001.png", alt: "HTML Basics" }]
 ---
 
-`HTML` stands for HyperText Markup Language, and it is the structure of a webpage. You can identify HTML code by its angel brackets like this: `<p>Hello World</p>`; it looks similar to another coding language called Extensible Markup Language (XML): `<title>Dav/Davs</title>`.
+`HTML` stands for HyperText Markup Language, and it is the structure of a webpage. You can identify HTML code by its angle brackets like this: `<p>Hello World</p>`.
 
-It is the skeleton of every webpage. It tells the web browser what a heading (`<h1>`) or a paragraph (`<p>`) is. It does this through special codes called tags, for example: (`<span>`). There are two kinds of tags in HTML: paired and unpaired. Paired tags need an open tag: `<strong>` and a closing tag: `</strong>`, like this `<strong>Dav/Davs</strong>`. This code boldens the content between the text. At the same time, unpaired tags are self-closing like a horizontal rule: `<hr>`.
+It is the skeleton of every webpage. It tells the web browser what a heading (`<h1>`) or a paragraph (`<p>`) is. It does this through special codes called tags, for example: (`<span>`). There are two kinds of tags in HTML: paired and unpaired. Paired tags need an open tag: `<strong>` and a closing tag: `</strong>`, like this `<strong>Dav/Davs</strong>`. This code boldens the content between the text, like this **Dav/Devs**. At the same time, unpaired tags are self-closing like a horizontal rule: `<hr>`, like this:
+
+<hr>
 
 There are more advanced tags like `<video>` to embed video content and `<canvas>` to allow graphics to be drawn on a webpage.
 
