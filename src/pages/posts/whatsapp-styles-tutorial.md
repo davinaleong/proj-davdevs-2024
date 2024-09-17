@@ -33,3 +33,5 @@ For italicized text, use the underscore character (`_`) like this: I am `\_33 ye
 For cancelled text, you will use an unfamiliar character called the tilde character (`~`). Example: I used to be `~32 years old~`. And the phrase "32 years old" will be cancelled. Note that the tilde character is not shown when your text is sent.
 
 ![Screenshot of More Special Characters iPhone Keyboard](/screenshots/posts/whatsapp-styles-tutorial-0010.png)
+
+To sum it all up, using these simple tricks can add some flair to your WhatsApp messages, making them more expressive and personalized. Whether you want to emphasize a point with bold, add a subtle touch with italics, or strike out old information, these formatting options are easy to use and can make your chats stand out. Try them out and give your conversations a fresh, new feel!
