@@ -7,14 +7,7 @@ description: "Discover the Script Trivia app, a gateway to IT for non-tech enthu
 keywords: "Script Trivia, Coding for Non-IT, ReactJS Quiz, Typescript Learning, SASS Web App, Webpack Boilerplate, IT Exploration, No Backend App, Database-Free Quiz, Legal-Friendly Learning"
 category: "react"
 images: [{ url: "script-trivia.png", alt: "Script Trivia" }]
-links: [
-    ,
-    # { label: "See Demo", url: "https://script-trivia.netlify.app/" },
-    # {
-    #   label: "See Repo",
-    #   url: "https://github.com/davinaleong/proj-script-trivia",
-    # },
-  ]
+links: []
 featured: true
 technologies:
   [
