@@ -13,11 +13,13 @@ images:
   ]
 ---
 
-Hello, fellow followers, Did you know you can style your WhatsApp messages in bold or italicize them?
+Hello, fellow followers. Did you know that you can bold or italicize your WhatsApp messages? "But how do I do it?" you may ask.
 
 ![Screenshot of WhatsApp Message Styles](/screenshots/posts/whatsapp-styles-tutorial-0007.png)
 
 "But how do I do it?" you may ask.
+
+> _Note:_ The screenshots are taken from an iPhone. Android users should seek assistance from their peers if they can't find the special characters as different brands have different keyboard configurations.
 
 You do it by typing special characters into your messages to stylize that portion of text or phrase. Where do you find these special characters? You see them by tapping the "123" key beside the "emoji" key. Then tap on the "#+=" key just above the "ABC" key to find these special characters.
 
@@ -31,5 +33,3 @@ For italicized text, use the underscore character (`_`) like this: I am `\_33 ye
 For cancelled text, you will use an unfamiliar character called the tilde character (`~`). Example: I used to be `~32 years old~`. And the phrase "32 years old" will be cancelled. Note that the tilde character is not shown when your text is sent.
 
 ![Screenshot of More Special Characters iPhone Keyboard](/screenshots/posts/whatsapp-styles-tutorial-0010.png)
-
-_Note:_ The screenshots are taken from an iPhone. Android users should seek assistance from their peers if they can't find the special characters.
