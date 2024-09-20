@@ -49,12 +49,12 @@ For italicized text, use the underscore character (`_`) like this: I am `_30 yea
 
 Here is a screenshot of how the text will appear in WhatsApp:
 
-![Screenshot of Italicized WhatsApp Text](/screenshots/posts/how-to-bold-italiaze-and-strikethrough-text-in-whatsapp-0007.PNG)
+![Screenshot of Italicized WhatsApp Text](/screenshots/posts/how-to-bold-italiaze-and-strikethrough-text-in-whatsapp-0007.png)
 
 For strikethrough text, you will use an _unfamiliar character_ called the tilde character (`~`). Example: I used to be `~29 years old~`. And the phrase "29 years old" will be struck through like this: I used to be <del>29 years old</del>. Note that the tilde character is not shown when your text is sent.
 
 Here is a screenshot of how the text will appear in WhatsApp:
 
-![Screenshot of Strikethrough WhatsApp Text](/screenshots/posts/how-to-bold-italiaze-and-strikethrough-text-in-whatsapp-0008.PNG)
+![Screenshot of Strikethrough WhatsApp Text](/screenshots/posts/how-to-bold-italiaze-and-strikethrough-text-in-whatsapp-0008.png)
 
 To sum it all up, these simple tricks can add flair to your WhatsApp messages, making them more expressive and personalized. Whether you want to emphasize a point with bold, add a subtle touch with italics, or strike out old information, these formatting options are easy to use and make your chats stand out. Try them out and give your conversations a fresh, new feel!
