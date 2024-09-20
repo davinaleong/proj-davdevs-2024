@@ -7,7 +7,7 @@ keywords: "security tips, personal information, receipts, ID numbers, data prote
 images:
   [
     {
-      url: "securely-dispose-your-receipts-0001.png",
+      url: "safely-dispose-of-your-receipts-0001.png",
       alt: "Safely Dispose of Your Receipts",
     },
   ]
@@ -18,12 +18,12 @@ Hey fellow followers! 👋 Here’s another security tip for you all! 🔒 This 
 Here’s a photo of a receipt with the sample information highlighted:
 📸
 
-![Photo of Receipt with Sensitive Information Highlighted](/screenshots/posts/securely-dispose-your-receipts-0003.png)
+![Photo of Receipt with Sensitive Information Highlighted](/screenshots/posts/safely-dispose-of-your-receipts-0003.png)
 
 And here’s a photo of a receipt with the sample information blacked-out:
 📸
 
-![Photo of Receipt with Sensitive Information Blacked-out](/screenshots/posts/securely-dispose-your-receipts-0004.png)
+![Photo of Receipt with Sensitive Information Blacked-out](/screenshots/posts/safely-dispose-of-your-receipts-0004.png)
 
 So next time you’re disposing of your receipts, make sure to black out that info 🖤 and shred them 🗑️ before throwing them away!
 
