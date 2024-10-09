@@ -9,7 +9,7 @@ import CookieDialogComponentAstro from "../components/cookie-dialog.component.as
 
 const { PUBLIC_APP_NAME, AUTHOR } = import.meta.env
 
-const { title = ``, description = '', image = '', keywords = '' } = Astro.props
+const { title = ``, description = '', image = favicon.src, keywords = '' } = Astro.props
 const theTitle: string = title === `` ? PUBLIC_APP_NAME : `${PUBLIC_APP_NAME} - ${title}`
 
 const currentPath: string = Astro.url.pathname
@@ -34,7 +34,7 @@ const home: boolean = currentPath === `/`
 
     <meta property="og:title" content={theTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={favicon.src} />
+    <meta property="og:image" content={image} />
     <meta property="og:url" content="www.davina-devs.com" />
 
 		<link rel="icon" type="image/png" href={favicon.src} />

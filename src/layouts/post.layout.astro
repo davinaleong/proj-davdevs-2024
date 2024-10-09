@@ -7,8 +7,12 @@ const { title, description, keywords, images, date } = frontmatter
 const { DATE_FORMAT } = import.meta.env
 
 const formattedDate = dayjs(date).format(DATE_FORMAT)
+let image = 0
+if (images.length > 0) {
+  image = images[0]
+}
 ---
-<MainLayoutAstro title={title} description={description} keywords={keywords}>
+<MainLayoutAstro title={title} description={description} image={image} keywords={keywords}>
   <section id="home-post" class="section section-half section-post section-post-hero">
     <div class="wrapper section__wrapper | flow mx-auto p-4">
       <h1 class="section-article-home__heading | text-4xl font-bold text-neutral-50 text-center uppercase">

@@ -12,8 +12,12 @@ const { label, categoryClass } = categories.filter(({ slug }: any) => slug === c
 const { DATE_FORMAT } = import.meta.env
 
 const formattedDate = dayjs(date).format(DATE_FORMAT)
+let image = 0
+if (images.length > 0) {
+  image = images[0]
+}
 ---
-<MainLayoutAstro title={title} description={description} keywords={keywords}>
+<MainLayoutAstro title={title} description={description} image={image} keywords={keywords}>
 <section
     id="project-hero"
     class="section section-half section-project section-project-hero"
