@@ -52,7 +52,7 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
 
                   <div class="skills mx-auto">
                     {skillPosts.map(({ frontmatter }: any, index: number) => {
-                      const { title, className } = frontmatter
+                      const { title } = frontmatter
 
                       return (
                       <buttton class={`btn btn-skill btn-blue-600 | shadow-md`} data-element="btn-skill" data-target={`skill-dialog-${index}`}>{title}</buttton>
@@ -84,7 +84,7 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
 
                   {selectedFeaturedPosts.map(({ frontmatter, url }: any) => {
                     const { title, description, category, images } = frontmatter
-                    const { label, slug, categoryClass } = categories.filter(({ slug }: any) => slug === category)[0]
+                    const { label, slug } = categories.filter(({ slug }: any) => slug === category)[0]
                     const image: ImageInterface = images[0]
                     return (
                       <>

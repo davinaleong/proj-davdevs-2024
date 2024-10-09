@@ -41,7 +41,7 @@ if (category) {
     <div class="wrapper section__wrapper | mx-auto p-4 flow">
       <nav class="filters">
         <a href={`${categoriesRoute}`}class="btn btn-skill" data-active={`${selectedCategory === null}`}>All</a>
-        {publishedCategories.map(({ label, slug, categoryClass }: any) => {
+        {publishedCategories.map(({ label, slug }: any) => {
           const active: string = `${(selectedCategory !== null && selectedCategory.slug === slug)}`
           return (<a href={`${categoriesRoute}${slug}/1`} class={`btn btn-skill`} data-active={active}>{label}</a>)
         })}
@@ -50,7 +50,7 @@ if (category) {
       <div class="cards-grid">
         {page.data.map((item: any) => {
           const { title, category, images } = item.frontmatter
-          const { label, categoryClass }: any = categories.filter(({ slug }: any) => slug === category)[0]
+          const { label }: any = categories.filter(({ slug }: any) => slug === category)[0]
           const image = images.length > 0 ? images[0] : null
 
           return (
