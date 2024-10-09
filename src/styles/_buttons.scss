@@ -119,12 +119,12 @@
   }
 
   &-skill {
-    --_btn-clr: theme("colors.neutral.50");
-    --_btn-bg-clr: theme("colors.blue.500");
-    --_btn-border-clr: theme("colors.blue.500");
-    --_btn-hover-clr: theme("colors.neutral.50");
-    --_btn-hover-bg-clr: theme("colors.blue.700");
-    --_btn-hover-border-clr: theme("colors.blue.700");
+    --_btn-clr: theme("colors.neutral.950");
+    --_btn-bg-clr: theme("colors.neutral.300");
+    --_btn-border-clr: theme("colors.neutral.300");
+    --_btn-hover-clr: theme("colors.neutral.950");
+    --_btn-hover-bg-clr: theme("colors.neutral.500");
+    --_btn-hover-border-clr: theme("colors.neutral.500");
     --_btn-spacer-inline: theme("padding.3");
     --_btn-spacer-block: theme("padding.2");
 
@@ -417,11 +417,33 @@
   }
 
   &-blue {
+    --_btn-clr: theme("colors.neutral.50");
     --_btn-bg-clr: theme("colors.blue.500");
     --_btn-border-clr: theme("colors.blue.500");
 
+    --_btn-hover-clr: theme("colors.neutral.50");
     --_btn-hover-bg-clr: theme("colors.blue.600");
     --_btn-hover-border-clr: theme("colors.blue.600");
+  }
+
+  &-blue-600 {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: theme("colors.blue.600");
+    --_btn-border-clr: theme("colors.blue.600");
+
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: theme("colors.blue.800");
+    --_btn-hover-border-clr: theme("colors.blue.800");
+  }
+
+  &-blue-700 {
+    --_btn-clr: theme("colors.neutral.50");
+    --_btn-bg-clr: theme("colors.blue.700");
+    --_btn-border-clr: theme("colors.blue.700");
+
+    --_btn-hover-clr: theme("colors.neutral.50");
+    --_btn-hover-bg-clr: theme("colors.blue.900");
+    --_btn-hover-border-clr: theme("colors.blue.900");
   }
 
   &-indigo {
@@ -484,6 +506,15 @@
       --_btn-hover-clr: theme("colors.neutral.950");
       --_btn-hover-bg-clr: theme("colors.neutral.800");
       --_btn-hover-border-clr: theme("colors.neutral.800");
+    }
+
+    &-skill {
+      --_btn-clr: theme("colors.neutral.50");
+      --_btn-bg-clr: theme("colors.neutral.700");
+      --_btn-border-clr: theme("colors.neutral.700");
+      --_btn-hover-clr: theme("colors.neutral.50");
+      --_btn-hover-bg-clr: theme("colors.neutral.500");
+      --_btn-hover-border-clr: theme("colors.neutral.500");
     }
 
     &-theme {

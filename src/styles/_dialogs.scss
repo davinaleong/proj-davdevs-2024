@@ -102,21 +102,21 @@
 
   &-yes {
     --_btn-clr: theme("colors.neutral.950");
-    --_btn-bg-clr: theme("colors.green.500");
-    --_btn-border-clr: theme("colors.green.500");
+    --_btn-bg-clr: theme("colors.blue.600");
+    --_btn-border-clr: theme("colors.blue.600");
 
     --_btn-hover-clr: theme("colors.neutral.950");
-    --_btn-hover-bg-clr: theme("colors.green.600");
-    --_btn-hover-border-clr: theme("colors.green.600");
+    --_btn-hover-bg-clr: theme("colors.blue.800");
+    --_btn-hover-border-clr: theme("colors.blue.800");
   }
 
   &-no {
     --_btn-clr: theme("colors.neutral.50");
-    --_btn-bg-clr: theme("colors.red.500");
-    --_btn-border-clr: theme("colors.red.500");
+    --_btn-bg-clr: theme("colors.blue.700");
+    --_btn-border-clr: theme("colors.blue.700");
 
     --_btn-hover-clr: theme("colors.neutral.50");
-    --_btn-hover-bg-clr: theme("colors.red.600");
-    --_btn-hover-border-clr: theme("colors.red.600");
+    --_btn-hover-bg-clr: theme("colors.blue.900");
+    --_btn-hover-border-clr: theme("colors.blue.900");
   }
 }

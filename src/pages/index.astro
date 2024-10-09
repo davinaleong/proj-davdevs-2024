@@ -55,7 +55,7 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                       const { title, className } = frontmatter
 
                       return (
-                      <buttton class={`btn btn-skill ${className} | shadow-md`} data-element="btn-skill" data-target={`skill-dialog-${index}`}>{title}</buttton>
+                      <buttton class={`btn btn-skill btn-blue-600 | shadow-md`} data-element="btn-skill" data-target={`skill-dialog-${index}`}>{title}</buttton>
                       )
                     })}
                   </div>
@@ -100,7 +100,7 @@ const selectedFeaturedPosts = [...featuredPosts].splice(0, import.meta.env.FEATU
                             </h3>
 
                             <p>
-                              <a href={`portfolio/categories/${slug}/1`} class={`btn btn-skill ${categoryClass}`}>{label}</a>  
+                              <a href={`portfolio/categories/${slug}/1`} class={`btn btn-skill`}>{label}</a>  
                             </p>
 
                             <p>{description}</p>
