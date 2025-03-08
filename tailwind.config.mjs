@@ -109,6 +109,11 @@ export default {
           light: "hsl(210, 90%, 50%)",
           dark: "hsl(210, 90%, 30%)",
         },
+        vue: {
+          base: "hsl(153, 48%, 37%)",
+          light: "hsl(153, 48%, 47%)",
+          dark: "hsl(153, 48%, 57%)",
+        },
       },
       fontFamily: {
         sans: "Montserrat, Arial, sans-serif",

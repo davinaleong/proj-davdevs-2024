@@ -81,5 +81,12 @@ categories:
       id: "nextjs",
       categoryClass: "btn-skill-nextjs",
     },
+    {
+      label: "Vue",
+      draft: 0,
+      slug: "vue",
+      id: "vue",
+      categoryClass: "btn-skill-vue",
+    },
   ]
 ---
