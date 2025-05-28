@@ -5,6 +5,7 @@ import logo from "../assets/images/logo-svg.svg"
 const homePath: string = `/`; //currentPath === `/` ? '/' : '../'
 const portfolioPath: string = `/portfolio/1`
 const articlesPath: string = `/articles`
+const toolsPath: string = `https://davdevstools.netlify.app/`
 const contactPath: string = `/contact`
 const funnyPath: string = `/funny`
 ---
@@ -23,7 +24,6 @@ const funnyPath: string = `/funny`
                     <a href={portfolioPath} class="primary-header__link">
                         Tech <i class="fa-sharp fa-thin fa-chevron-down"></i>
                     </a>
-
                     <ul class="primary-header__li__ul">
                         <li class="primary-header__li">
                             <a href={portfolioPath} class="primary-header__link">Portfolio</a>
@@ -35,6 +35,9 @@ const funnyPath: string = `/funny`
                             <a href="https://davdevs-fem.netlify.app/" class="primary-header__link" title="Frontend Mentor Demos" target="_blank">FEM  Demos</a>
                         </li>
                     </ul>
+                </li>
+                <li class="primary-header__li">
+                    <a href={toolsPath} class="primary-header__link">Tools</a>
                 </li>
                 <li class="primary-header__li">
                     <a href={contactPath} class="primary-header__link">Contact</a>

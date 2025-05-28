@@ -11,6 +11,7 @@ const currentPath: string = Astro.url.pathname
 const homePath: string = currentPath === `/` ? '/' : '../'
 const portfolioPath: string = currentPath === `/` ? 'portfolio/' : '../portfolio/'
 const articlesPath: string = currentPath === `/` ? 'articles/' : '../articles/'
+const toolsPath: string = `https://davdevstools.netlify.app/`
 const contactPath: string = currentPath === `/` ? 'contact/' : '../contact/'
 const funnyPath: string = currentPath === `/` ? 'funny/' : '../funny/'
 const privacyPolicyPath: string = currentPath === `/` ? 'privacy-policy/' : '../privacy-policy/'
@@ -32,6 +33,7 @@ const privacyPolicyPath: string = currentPath === `/` ? 'privacy-policy/' : '../
         <ul class="primary-footer__list">
           <li><a href={`${homePath}`}>Home</a></li>
           <li><a href={`${portfolioPath}`}>Portfolio</a></li>
+          <li><a href={`${toolsPath}`}>Tools</a></li>
           <li><a href="https://davdevs-fem.netlify.app/" target="_blank" title="Frontend Mentor Demos">FEM Demos</a></li>
           <li><a href={`${articlesPath}`}>Articles</a></li>
           <li><a href={`${contactPath}`}>Contact</a></li>
