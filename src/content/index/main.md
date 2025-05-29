@@ -48,7 +48,7 @@ social:
       [
         {
           label: "Various videos",
-          link: "https://www.youtube.com/channel/UCh-C6LhCRyVxlzdFc4WCrDw",
+          link: "https://www.youtube.com/@DavDevsMedia",
           icon: "fa-youtube",
           className: "card-social-youtube",
         },
@@ -66,7 +66,7 @@ social:
         },
         {
           label: "Professional",
-          link: "https://www.linkedin.com/in/davina-leong-s9115675g/",
+          link: "https://www.linkedin.com/in/davina-leong/",
           icon: "fa-linkedin",
           className: "card-social-linkedin",
         },

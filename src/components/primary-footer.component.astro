@@ -10,7 +10,10 @@ const strYear: string = year === nowYear ? `${year}` : `${year} &ndash; ${nowYea
 const currentPath: string = Astro.url.pathname
 const homePath: string = currentPath === `/` ? '/' : '../'
 const portfolioPath: string = currentPath === `/` ? 'portfolio/' : '../portfolio/'
+const toolsPath: string = `https://davdevstools.netlify.app/`
+const notebooksPath: string = `https://davinaleong.github.io/proj-jupyter-notebooks/`
 const articlesPath: string = currentPath === `/` ? 'articles/' : '../articles/'
+const femPath: string = `https://davdevs-fem.netlify.app/`
 const contactPath: string = currentPath === `/` ? 'contact/' : '../contact/'
 const funnyPath: string = currentPath === `/` ? 'funny/' : '../funny/'
 const privacyPolicyPath: string = currentPath === `/` ? 'privacy-policy/' : '../privacy-policy/'
@@ -30,13 +33,15 @@ const privacyPolicyPath: string = currentPath === `/` ? 'privacy-policy/' : '../
       <div class="primary-footer__top__col | flow">
         <h2 class="primary-footer__heading">Pages</h2>
         <ul class="primary-footer__list">
-          <li><a href={`${homePath}`}>Home</a></li>
-          <li><a href={`${portfolioPath}`}>Portfolio</a></li>
-          <li><a href="https://davdevs-fem.netlify.app/" target="_blank" title="Frontend Mentor Demos">FEM Demos</a></li>
-          <li><a href={`${articlesPath}`}>Articles</a></li>
-          <li><a href={`${contactPath}`}>Contact</a></li>
-          <li><a href={`${funnyPath}`}>Funny</a></li>
-          <li><a href={`${privacyPolicyPath}`}>Privacy Policy</a></li>
+          <li><a href={homePath}>Home</a></li>
+          <li><a href={portfolioPath}>Portfolio</a></li>
+          <li><a href={toolsPath}>Tools</a></li>
+          <li><a href={notebooksPath}>Python</a></li>
+          <li><a href={articlesPath}>Articles</a></li>
+          <li><a href={femPath} target="_blank" title="Frontend Mentor Demos">FEM Demos</a></li>
+          <li><a href={contactPath}>Contact</a></li>
+          <li><a href={funnyPath}>Funny</a></li>
+          <li><a href={privacyPolicyPath}>Privacy Policy</a></li>
         </ul>
       </div>
       <div class="primary-footer__top__col | flow">
@@ -51,10 +56,12 @@ const privacyPolicyPath: string = currentPath === `/` ? 'privacy-policy/' : '../
       <div class="primary-footer__top__col | flow">
         <h2 class="primary-footer__heading">Social</h2>
         <ul class="primary-footer__list">
-          <li><a href="https://www.linkedin.com/in/davina-leong-s9115675g/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/in/davina-leong/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/DavinaLeong" target="_blank">GitHub</a></li>
           <li><a href="https://www.instagram.com/davinaleong/" target="_blank">Instagram</a></li>
-          <li><a href="https://www.youtube.com/channel/UCh-C6LhCRyVxlzdFc4WCrDw" target="_blank">YouTube</a></li>
-          <li><a href="https://github.com/davinaleong" target="_blank">GitHub</a></li>
+          <li><a href="https://www.youtube.com/@DavDevsMedia" target="_blank">YouTube</a></li>
+          <li><a href="https://www.facebook.com/DavinaLSY" target="_blank">Facebook</a></li>
+          <li><a href="https://www.threads.com/@davinaleong?hl=en" target="_blank">Threads</a></li>
         </ul>
       </div>
     </div>
