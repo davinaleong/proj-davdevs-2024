@@ -23,8 +23,6 @@ articlePosts.sort((a: any, b: any) => sortByDateDesc(a, b))
         class="section section-articles section-articles-content"
       >
         <div class="wrapper section__wrapper | mx-auto p-4 flow">
-          <p><strong>Disclaimer:</strong> I am by no means the smartest or most updated person in the technology industry. All these articles are written my me to the best of my ability and knowledge as a web developer for 8+ years. My purpose of writing these articles is to inform laypeople of what's going on in the industry and how to stay safe online. Don't take my word for it and do do your own research too. I use ChatGPT and Grammarly to help me proof-read the content and generate the meta description and keywords.</p>
-
           <div class="cards-grid">
             {articlePosts.map(({ url, frontmatter }: any) => {
               const { title, images } = frontmatter
